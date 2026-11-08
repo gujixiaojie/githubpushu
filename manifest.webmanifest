@@ -1,0 +1,14 @@
+{
+  "name": "GitHub 项目搜索与每日收录",
+  "short_name": "GH收录",
+  "description": "搜索 GitHub 开源项目并查看每日合规收录库",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1216",
+  "theme_color": "#2f6feb",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

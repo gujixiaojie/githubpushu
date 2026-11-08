@@ -4,12 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#2f6feb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
 <title>GitHub 项目搜索收集器（单文件版）</title>
 <style>
 :root{
   --bg:#f6f7f9; --card:#fff; --border:#e5e7eb; --text:#1f2328;
   --muted:#6b7280; --accent:#2f6feb; --accent-weak:#e8f0fe; --danger:#d93025; --ok:#188038;
   --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1216; --card:#171b21; --border:#2a313a; --text:#e6e8eb;
+    --muted:#9aa3ad; --accent:#6ea1ff; --accent-weak:#1d2a45; --danger:#ff6b6b; --ok:#4ec978;
+  }
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
@@ -711,6 +720,11 @@ $("addLibBtn").addEventListener("click",addToLibrary);
 var dl=$("langList");LANGS.forEach(function(l){var o=document.createElement("option");o.value=l;dl.appendChild(o)});
 renderPresets();updateLibCount();backupReminder(false);
 })();
+</script>
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",function(){
+  navigator.serviceWorker.register("sw.js").catch(function(){});
+})}
 </script>
 </body>
 </html>

@@ -2,13 +2,22 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#2f6feb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
 <title>每日收录库 · GitHub 项目速递</title>
 <style>
 :root{
   --bg:#f6f7f9;--card:#fff;--border:#e5e7eb;--text:#1f2328;--muted:#6b7280;
-  --accent:#2f6feb;--accent-weak:#e8f0fe;--ok:#188038;--radius:10px;
+  --accent:#2f6feb;--accent-weak:#e8f0fe;--radius:10px;--shadow:0 1px 2px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1216;--card:#171b21;--border:#2a313a;--text:#e6e8eb;--muted:#9aa3ad;
+    --accent:#6ea1ff;--accent-weak:#1d2a45;--shadow:none;
+  }
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
@@ -24,26 +33,33 @@ a:hover{text-decoration:underline}
   border:1px solid var(--border);background:var(--card);color:var(--text)}
 .nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .filters{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:12px;display:grid;grid-template-columns:1fr 180px 160px;gap:10px;margin-bottom:14px}
-input,select{border:1px solid var(--border);border-radius:7px;padding:9px 11px;font-size:14px;width:100%;font-family:inherit}
+  padding:12px;display:grid;grid-template-columns:1fr 160px 140px 140px;gap:10px;margin-bottom:14px}
+input,select,button{border:1px solid var(--border);border-radius:7px;padding:9px 11px;font-size:14px;
+  width:100%;font-family:inherit;background:var(--card);color:var(--text)}
 .stat{font-size:13px;color:var(--muted);margin:2px 2px 10px}
 .stat b{color:var(--text)}
+.new-pill{display:inline-block;background:#d93025;color:#fff;font-size:11px;font-weight:700;
+  border-radius:10px;padding:1px 8px;margin-left:6px;vertical-align:middle}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:13px 15px;margin-bottom:10px}
-.card:hover{border-color:#c9cdd3}
+  padding:13px 15px;margin-bottom:10px;box-shadow:var(--shadow)}
+.card:hover{border-color:var(--accent)}
 .title-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
 .title{font-size:16px;font-weight:700;word-break:break-all}
-.summary{font-size:13.5px;color:#374151;margin-bottom:9px}
+.summary{font-size:13.5px;color:var(--muted);margin-bottom:9px}
 .meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.meta .star{color:#b8860b;font-weight:600}
-.chip{font-size:11.5px;padding:2px 9px;border-radius:11px;font-weight:600;background:var(--accent-weak);
-  color:var(--accent);white-space:nowrap}
-.chip.gray{background:#f3f4f6;color:#4b5563}
+.meta .star{color:#d4a017;font-weight:600}
+.chip{font-size:11.5px;padding:2px 9px;border-radius:11px;font-weight:600;
+  background:var(--accent-weak);color:var(--accent);white-space:nowrap}
+.chip.gray{background:var(--bg);color:var(--muted)}
+.share-btn{border:none;width:auto;padding:3px 10px;font-size:12px;border-radius:6px;cursor:pointer;
+  background:transparent;color:var(--accent)}
+.share-btn:hover{background:var(--accent-weak)}
 .empty{text-align:center;color:var(--muted);font-size:14px;padding:46px 16px;
   background:var(--card);border:1px dashed var(--border);border-radius:var(--radius)}
-@media (max-width:640px){
-  .filters{grid-template-columns:1fr}
-}
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#333;color:#fff;
+  padding:9px 18px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:99}
+#toast.show{opacity:.95}
+@media (max-width:640px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -63,30 +79,40 @@ input,select{border:1px solid var(--border);border-radius:7px;padding:9px 11px;f
     <input id="kw" placeholder="搜索标题 / 简介 / 标签…">
     <select id="catSel"><option value="">全部分类</option></select>
     <select id="platSel"><option value="">全部平台</option></select>
+    <select id="sortSel">
+      <option value="new">最新收录</option>
+      <option value="star">星标最多</option>
+      <option value="update">最近更新</option>
+    </select>
   </div>
 
   <div class="stat" id="statLine"></div>
   <div id="list"></div>
 </div>
+<div id="toast"></div>
 
 <script>
 (function(){
 "use strict";
-var ALL=[];
+var ALL=[],LATEST="";
 function $(id){return document.getElementById(id)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");
+  setTimeout(function(){t.classList.remove("show")},1800)}
 
+function boot(d){
+  ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
+  LATEST=ALL.map(function(p){return p.crawl_date}).sort().pop()||"";
+  var meta=d.meta||{};
+  var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
+  $("metaLine").innerHTML="共 "+ALL.length+" 个收录项目 · 更新于 "+
+    (meta.updated_at||LATEST)+' <span class="new-pill">最新收录日 '+newest+' 条</span>';
+  fillOptions();render();
+}
 fetch("data/projects.json",{cache:"no-store"})
   .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
-  .then(function(d){
-    ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
-    var meta=d.meta||{};
-    var dates=ALL.map(function(p){return p.crawl_date}).sort();
-    $("metaLine").textContent="共 "+ALL.length+" 个收录项目 · 数据更新于 "+
-      (meta.updated_at||(dates[dates.length-1]||"未知"));
-    fillOptions();render();
-  })
+  .then(boot)
   .catch(function(e){
     $("metaLine").textContent="数据加载失败："+e.message;
     $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
@@ -104,7 +130,8 @@ function fillOptions(){
 }
 
 function render(){
-  var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,plat=$("platSel").value;
+  var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,
+      plat=$("platSel").value,sort=$("sortSel").value;
   var list=ALL.filter(function(p){
     if(cat&&(p.category_tags||[]).indexOf(cat)<0)return false;
     if(plat&&(p.platform_tags||[]).indexOf(plat)<0)return false;
@@ -114,24 +141,50 @@ function render(){
     }
     return true;
   });
+  list.sort(function(a,b){
+    if(sort==="star")return (b.star||0)-(a.star||0);
+    if(sort==="update")return String(b.last_commit).localeCompare(String(a.last_commit));
+    return String(b.crawl_date).localeCompare(String(a.crawl_date));
+  });
   $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+ALL.length+" 个项目";
   if(!list.length){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';return}
   $("list").innerHTML=list.map(function(p){
     var cats=(p.category_tags||[]).map(function(t){return'<span class="chip">'+esc(t)+"</span>"}).join("");
     var plats=(p.platform_tags||[]).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
+    var isNew=p.crawl_date===LATEST?'<span class="new-pill" style="margin:0">新</span>':"";
     return '<div class="card"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
-      +cats+plats+"</div>"
+      +isNew+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
-      +"<span>收录于 "+esc(p.crawl_date)+"</span><span>最近更新 "+esc(p.last_commit)+"</span></div></div>";
+      +"<span>收录于 "+esc(p.crawl_date)+"</span><span>更新 "+esc(p.last_commit)+"</span>"
+      +'<button class="share-btn" data-url="'+esc(p.github_url)+'" data-title="'+esc(p.title)+'">分享</button>'
+      +"</div></div>";
   }).join("");
 }
 
-["kw","catSel","platSel"].forEach(function(id){
+function share(url,title){
+  var payload={title:title,text:"推荐一个 GitHub 项目："+title,url:url};
+  if(navigator.share){navigator.share(payload).catch(function(){});return}
+  var done=function(){toast("链接已复制")};
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(done).catch(function(){toast(url)});
+  }else{toast(url)}
+}
+
+["kw","catSel","platSel","sortSel"].forEach(function(id){
   $(id).addEventListener("input",render);
 });
+$("list").addEventListener("click",function(e){
+  var b=e.target.closest(".share-btn");
+  if(b)share(b.getAttribute("data-url"),b.getAttribute("data-title"));
+});
 })();
+</script>
+<script>
+if("serviceWorker" in navigator){window.addEventListener("load",function(){
+  navigator.serviceWorker.register("sw.js").catch(function(){});
+})}
 </script>
 </body>
 </html>
