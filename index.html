@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>GitHub 项目搜索收集器（单文件版）</title>
+<style>
+:root{
+  --bg:#f6f7f9; --card:#fff; --border:#e5e7eb; --text:#1f2328;
+  --muted:#6b7280; --accent:#2f6feb; --accent-weak:#e8f0fe; --danger:#d93025; --ok:#188038;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.55}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.page{max-width:1080px;margin:0 auto;padding:16px 16px 96px}
+.topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.topbar h1{font-size:22px;font-weight:700}
+.topbar .sub{color:var(--muted);font-size:13px}
+.tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:4px}
+.tabs button{border:none;background:none;padding:7px 16px;font-size:13.5px;border-radius:7px;cursor:pointer;color:var(--muted)}
+.tabs button.active{background:var(--accent);color:#fff;font-weight:600}
+.rate-bar{display:flex;flex-wrap:wrap;gap:8px 18px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:9px 14px;margin-bottom:12px;font-size:12.5px;color:var(--muted)}
+.rate-bar b{color:var(--text);font-weight:600}
+.ok{color:var(--ok)}.warn{color:#b26a00}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:14px}
+.row{margin-bottom:10px}.row:last-child{margin-bottom:0}
+.fld-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input,select,textarea{border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:14px;width:100%;font-family:inherit}
+textarea{resize:vertical;min-height:54px}
+.search-input{font-size:14px}
+.chk-group{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chk-group label{display:inline-flex;align-items:center;gap:5px;font-size:13px;padding:4px 10px;
+  border:1px solid var(--border);border-radius:20px;background:#fafbfc;cursor:pointer}
+.chk-group input{width:auto;accent-color:var(--accent)}
+.btn{border:none;border-radius:8px;padding:9px 18px;font-size:14px;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#2559c9}
+.btn-primary:disabled{background:#a9c1f0;cursor:not-allowed}
+.btn-ghost{background:#fff;border:1px solid var(--border);color:var(--text)}
+.btn-ghost:hover{background:#f3f4f6}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-sm{padding:5px 10px;font-size:12.5px;border-radius:6px}
+.filter-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:6px 2px}
+.toolbar .grp{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.result-count{font-size:13px;color:var(--muted)}
+.preset-row{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.preset-row select{flex:1}
+.preset-row .btn{white-space:nowrap}
+.s-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;
+  margin-bottom:10px;display:flex;gap:12px}
+.s-card:hover{border-color:#c9cdd3}
+.s-card .check{flex:0 0 22px;padding-top:4px}
+.s-card .check input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.s-card .body{flex:1;min-width:0}
+.title-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.title{font-size:16px;font-weight:700;word-break:break-all}
+.summary{font-size:13.5px;color:#374151;margin-bottom:7px}
+.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.meta .star{color:#b8860b;font-weight:600}
+.s-card.selected{border-color:var(--accent);background:#fbfdff}
+.badge{font-size:11.5px;padding:2px 8px;border-radius:10px;font-weight:600;border:1px solid transparent;white-space:nowrap}
+.badge.inlib{background:#e6f4ea;color:#137333;border-color:#b7dfc1}
+.badge.lang{background:#eef2ff;color:#3949ab;border-color:#d4ddfb}
+.badge.lic{background:#f3f4f6;color:#4b5563;border-color:var(--border)}
+.badge.fork{background:#fff7e6;color:#b26a00;border-color:#f5d9a8}
+.topic-line{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.topic-chip{font-size:11.5px;padding:1px 8px;border-radius:10px;background:var(--accent-weak);color:var(--accent)}
+.pager{display:flex;justify-content:center;align-items:center;gap:6px;margin:18px 0;flex-wrap:wrap}
+.pager button{border:1px solid var(--border);background:var(--card);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer}
+.pager button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pager button:disabled{opacity:.45;cursor:not-allowed}
+.action-bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);
+  border-top:1px solid var(--border);padding:10px 16px;z-index:50}
+.action-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.action-inner .sel-count{font-size:13.5px;color:var(--muted);margin-right:auto}
+.empty-box{text-align:center;color:var(--muted);font-size:14px;padding:48px 16px;background:var(--card);
+  border:1px dashed var(--border);border-radius:var(--radius)}
+.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#323232;color:#fff;
+  padding:10px 20px;border-radius:8px;font-size:14px;z-index:999;display:none}
+.toast.show{display:block}
+.lib-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px}
+.lib-item.checked{border-color:var(--accent);background:#fbfdff}
+.lib-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.lib-head .title{flex:1;min-width:200px}
+.lib-head .lib-check{width:18px;height:18px;accent-color:var(--accent)}
+.lib-controls{display:grid;grid-template-columns:140px 1fr;gap:8px;margin-top:8px}
+.status-pill{font-size:12px;padding:2px 9px;border-radius:12px;font-weight:600}
+.st-待看{background:#f3f4f6;color:#4b5563}
+.st-调研中{background:#e8f0fe;color:#2f6feb}
+.st-已采用{background:#e6f4ea;color:#137333}
+.st-放弃{background:#fce8e6;color:#c5221f}
+.bulk-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;background:#fafbfc;
+  border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px}
+.bulk-bar select{width:150px}
+.bulk-bar .cnt{font-size:12.5px;color:var(--muted)}
+.setting-note{font-size:12.5px;color:var(--muted);background:#fbf7ec;border:1px solid #f0e2c0;
+  border-radius:8px;padding:10px 12px;margin-top:8px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-box{background:#fff;border-radius:12px;max-width:820px;width:100%;max-height:86vh;display:flex;flex-direction:column}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border)}
+.modal-head .btn{padding:5px 14px}
+#readmeContent{padding:14px 16px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:13px;line-height:1.6}
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .s-card{flex-direction:column}
+  .s-card .check{flex:none}
+  .lib-controls{grid-template-columns:1fr}
+  .action-inner .btn{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div>
+      <h1>GitHub 项目搜索收集器</h1>
+      <div class="sub">单文件离线版 · 浏览器直连 GitHub · 收藏存在本机</div>
+    </div>
+    <div class="tabs">
+      <button class="active" data-view="search">搜索</button>
+      <button data-view="library">收藏库 <span id="libCount">0</span></button>
+      <button data-view="settings">设置</button>
+    </div>
+  </div>
+
+  <!-- ============ 搜索视图 ============ -->
+  <div id="view-search">
+    <div class="rate-bar">
+      <span>接口状态：<b id="rateState">未搜索</b></span>
+      <span>剩余次数：<b id="rateRemain">-</b></span>
+      <span>重置倒计时：<b id="rateReset">-</b></span>
+      <span id="rateAuth"></span>
+    </div>
+
+    <div class="panel">
+      <div class="preset-row">
+        <select id="presetSel"><option value="">常用搜索条件（选择即加载）…</option></select>
+        <button class="btn btn-ghost btn-sm" id="presetSave">保存当前条件</button>
+        <button class="btn btn-ghost btn-sm" id="presetDel">删除预设</button>
+      </div>
+      <div class="row">
+        <div class="fld-label">关键词（支持 GitHub 搜索语法，如 in:name、user:xxx）</div>
+        <input class="search-input" id="q" placeholder="例如：ai agent、rag、播放器…" autocomplete="off">
+      </div>
+      <div class="grid">
+        <div><div class="fld-label">编程语言</div><input id="lang" list="langList" placeholder="不限 / 可输入"><datalist id="langList"></datalist></div>
+        <div><div class="fld-label">Topic 主题</div><input id="topic" placeholder="例如：llm"></div>
+        <div><div class="fld-label">Star 最低（默认 5）</div><input type="number" id="minStar" min="0" value="5"></div>
+        <div><div class="fld-label">开源许可证</div><input id="licenseKey" placeholder="例如：mit、apache-2.0"></div>
+        <div><div class="fld-label">创建时间</div>
+          <select id="createdDays"><option value="0">不限</option><option value="1">最近1天</option>
+          <option value="7" selected>最近7天</option><option value="30">最近30天</option>
+          <option value="90">最近90天</option><option value="365">最近1年</option></select>
+        </div>
+        <div><div class="fld-label">最近更新</div>
+          <select id="pushedDays"><option value="0">不限</option><option value="7">最近7天</option>
+          <option value="30">最近30天</option><option value="90" selected>最近90天</option>
+          <option value="180">最近180天</option><option value="365">最近1年</option></select>
+        </div>
+        <div><div class="fld-label">排序方式</div>
+          <select id="sort"><option value="">最佳匹配</option><option value="stars">Star数</option>
+          <option value="updated">更新时间</option><option value="forks">Fork数</option></select>
+        </div>
+        <div><div class="fld-label">每页条数</div>
+          <select id="perPage"><option value="30" selected>30</option><option value="50">50</option>
+          <option value="100">100</option></select>
+        </div>
+      </div>
+      <div class="chk-group">
+        <label><input type="checkbox" id="excludeFork" checked>排除 fork 仓库（防刷榜）</label>
+        <label><input type="checkbox" id="excludeArchived" checked>排除归档仓库</label>
+        <label><input type="checkbox" id="mergeSame" checked>结果中同名项目归并（保留 star 最高）</label>
+      </div>
+      <div class="filter-actions">
+        <button class="btn btn-primary" id="searchBtn">搜索</button>
+        <button class="btn btn-ghost" id="resetBtn">重置条件</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <span class="result-count" id="resultCount"></span>
+      <div class="grp">
+        <button class="btn btn-ghost btn-sm" id="selectPage">全选本页</button>
+        <button class="btn btn-ghost btn-sm" id="selectAll">全选全部</button>
+        <button class="btn btn-ghost btn-sm" id="exportCsv">导出CSV</button>
+        <button class="btn btn-ghost btn-sm" id="exportJson">导出JSON</button>
+      </div>
+    </div>
+
+    <div id="results"></div>
+    <div class="pager" id="pager"></div>
+  </div>
+
+  <!-- ============ 收藏库视图 ============ -->
+  <div id="view-library" hidden>
+    <div class="panel">
+      <div class="grid">
+        <div><div class="fld-label">库内搜索</div><input id="libSearch" placeholder="标题 / 简介 / 标签"></div>
+        <div><div class="fld-label">状态筛选</div>
+          <select id="libStatus"><option value="">全部</option><option>待看</option>
+          <option>调研中</option><option>已采用</option><option>放弃</option></select>
+        </div>
+      </div>
+      <div class="filter-actions">
+        <button class="btn btn-ghost btn-sm" id="importBtn">导入JSON</button>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
+        <button class="btn btn-ghost btn-sm" id="libExportJson">导出JSON（速递库格式）</button>
+        <button class="btn btn-ghost btn-sm" id="libExportCsv">导出CSV</button>
+        <button class="btn btn-danger btn-sm" id="libClear">清空收藏库</button>
+      </div>
+    </div>
+    <div class="bulk-bar">
+      <label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="libCheckAll" style="width:16px;height:16px"> 全选当前列表</label>
+      <select id="bulkStatus"><option value="">批量改状态…</option>
+        <option>待看</option><option>调研中</option><option>已采用</option><option>放弃</option></select>
+      <button class="btn btn-ghost btn-sm" id="bulkStatusBtn">应用状态</button>
+      <button class="btn btn-danger btn-sm" id="bulkDelBtn">删除选中</button>
+      <span class="cnt" id="bulkCount"></span>
+    </div>
+    <div id="libraryList"></div>
+  </div>
+
+  <!-- ============ 设置视图 ============ -->
+  <div id="view-settings" hidden>
+    <div class="panel">
+      <div class="fld-label">GitHub Token（可选，不填为匿名访问）</div>
+      <input id="tokenInput" type="password" placeholder="ghp_xxx 或 github_pat_xxx">
+      <div class="chk-group" style="margin-top:10px">
+        <label><input type="radio" name="tokenMode" value="persist" checked> 持久保存（localStorage）</label>
+        <label><input type="radio" name="tokenMode" value="memory"> 仅内存（关闭页面即失效）</label>
+      </div>
+      <div class="filter-actions"><button class="btn btn-primary btn-sm" id="saveToken">保存</button>
+        <button class="btn btn-ghost btn-sm" id="removeToken">删除已存 Token</button></div>
+      <div class="setting-note">
+        匿名访问搜索接口限额 10 次/分钟；填写 Token 后提升到 30 次/分钟。Token 仅保存在当前浏览器，
+        不会上传到任何服务器；公共电脑请选择「仅内存」模式。
+      </div>
+    </div>
+    <div class="panel">
+      <div class="fld-label">数据统计与备份</div>
+      <div id="settingStats" class="result-count" style="margin-bottom:8px"></div>
+      <div id="backupInfo" class="result-count" style="margin-bottom:10px"></div>
+      <div class="filter-actions"><button class="btn btn-danger btn-sm" id="resetAll">清空全部本地数据</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="action-bar">
+  <div class="action-inner">
+    <span class="sel-count" id="selCount">已勾选 0 条</span>
+    <button class="btn btn-ghost" id="clearSel">清空勾选</button>
+    <button class="btn btn-primary" id="addLibBtn">加入收藏库</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- README 速读弹窗 -->
+<div class="modal" id="readmeModal" hidden>
+  <div class="modal-box">
+    <div class="modal-head"><b>README 速读</b><button class="btn btn-ghost btn-sm" id="readmeClose">关闭</button></div>
+    <pre id="readmeContent"></pre>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var LS_LIB="ghpf_library_v1", LS_TOKEN="ghpf_token_v1", LS_TOKEN_MODE="ghpf_token_mode_v1",
+    LS_PRESETS="ghpf_presets_v1", LS_LAST_EXPORT="ghpf_last_export_v1";
+var LANGS=["Python","JavaScript","TypeScript","Java","Go","C","C++","C#","Rust","Kotlin","Swift",
+  "Objective-C","Ruby","PHP","Dart","Shell","HTML","CSS","Vue","Svelte","Lua","Assembly","Scala"];
+var PLATFORM_MAP={"Windows":["windows","win11","win10","win32","winui","wpf","winforms","uwp"],
+  "macOS":["macos","mac os","osx","macbook","apple silicon"],"Android":["android","apk","aosp"],
+  "iOS":["ios","iphone","ipad","swiftui","catalyst"],"鸿蒙":["harmony","鸿蒙","harmonyos","ohos","openharmony"]};
+var STATUSES=["待看","调研中","已采用","放弃"];
+
+var state={items:[],page:1,perPage:30,total:0,selected:{},rawCount:0,resetAt:0};
+var libSelected={};
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+  return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+var toastTimer;
+function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");
+  clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove("show")},2600)}
+function todayStr(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")
+  +"-"+String(d.getDate()).padStart(2,"0")}
+function trunc80(s){s=String(s||"").replace(/\s+/g," ").trim();return s.length>80?s.slice(0,80)+"…":s}
+function sleep(ms){return new Promise(function(res){setTimeout(res,ms)})}
+function loadLib(){try{return JSON.parse(localStorage.getItem(LS_LIB)||"[]")}catch(e){return[]}}
+function saveLib(a){localStorage.setItem(LS_LIB,JSON.stringify(a));updateLibCount()}
+function updateLibCount(){$("libCount").textContent=loadLib().length}
+function detectPlatform(t,s,tp){var text=(t+" "+s+" "+tp.join(" ")).toLowerCase();var tags=[];
+  Object.keys(PLATFORM_MAP).forEach(function(p){if(PLATFORM_MAP[p].some(function(k){return text.indexOf(k)>=0}))tags.push(p)});
+  return tags.length?tags:["跨平台"]}
+
+/* ---------- Token（持久化 / 内存模式） ---------- */
+var memToken="";
+function tokenMode(){return localStorage.getItem(LS_TOKEN_MODE)||"persist"}
+function getToken(){return tokenMode()==="memory"?memToken:(localStorage.getItem(LS_TOKEN)||"")}
+function setToken(v){
+  if(tokenMode()==="memory"){memToken=v;localStorage.removeItem(LS_TOKEN)}
+  else{localStorage.setItem(LS_TOKEN,v);memToken=""}}
+function clearToken(){memToken="";localStorage.removeItem(LS_TOKEN)}
+
+/* ---------- 请求队列 + 限流自动重试 ---------- */
+var queue=Promise.resolve();
+function enqueue(task){var run=queue.then(function(){return task()});queue=run.catch(function(){});return run}
+function authHeaders(extra){
+  var h=Object.assign({Accept:"application/vnd.github+json"},extra||{});
+  var t=getToken();if(t)h.Authorization="Bearer "+t;return h}
+function doFetch(url,options,attempt){
+  return fetch(url,options).then(function(r){
+    if((r.status===403||r.status===429)&&attempt<1){
+      var reset=parseInt(r.headers.get("x-ratelimit-reset")||"0",10);
+      var wait=reset?reset-Math.floor(Date.now()/1000):parseInt(r.headers.get("retry-after")||"30",10);
+      // 仅在重置时间很近时自动重试；重置时间远（如核心接口按小时重置）则立即失败，避免长时间空等
+      if(wait>=1&&wait<=15){
+        toast("触发限流，"+wait+" 秒后自动重试…");
+        return sleep(wait*1000).then(function(){return doFetch(url,options,attempt+1)});
+      }
+    }
+    return r;
+  });
+}
+function githubFetch(url,options){return enqueue(function(){return doFetch(url,options||{},0)})}
+
+/* ---------- 视图切换 ---------- */
+var VIEWS={
+  search:document.getElementById("view-search"),
+  library:document.getElementById("view-library"),
+  settings:document.getElementById("view-settings")
+};
+Array.prototype.forEach.call(document.querySelectorAll(".tabs button"),function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".tabs button").forEach(function(x){x.classList.remove("active")});
+    b.classList.add("active");
+    var target=b.getAttribute("data-view");
+    Object.keys(VIEWS).forEach(function(name){
+      if(VIEWS[name])VIEWS[name].hidden=name!==target;
+    });
+    if(target==="library")renderLibrary();
+    if(target==="settings")renderSettings();
+  })
+});
+
+/* ---------- 查询构建 ---------- */
+function daysAgo(n){n=parseInt(n,10);if(!n)return"";
+  var d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10)}
+function buildQuery(){
+  var parts=[];
+  if($("q").value.trim())parts.push($("q").value.trim());
+  if($("lang").value.trim())parts.push("language:"+$("lang").value.trim());
+  var ms=parseInt($("minStar").value||"0",10);if(ms>0)parts.push("stars:>="+ms);
+  var c=daysAgo($("createdDays").value);if(c)parts.push("created:>="+c);
+  var p=daysAgo($("pushedDays").value);if(p)parts.push("pushed:>="+p);
+  if($("topic").value.trim())parts.push("topic:"+$("topic").value.trim());
+  if($("licenseKey").value.trim())parts.push("license:"+$("licenseKey").value.trim());
+  if($("excludeFork").checked)parts.push("fork:false");
+  if($("excludeArchived").checked)parts.push("archived:false");
+  return parts.join(" ")
+}
+function normalize(it){var lic=it.license||{};return{
+  id:(it.full_name||"").toLowerCase(),gh_id:it.id||0,full_name:it.full_name,title:it.name||it.full_name.split("/")[1],
+  url:it.html_url,summary:(it.description||"").trim(),star:it.stargazers_count||0,forks:it.forks_count||0,
+  language:it.language||"",topics:it.topics||[],created_at:(it.created_at||"").slice(0,10),
+  pushed_at:(it.pushed_at||"").slice(0,10),is_fork:!!it.fork,is_archived:!!it.archived,
+  license:lic.spdx_id||"",default_branch:it.default_branch||""}}
+
+/* ---------- 搜索 ---------- */
+function fetchPage(page){
+  var params=new URLSearchParams({q:buildQuery(),per_page:$("perPage").value,page:String(page)});
+  if($("sort").value){params.set("sort",$("sort").value);params.set("order","desc")}
+  return githubFetch("https://api.github.com/search/repositories?"+params.toString(),
+    {headers:authHeaders()}).then(function(r){
+      updateRate(r);
+      if(r.status===422)throw new Error("查询语法不被接受(422)，请检查关键词");
+      if(r.status===403)throw new Error("GitHub 已限流，请稍后再试，或在设置中填写 Token");
+      if(!r.ok)throw new Error("GitHub 返回 "+r.status);
+      return r.json();
+    }).then(function(d){
+      state.rawCount=d.total_count||0;
+      var all=(d.items||[]).map(normalize);
+      if($("mergeSame").checked){
+        var seen={};all=all.filter(function(it){var k=it.title.toLowerCase();
+          if(seen[k])return false;seen[k]=1;return true})
+      }
+      return all;
+    });
+}
+function search(page){
+  if(!buildQuery())return toast("请输入关键词或至少一个筛选条件");
+  state.page=page;$("searchBtn").disabled=true;$("rateState").textContent="搜索中…";
+  fetchPage(page).then(function(all){
+    $("searchBtn").disabled=false;
+    state.items=all;state.perPage=parseInt($("perPage").value,10);
+    render();
+  }).catch(function(e){$("searchBtn").disabled=false;toast(e.message);$("rateState").textContent="失败"})
+}
+function updateRate(r){
+  $("rateState").textContent="正常";
+  $("rateRemain").textContent=r.headers.get("x-ratelimit-remaining")+" / "+r.headers.get("x-ratelimit-limit");
+  var reset=parseInt(r.headers.get("x-ratelimit-reset")||"0",10);
+  state.resetAt=reset;tickReset();
+  $("rateAuth").innerHTML=getToken()?'<span class="ok">已使用 Token</span>':'<span class="warn">匿名（10次/分钟）</span>';
+}
+function tickReset(){if(!state.resetAt){$("rateReset").textContent="-";return}
+  var s=Math.max(0,state.resetAt-Math.floor(Date.now()/1000));
+  $("rateReset").textContent=Math.floor(s/60)+"分"+(s%60)+"秒"}
+setInterval(tickReset,1000);
+
+/* ---------- 渲染结果 ---------- */
+function render(){
+  var lib=loadLib();
+  var libIds={};lib.forEach(function(x){libIds[x.id]=1});
+  $("resultCount").textContent="共找到 "+state.rawCount.toLocaleString()+" 个项目"+
+    ($("mergeSame").checked?"，归并后本页显示 "+state.items.length+" 个":"，当前第 "+state.page+" 页");
+  var box=$("results");
+  if(!state.items.length){box.innerHTML='<div class="empty-box">没有符合条件的项目，试试放宽筛选条件</div>';
+    $("pager").innerHTML="";updateSelCount();return}
+  box.innerHTML=state.items.map(function(it){
+    var badges=[];
+    if(libIds[it.id])badges.push('<span class="badge inlib">已收藏</span>');
+    if(it.is_fork)badges.push('<span class="badge fork">fork</span>');
+    if(it.language)badges.push('<span class="badge lang">'+esc(it.language)+"</span>");
+    if(it.license)badges.push('<span class="badge lic">'+esc(it.license)+"</span>");
+    var topics=(it.topics||[]).map(function(t){return'<span class="topic-chip">'+esc(t)+"</span>"}).join("");
+    return '<div class="s-card '+(state.selected[it.id]?"selected":"")+'">'
+      +'<div class="check"><input type="checkbox" data-id="'+esc(it.id)+'" '+(state.selected[it.id]?"checked":"")+"></div>"
+      +'<div class="body"><div class="title-line"><a class="title" href="'+esc(it.url)+'" target="_blank" rel="noopener">'
+      +esc(it.full_name)+"</a>"+badges.join("")+"</div>"
+      +(it.summary?'<div class="summary">'+esc(it.summary)+"</div>":"")
+      +(topics?'<div class="topic-line">'+topics+"</div>":"")
+      +'<div class="meta"><span class="star">★ '+it.star.toLocaleString()+"</span><span>⑂ "+it.forks.toLocaleString()
+      +"</span><span>创建 "+esc(it.created_at)+"</span><span>更新 "+esc(it.pushed_at)+"</span>"
+      +'<button class="btn btn-ghost btn-sm" data-readme="'+esc(it.full_name)+'">README</button></div></div></div>';
+  }).join("");
+  Array.prototype.forEach.call(box.querySelectorAll("input[type=checkbox]"),function(cb){
+    cb.addEventListener("change",function(){var id=cb.getAttribute("data-id");
+      if(cb.checked)state.selected[id]=state.items.filter(function(x){return x.id===id})[0];
+      else delete state.selected[id];render()})
+  });
+  Array.prototype.forEach.call(box.querySelectorAll("[data-readme]"),function(b){
+    b.addEventListener("click",function(){openReadme(b.getAttribute("data-readme"))})});
+  renderPager();updateSelCount();
+}
+function renderPager(){
+  if(!$("mergeSame").checked){
+    var pages=Math.max(1,Math.ceil(state.rawCount/state.perPage));
+    if(pages<=1){$("pager").innerHTML="";return}
+    var cur=state.page,from=Math.max(1,cur-2),to=Math.min(pages,cur+2),h='<button '+(cur<=1?"disabled":"")
+      +' data-p="'+(cur-1)+'">上一页</button>';
+    for(var i=from;i<=to;i++)h+='<button class="'+(i===cur?"active":"")+'" data-p="'+i+'">'+i+"</button>";
+    h+='<button '+(cur>=pages?"disabled":"")+' data-p="'+(cur+1)+'">下一页</button>';
+    $("pager").innerHTML=h;
+    Array.prototype.forEach.call($("pager").querySelectorAll("button[data-p]"),function(b){
+      b.addEventListener("click",function(){search(parseInt(b.getAttribute("data-p"),10))})});
+  }else $("pager").innerHTML="";
+}
+function selectPage(){state.items.forEach(function(it){state.selected[it.id]=it});render()}
+function selectAllResults(){
+  if(!state.rawCount)return toast("请先执行搜索");
+  var perPage=parseInt($("perPage").value,10);
+  var reachable=Math.min(state.rawCount,1000);
+  var pages=Math.ceil(reachable/perPage);
+  toast("正在加载全部 "+reachable+" 条结果…");
+  var p=1;
+  function step(){
+    if(p>pages){render();toast("已全选 "+Object.keys(state.selected).length+" 条");return Promise.resolve()}
+    return fetchPage(p).then(function(items){
+      items.forEach(function(it){state.selected[it.id]=it});
+      updateSelCount();p++;return step();
+    }).catch(function(e){toast("加载中断："+e.message);render()});
+  }
+  return step();
+}
+function clearSelected(){state.selected={};render()}
+function updateSelCount(){$("selCount").textContent="已勾选 "+Object.keys(state.selected).length+" 条"}
+
+/* ---------- 收藏 ---------- */
+function addToLibrary(){
+  var ids=Object.keys(state.selected);
+  if(!ids.length)return toast("请先勾选项目");
+  var lib=loadLib();var exist={};lib.forEach(function(x){exist[x.id]=1});var n=0;
+  ids.forEach(function(id){if(exist[id])return;var it=state.selected[id];
+    lib.push(Object.assign({},it,{status:"待看",tags:[],note:"",saved_at:todayStr()}));n++});
+  saveLib(lib);toast("已加入 "+n+" 条，重复跳过 "+(ids.length-n)+" 条");
+  state.selected={};render();
+  backupReminder(true);
+}
+function renderLibrary(){
+  var lib=loadLib();
+  updateLibCount();
+  var kw=$("libSearch").value.trim().toLowerCase(),st=$("libStatus").value;
+  var list=lib.filter(function(x){
+    if(st&&x.status!==st)return false;
+    if(kw){var hay=(x.full_name+" "+x.summary+" "+(x.tags||[]).join(" ")).toLowerCase();
+      if(hay.indexOf(kw)<0)return false}
+    return true});
+  var box=$("libraryList");
+  if(!list.length){box.innerHTML='<div class="empty-box">'+(lib.length?"没有符合筛选的收藏":"收藏库为空，去搜索页勾选项目加入吧")+"</div>";
+    updateBulkCount();return}
+  box.innerHTML=list.map(function(x){
+    var checked=libSelected[x.id]?"checked":"";
+    return '<div class="lib-item'+(libSelected[x.id]?" checked":"")+'">'
+      +'<div class="lib-head"><input type="checkbox" class="lib-check" data-libcheck="'+esc(x.id)+'" '+checked+'>'
+      +'<a class="title" href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.full_name)+'</a>'
+      +'<span class="status-pill st-'+esc(x.status)+'">'+esc(x.status)+"</span>"
+      +'<span class="meta"><span class="star">★ '+x.star.toLocaleString()+"</span><span>更新 "+esc(x.pushed_at)+"</span></span>"
+      +'<button class="btn btn-ghost btn-sm" data-readme="'+esc(x.full_name)+'">README</button>'
+      +'<button class="btn btn-danger btn-sm" data-del="'+esc(x.id)+'">删除</button></div>'
+      +(x.summary?'<div class="summary">'+esc(x.summary)+"</div>":"")
+      +'<div class="lib-controls"><select data-status="'+esc(x.id)+'">'
+      +STATUSES.map(function(s){return'<option '+(x.status===s?"selected":"")+">"+s+"</option>"}).join("")
+      +'</select><input data-note="'+esc(x.id)+'" placeholder="备注 / 标签（逗号分隔）" value="'+esc((x.tags||[]).join(", ")+(x.note?" | "+x.note:""))+'"></div></div>';
+  }).join("");
+  Array.prototype.forEach.call(box.querySelectorAll(".lib-check"),function(cb){
+    cb.addEventListener("change",function(){
+      var id=cb.getAttribute("data-libcheck");
+      if(cb.checked)libSelected[id]=1;else delete libSelected[id];renderLibrary()})});
+  Array.prototype.forEach.call(box.querySelectorAll("[data-del]"),function(b){
+    b.addEventListener("click",function(){var id=b.getAttribute("data-del");
+      saveLib(loadLib().filter(function(x){return x.id!==id}));delete libSelected[id];renderLibrary();toast("已删除")})});
+  Array.prototype.forEach.call(box.querySelectorAll("[data-readme]"),function(b){
+    b.addEventListener("click",function(){openReadme(b.getAttribute("data-readme"))})});
+  Array.prototype.forEach.call(box.querySelectorAll("[data-status]"),function(sl){
+    sl.addEventListener("change",function(){var lib2=loadLib();
+      lib2.forEach(function(x){if(x.id===sl.getAttribute("data-status"))x.status=sl.value});
+      saveLib(lib2);renderLibrary()})});
+  Array.prototype.forEach.call(box.querySelectorAll("[data-note]"),function(inp){
+    inp.addEventListener("change",function(){var lib2=loadLib();
+      lib2.forEach(function(x){if(x.id===inp.getAttribute("data-note")){
+        var parts=inp.value.split("|");
+        x.tags=parts[0].split(",").map(function(t){return t.trim()}).filter(Boolean);
+        x.note=(parts[1]||"").trim()}});
+      saveLib(lib2);toast("已保存备注")})});
+  updateBulkCount();
+}
+["libSearch","libStatus"].forEach(function(id){$(id).addEventListener("input",renderLibrary)});
+
+/* ---------- 收藏库批量操作 ---------- */
+function updateBulkCount(){$("bulkCount").textContent="已选 "+Object.keys(libSelected).length+" 条";
+  var all=document.querySelectorAll("#libraryList .lib-check");
+  $("libCheckAll").checked=all.length>0&&Array.prototype.every.call(all,function(c){return c.checked})}
+$("libCheckAll").addEventListener("change",function(){
+  var box=$("libraryList");
+  if($("libCheckAll").checked){
+    Array.prototype.forEach.call(box.querySelectorAll(".lib-check"),function(c){
+      libSelected[c.getAttribute("data-libcheck")]=1;c.checked=true});
+  }else{libSelected={};
+    Array.prototype.forEach.call(box.querySelectorAll(".lib-check"),function(c){c.checked=false})}
+  renderLibrary();
+});
+$("bulkStatusBtn").addEventListener("click",function(){
+  var st=$("bulkStatus").value,ids=Object.keys(libSelected);
+  if(!st)return toast("请先选择要应用的状态");
+  if(!ids.length)return toast("请先勾选条目");
+  var lib=loadLib();
+  lib.forEach(function(x){if(libSelected[x.id])x.status=st});
+  saveLib(lib);libSelected={};renderLibrary();toast("已批量更新 "+ids.length+" 条");
+});
+$("bulkDelBtn").addEventListener("click",function(){
+  var ids=Object.keys(libSelected);
+  if(!ids.length)return toast("请先勾选要删除的条目");
+  if(!confirm("确定删除选中的 "+ids.length+" 条收藏？"))return;
+  saveLib(loadLib().filter(function(x){return!libSelected[x.id]}));
+  libSelected={};renderLibrary();toast("已批量删除");
+});
+
+/* ---------- 备份提醒 ---------- */
+function markExported(){localStorage.setItem(LS_LAST_EXPORT,new Date().toISOString())}
+function lastExport(){var s=localStorage.getItem(LS_LAST_EXPORT);return s?new Date(s):null}
+function backupReminder(show){
+  var d=lastExport(),lib=loadLib();
+  var stale=!d||(Date.now()-d.getTime()>7*86400*1000);
+  if(show&&lib.length&&(stale||lib.length>=20))
+    toast("收藏尚未备份，建议导出 JSON 留存");
+}
+function fmtDate(d){return d?d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"):"从未导出"}
+
+/* ---------- 导入导出 ---------- */
+function toDigestItem(x){return{id:x.id,gh_id:x.gh_id||0,crawl_date:todayStr(),platform_tags:detectPlatform(x.title,x.summary,x.topics||[]),
+  title:x.title,summary:trunc80(x.summary),github_url:x.url,star:x.star,last_commit:x.pushed_at||todayStr(),
+  category_tags:["手动收录"],is_hidden:false}}
+function download(blob,name){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;
+  document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},100)}
+function exportJson(items){if(!items.length)return toast("没有可导出的内容");
+  download(new Blob([JSON.stringify({projects:items.map(toDigestItem)},null,2)],{type:"application/json"}),
+    "github-collected-"+todayStr()+".json");markExported();toast("已导出 "+items.length+" 条 JSON")}
+function exportCsv(items){if(!items.length)return toast("没有可导出的内容");
+  function cell(v){return'"'+String(v==null?"":v).replace(/"/g,'""')+'"'}
+  var head=["标题","仓库全名","简介","Star","Forks","语言","许可证","创建时间","最近更新","链接"];
+  var rows=items.map(function(x){return[x.title,x.full_name,x.summary,x.star,x.forks,x.language,x.license,
+    x.created_at,x.pushed_at,x.url].map(cell).join(",")});
+  download(new Blob(["\uFEFF"+head.map(cell).join(",")+"\n"+rows.join("\n")],{type:"text/csv;charset=utf-8"}),
+    "github-search-"+todayStr()+".csv");markExported();toast("已导出 "+items.length+" 条 CSV")}
+$("exportJson").addEventListener("click",function(){
+  exportJson(Object.keys(state.selected).length?Object.keys(state.selected).map(function(id){return state.selected[id]}):state.items)});
+$("exportCsv").addEventListener("click",function(){
+  exportCsv(Object.keys(state.selected).length?Object.keys(state.selected).map(function(id){return state.selected[id]}):state.items)});
+$("libExportJson").addEventListener("click",function(){exportJson(loadLib())});
+$("libExportCsv").addEventListener("click",function(){exportCsv(loadLib())});
+$("importBtn").addEventListener("click",function(){$("importFile").click()});
+$("importFile").addEventListener("change",function(){
+  var f=$("importFile").files[0];if(!f)return;
+  var reader=new FileReader();
+  reader.onload=function(){try{var d=JSON.parse(reader.result);var arr=d.projects||d.items||(Array.isArray(d)?d:[]);
+    var lib=loadLib(),exist={};lib.forEach(function(x){exist[x.id]=1});var n=0;
+    arr.forEach(function(p){var id=(p.id||"").toLowerCase();if(!id||exist[id])return;
+      lib.push(Object.assign({id:id,gh_id:p.gh_id||0,full_name:p.full_name||p.title,title:p.title,url:p.github_url||p.url,
+        summary:p.summary||"",star:p.star||0,forks:p.forks||0,language:p.language||"",topics:p.topics||[],
+        created_at:p.created_at||"",pushed_at:p.last_commit||"",is_fork:false,is_archived:false,license:"",default_branch:""},
+        {status:p.status||"待看",tags:p.tags||[],note:p.note||"",saved_at:todayStr()}));exist[id]=1;n++});
+    saveLib(lib);renderLibrary();toast("导入 "+n+" 条")}catch(e){toast("JSON 解析失败")}};
+  reader.readAsText(f);$("importFile").value=""});
+
+/* ---------- 搜索条件预设 ---------- */
+var FORM_IDS=["q","lang","topic","minStar","licenseKey","createdDays","pushedDays","sort","perPage"];
+function readForm(){var o={};FORM_IDS.forEach(function(id){o[id]=$(id).value});
+  ["excludeFork","excludeArchived","mergeSame"].forEach(function(id){o[id]=$(id).checked});return o}
+function applyForm(o){FORM_IDS.forEach(function(id){if(o[id]!=null)$(id).value=o[id]});
+  ["excludeFork","excludeArchived","mergeSame"].forEach(function(id){if(o[id]!=null)$(id).checked=!!o[id]})}
+function renderPresets(){
+  var presets=loadPresets(),sel=$("presetSel");
+  sel.innerHTML='<option value="">常用搜索条件（选择即加载）…</option>';
+  Object.keys(presets).forEach(function(name){
+    var o=document.createElement("option");o.value=name;o.textContent=name;sel.appendChild(o)});
+  sel.value="";
+}
+function loadPresets(){try{return JSON.parse(localStorage.getItem(LS_PRESETS)||"{}")}catch(e){return{}}}
+function savePresetObj(o){localStorage.setItem(LS_PRESETS,JSON.stringify(o))}
+$("presetSave").addEventListener("click",function(){
+  var name=prompt("给这套搜索条件起个名字：");if(!name)return;name=name.trim();if(!name)return;
+  var p=loadPresets();p[name]=readForm();savePresetObj(p);renderPresets();toast("已保存预设："+name);
+});
+$("presetDel").addEventListener("click",function(){
+  var name=$("presetSel").value;if(!name)return toast("请先选择要删除的预设");
+  if(!confirm("删除预设「"+name+"」？"))return;
+  var p=loadPresets();delete p[name];savePresetObj(p);renderPresets();toast("已删除");
+});
+$("presetSel").addEventListener("change",function(){
+  var p=loadPresets();if(p[this.value]){applyForm(p[this.value]);toast("已加载预设："+this.value)}});
+
+/* ---------- README 速读 ---------- */
+function openReadme(fullName){
+  $("readmeModal").hidden=false;$("readmeContent").textContent="加载中…";
+  githubFetch("https://api.github.com/repos/"+fullName+"/readme",
+    {headers:authHeaders({Accept:"application/vnd.github.raw"})}).then(function(r){
+    if(r.status===404){$("readmeContent").textContent="该仓库没有 README 文件";return}
+    if(r.status===403){$("readmeContent").textContent="GitHub 匿名访问已限流，请稍后再试，或在「设置」中填写 Token 后重试";return}
+    if(!r.ok){$("readmeContent").textContent="加载失败（HTTP "+r.status+"）";return}
+    return r.text().then(function(t){
+      if(t.length>6000)t=t.slice(0,6000)+"\n\n…（内容过长已截断，完整内容请在 GitHub 查看）";
+      $("readmeContent").textContent=t;
+    });
+  }).catch(function(e){$("readmeContent").textContent="加载异常："+e.message});
+}
+$("readmeClose").addEventListener("click",function(){$("readmeModal").hidden=true});
+$("readmeModal").addEventListener("click",function(e){if(e.target===this)this.hidden=true});
+
+/* ---------- 设置 ---------- */
+function renderSettings(){$("tokenInput").value=getToken();
+  var mode=tokenMode();
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="tokenMode"]'),function(r){r.checked=r.value===mode});
+  var lib=loadLib();
+  $("settingStats").innerHTML="收藏项目 <b>"+lib.length+"</b> 个 · 占用存储约 <b>"
+    +Math.round(new Blob([localStorage.getItem(LS_LIB)||""]).size/1024)+" KB</b>";
+  var d=lastExport();
+  $("backupInfo").innerHTML="上次导出备份：<b>"+fmtDate(d)+"</b>"+
+    ((!d||Date.now()-d.getTime()>7*86400e3)?' <span class="warn">超过 7 天未备份，建议导出 JSON</span>':"");
+}
+Array.prototype.forEach.call(document.querySelectorAll('input[name="tokenMode"]'),function(r){
+  r.addEventListener("change",function(){
+    localStorage.setItem(LS_TOKEN_MODE,r.value);
+    if(r.value==="memory"){memToken=localStorage.getItem(LS_TOKEN)||"";localStorage.removeItem(LS_TOKEN)}
+    else{localStorage.setItem(LS_TOKEN,memToken);memToken=""}
+    renderSettings();
+  });
+});
+$("saveToken").addEventListener("click",function(){var v=$("tokenInput").value.trim();
+  if(!v)return toast("请输入 Token");setToken(v);toast("Token 已保存")});
+$("removeToken").addEventListener("click",function(){clearToken();
+  $("tokenInput").value="";toast("已删除")});
+$("libClear").addEventListener("click",function(){if(confirm("确定清空收藏库？此操作不可恢复")){
+  localStorage.removeItem(LS_LIB);libSelected={};renderLibrary();updateLibCount();toast("已清空")}});
+$("resetAll").addEventListener("click",function(){if(confirm("确定清空收藏库与 Token 等全部本地数据？")){
+  localStorage.removeItem(LS_LIB);localStorage.removeItem(LS_TOKEN);clearToken();
+  libSelected={};updateLibCount();renderSettings();toast("已重置")}});
+
+/* ---------- 事件绑定 ---------- */
+$("searchBtn").addEventListener("click",function(){search(1)});
+$("resetBtn").addEventListener("click",function(){
+  $("q").value="";$("lang").value="";$("topic").value="";$("minStar").value="5";$("licenseKey").value="";
+  $("createdDays").value="7";$("pushedDays").value="90";$("sort").value="";$("perPage").value="30";
+  $("excludeFork").checked=true;$("excludeArchived").checked=true});
+$("q").addEventListener("keydown",function(e){if(e.key==="Enter")search(1)});
+$("selectPage").addEventListener("click",selectPage);
+$("selectAll").addEventListener("click",selectAllResults);
+$("clearSel").addEventListener("click",clearSelected);
+$("addLibBtn").addEventListener("click",addToLibrary);
+
+var dl=$("langList");LANGS.forEach(function(l){var o=document.createElement("option");o.value=l;dl.appendChild(o)});
+renderPresets();updateLibCount();backupReminder(false);
+})();
+</script>
+</body>
+</html>

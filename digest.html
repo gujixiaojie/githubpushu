@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>每日收录库 · GitHub 项目速递</title>
+<style>
+:root{
+  --bg:#f6f7f9;--card:#fff;--border:#e5e7eb;--text:#1f2328;--muted:#6b7280;
+  --accent:#2f6feb;--accent-weak:#e8f0fe;--ok:#188038;--radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.55}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:16px 14px 60px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.top h1{font-size:21px}
+.top .meta{color:var(--muted);font-size:13px;margin-top:3px}
+.nav{display:flex;gap:6px}
+.nav a{padding:7px 14px;border-radius:8px;font-size:13.5px;font-weight:600;
+  border:1px solid var(--border);background:var(--card);color:var(--text)}
+.nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filters{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:12px;display:grid;grid-template-columns:1fr 180px 160px;gap:10px;margin-bottom:14px}
+input,select{border:1px solid var(--border);border-radius:7px;padding:9px 11px;font-size:14px;width:100%;font-family:inherit}
+.stat{font-size:13px;color:var(--muted);margin:2px 2px 10px}
+.stat b{color:var(--text)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:13px 15px;margin-bottom:10px}
+.card:hover{border-color:#c9cdd3}
+.title-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+.title{font-size:16px;font-weight:700;word-break:break-all}
+.summary{font-size:13.5px;color:#374151;margin-bottom:9px}
+.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.meta .star{color:#b8860b;font-weight:600}
+.chip{font-size:11.5px;padding:2px 9px;border-radius:11px;font-weight:600;background:var(--accent-weak);
+  color:var(--accent);white-space:nowrap}
+.chip.gray{background:#f3f4f6;color:#4b5563}
+.empty{text-align:center;color:var(--muted);font-size:14px;padding:46px 16px;
+  background:var(--card);border:1px dashed var(--border);border-radius:var(--radius)}
+@media (max-width:640px){
+  .filters{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>GitHub 每日收录库</h1>
+      <div class="meta" id="metaLine">加载中…</div>
+    </div>
+    <div class="nav">
+      <a href="index.html">项目搜索</a>
+      <a href="digest.html" class="active">收录库</a>
+    </div>
+  </div>
+
+  <div class="filters">
+    <input id="kw" placeholder="搜索标题 / 简介 / 标签…">
+    <select id="catSel"><option value="">全部分类</option></select>
+    <select id="platSel"><option value="">全部平台</option></select>
+  </div>
+
+  <div class="stat" id="statLine"></div>
+  <div id="list"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var ALL=[];
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+  return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+
+fetch("data/projects.json",{cache:"no-store"})
+  .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
+  .then(function(d){
+    ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
+    var meta=d.meta||{};
+    var dates=ALL.map(function(p){return p.crawl_date}).sort();
+    $("metaLine").textContent="共 "+ALL.length+" 个收录项目 · 数据更新于 "+
+      (meta.updated_at||(dates[dates.length-1]||"未知"));
+    fillOptions();render();
+  })
+  .catch(function(e){
+    $("metaLine").textContent="数据加载失败："+e.message;
+    $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
+  });
+
+function uniq(key){
+  var s={};ALL.forEach(function(p){(p[key]||[]).forEach(function(v){s[v]=1})});
+  return Object.keys(s).sort();
+}
+function fillOptions(){
+  uniq("category_tags").forEach(function(v){
+    var o=document.createElement("option");o.value=v;o.textContent=v;$("catSel").appendChild(o)});
+  uniq("platform_tags").forEach(function(v){
+    var o=document.createElement("option");o.value=v;o.textContent=v;$("platSel").appendChild(o)});
+}
+
+function render(){
+  var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,plat=$("platSel").value;
+  var list=ALL.filter(function(p){
+    if(cat&&(p.category_tags||[]).indexOf(cat)<0)return false;
+    if(plat&&(p.platform_tags||[]).indexOf(plat)<0)return false;
+    if(kw){
+      var hay=(p.title+" "+p.summary+" "+(p.category_tags||[]).join(" ")+" "+(p.platform_tags||[]).join(" ")).toLowerCase();
+      if(hay.indexOf(kw)<0)return false;
+    }
+    return true;
+  });
+  $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+ALL.length+" 个项目";
+  if(!list.length){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';return}
+  $("list").innerHTML=list.map(function(p){
+    var cats=(p.category_tags||[]).map(function(t){return'<span class="chip">'+esc(t)+"</span>"}).join("");
+    var plats=(p.platform_tags||[]).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
+    return '<div class="card"><div class="title-line">'
+      +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
+      +cats+plats+"</div>"
+      +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
+      +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
+      +"<span>收录于 "+esc(p.crawl_date)+"</span><span>最近更新 "+esc(p.last_commit)+"</span></div></div>";
+  }).join("");
+}
+
+["kw","catSel","platSel"].forEach(function(id){
+  $(id).addEventListener("input",render);
+});
+})();
+</script>
+</body>
+</html>
