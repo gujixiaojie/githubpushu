@@ -33,32 +33,49 @@ a:hover{text-decoration:underline}
   border:1px solid var(--border);background:var(--card);color:var(--text)}
 .nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .filters{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:12px;display:grid;grid-template-columns:1fr 160px 140px 140px;gap:10px;margin-bottom:14px}
-input,select,button{border:1px solid var(--border);border-radius:7px;padding:9px 11px;font-size:14px;
+  padding:12px;display:grid;grid-template-columns:1fr 140px 120px 120px 120px;gap:10px;margin-bottom:10px}
+input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px 10px;font-size:13.5px;
   width:100%;font-family:inherit;background:var(--card);color:var(--text)}
+.chk-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px;font-size:13px;color:var(--muted)}
+.chk-row label{display:flex;align-items:center;gap:5px}
+.chk-row input{width:auto}
 .stat{font-size:13px;color:var(--muted);margin:2px 2px 10px}
 .stat b{color:var(--text)}
 .new-pill{display:inline-block;background:#d93025;color:#fff;font-size:11px;font-weight:700;
   border-radius:10px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.pin-pill{background:#f59e0b;color:#fff}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
   padding:13px 15px;margin-bottom:10px;box-shadow:var(--shadow)}
-.card:hover{border-color:var(--accent)}
+.card.pinned{border-color:#f59e0b}
 .title-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
 .title{font-size:16px;font-weight:700;word-break:break-all}
 .summary{font-size:13.5px;color:var(--muted);margin-bottom:9px}
-.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.note-line{font-size:12.5px;background:var(--accent-weak);color:var(--accent);
+  border-radius:7px;padding:6px 9px;margin-bottom:8px}
+.meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:9px;align-items:center}
 .meta .star{color:#d4a017;font-weight:600}
 .chip{font-size:11.5px;padding:2px 9px;border-radius:11px;font-weight:600;
   background:var(--accent-weak);color:var(--accent);white-space:nowrap}
 .chip.gray{background:var(--bg);color:var(--muted)}
-.share-btn{border:none;width:auto;padding:3px 10px;font-size:12px;border-radius:6px;cursor:pointer;
-  background:transparent;color:var(--accent)}
-.share-btn:hover{background:var(--accent-weak)}
+.mini-btn{border:1px solid var(--border);width:auto;padding:3px 9px;font-size:12px;border-radius:6px;
+  cursor:pointer;background:transparent;color:var(--accent)}
+.mini-btn.on{background:#f59e0b;color:#fff;border-color:#f59e0b}
+.rate-mini{border:none;width:auto;padding:0;font-size:13px;cursor:pointer;background:transparent}
 .empty{text-align:center;color:var(--muted);font-size:14px;padding:46px 16px;
   background:var(--card);border:1px dashed var(--border);border-radius:var(--radius)}
 #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#333;color:#fff;
   padding:9px 18px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:99}
 #toast.show{opacity:.95}
+/* 看板 */
+.dash{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:14px;margin-bottom:14px}
+.dash h3{font-size:14px;margin-bottom:10px}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:9px}
+.dash-cell{background:var(--bg);border-radius:8px;padding:9px 11px}
+.dash-cell .n{font-size:19px;font-weight:700}
+.dash-cell .l{font-size:12px;color:var(--muted)}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:4px}
+.bar-row .bar{height:8px;background:var(--accent);border-radius:4px;min-width:3px}
 @media (max-width:640px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -75,15 +92,35 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:9px
     </div>
   </div>
 
+  <div id="dashBox" hidden>
+    <div class="dash">
+      <h3>收录健康度看板</h3>
+      <div class="dash-grid" id="dashGrid"></div>
+      <h3 style="margin-top:14px">分类分布</h3>
+      <div id="dashCats"></div>
+    </div>
+  </div>
+
   <div class="filters">
     <input id="kw" placeholder="搜索标题 / 简介 / 标签…">
     <select id="catSel"><option value="">全部分类</option></select>
     <select id="platSel"><option value="">全部平台</option></select>
+    <select id="licSel"><option value="">全部许可证</option></select>
+    <select id="groupSel"><option value="">全部分组</option><option value="__pinned">仅看置顶</option></select>
+  </div>
+  <div class="filters" style="grid-template-columns:repeat(3,1fr)">
     <select id="sortSel">
       <option value="new">最新收录</option>
       <option value="star">星标最多</option>
       <option value="update">最近更新</option>
+      <option value="rating">我的评分</option>
     </select>
+    <button class="mini-btn" id="dashToggle" style="width:100%">健康看板</button>
+    <button class="mini-btn" id="addGroupBtn" style="width:100%">新建分组</button>
+  </div>
+  <div class="chk-row">
+    <label><input type="checkbox" id="fNewbie">新手友好（有未关闭 issue）</label>
+    <label><input type="checkbox" id="fCn">中文相关</label>
   </div>
 
   <div class="stat" id="statLine"></div>
@@ -94,12 +131,21 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:9px
 <script>
 (function(){
 "use strict";
-var ALL=[],LATEST="";
+var ALL=[],LATEST="",META={},GROUPS=[];
+var LS_META="ghpf_dg_meta_v1",LS_GROUP="ghpf_dg_groups_v1";
 function $(id){return document.getElementById(id)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
   return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");
-  setTimeout(function(){t.classList.remove("show")},1800)}
+  setTimeout(function(){t.classList.remove("show")},1700)}
+function loadMeta(){
+  try{META=JSON.parse(localStorage.getItem(LS_META)||"{}")}catch(e){META={}}
+  try{GROUPS=JSON.parse(localStorage.getItem(LS_GROUP)||"[]")}catch(e){GROUPS=[]}
+}
+function saveMeta(){localStorage.setItem(LS_META,JSON.stringify(META))}
+function gm(id){return META[id]||{}}          // 只读，不创建空条目
+function m(id){return META[id]||(META[id]={})} // 变更时使用
+function hasCjk(s){return /[\u4e00-\u9fff]/.test(s||"")}
 
 function boot(d){
   ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
@@ -108,7 +154,7 @@ function boot(d){
   var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
   $("metaLine").innerHTML="共 "+ALL.length+" 个收录项目 · 更新于 "+
     (meta.updated_at||LATEST)+' <span class="new-pill">最新收录日 '+newest+' 条</span>';
-  fillOptions();render();
+  loadMeta();fillOptions();render();renderDashboard();
 }
 fetch("data/projects.json",{cache:"no-store"})
   .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
@@ -123,61 +169,119 @@ function uniq(key){
   return Object.keys(s).sort();
 }
 function fillOptions(){
-  uniq("category_tags").forEach(function(v){
-    var o=document.createElement("option");o.value=v;o.textContent=v;$("catSel").appendChild(o)});
-  uniq("platform_tags").forEach(function(v){
-    var o=document.createElement("option");o.value=v;o.textContent=v;$("platSel").appendChild(o)});
+  uniq("category_tags").forEach(function(v){var o=document.createElement("option");
+    o.value=v;o.textContent=v;$("catSel").appendChild(o)});
+  uniq("platform_tags").forEach(function(v){var o=document.createElement("option");
+    o.value=v;o.textContent=v;$("platSel").appendChild(o)});
+  var lics={};ALL.forEach(function(p){lics[p.license||"未知"]=1});
+  Object.keys(lics).sort().forEach(function(v){var o=document.createElement("option");
+    o.value=v==="未知"?"":v;o.textContent=v;$("licSel").appendChild(o)});
+  fillGroupSel();
+}
+function fillGroupSel(){
+  var sel=$("groupSel");
+  while(sel.options.length>2)sel.remove(2);
+  GROUPS.forEach(function(g){var o=document.createElement("option");o.value=g;o.textContent=g;sel.appendChild(o)});
 }
 
 function render(){
   var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,
-      plat=$("platSel").value,sort=$("sortSel").value;
+      plat=$("platSel").value,lic=$("licSel").value,grp=$("groupSel").value,
+      sort=$("sortSel").value;
   var list=ALL.filter(function(p){
     if(cat&&(p.category_tags||[]).indexOf(cat)<0)return false;
     if(plat&&(p.platform_tags||[]).indexOf(plat)<0)return false;
-    if(kw){
-      var hay=(p.title+" "+p.summary+" "+(p.category_tags||[]).join(" ")+" "+(p.platform_tags||[]).join(" ")).toLowerCase();
-      if(hay.indexOf(kw)<0)return false;
-    }
+    if(lic&&(p.license||"")!==lic)return false;
+    if(grp==="__pinned"&&!gm(p.id).pin)return false;
+    if(grp&&grp!=="__pinned"&&gm(p.id).group!==grp)return false;
+    if($("fNewbie").checked&&!(p.open_issues>0))return false;
+    if($("fCn").checked&&!(hasCjk(p.title)||hasCjk(p.summary)))return false;
+    if(kw){var hay=(p.title+" "+p.summary+" "+(p.category_tags||[]).join(" ")).toLowerCase();
+      if(hay.indexOf(kw)<0)return false}
     return true;
   });
   list.sort(function(a,b){
-    if(sort==="star")return (b.star||0)-(a.star||0);
+    if(sort==="star")return(b.star||0)-(a.star||0);
     if(sort==="update")return String(b.last_commit).localeCompare(String(a.last_commit));
+    if(sort==="rating")return(gm(b.id).rating||0)-(gm(a.id).rating||0);
     return String(b.crawl_date).localeCompare(String(a.crawl_date));
   });
+  // 置顶优先
+  list.sort(function(a,b){return(!!gm(b.id).pin)-(!!gm(a.id).pin)});
   $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+ALL.length+" 个项目";
   if(!list.length){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';return}
   $("list").innerHTML=list.map(function(p){
+    var mm=gm(p.id);
     var cats=(p.category_tags||[]).map(function(t){return'<span class="chip">'+esc(t)+"</span>"}).join("");
     var plats=(p.platform_tags||[]).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
     var isNew=p.crawl_date===LATEST?'<span class="new-pill" style="margin:0">新</span>':"";
-    return '<div class="card"><div class="title-line">'
+    var pin='<button class="mini-btn '+(mm.pin?"on":"")+'" data-act="pin" data-id="'+esc(p.id)+'">置顶</button>';
+    var stars=[1,2,3,4,5].map(function(n){return'<button class="rate-mini" data-act="rate" data-id="'+
+      esc(p.id)+'" data-v="'+n+'">'+(n<=(mm.rating||0)?"★":"☆")+"</button>"}).join("");
+    var gsel='<select data-act="group" data-id="'+esc(p.id)+'" style="width:auto;padding:3px 6px;font-size:12px">'+
+      '<option value="">未分组</option>'+GROUPS.map(function(g){return'<option '+(mm.group===g?"selected":"")+'>'+esc(g)+"</option>"}).join("")+"</select>";
+    var note=mm.note?'<div class="note-line">备注：'+esc(mm.note)+"</div>":"";
+    return '<div class="card '+(mm.pin?"pinned":"")+'"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
       +isNew+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
+      +note
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
-      +"<span>收录于 "+esc(p.crawl_date)+"</span><span>更新 "+esc(p.last_commit)+"</span>"
-      +'<button class="share-btn" data-url="'+esc(p.github_url)+'" data-title="'+esc(p.title)+'">分享</button>'
-      +"</div></div>";
+      +"<span>更新 "+esc(p.last_commit)+"</span>"+pin+gsel
+      +'<button class="mini-btn" data-act="note" data-id="'+esc(p.id)+'">备注</button>'
+      +'<button class="mini-btn" data-act="share" data-id="'+esc(p.id)+'">分享</button>'
+      +"</div><div class='meta' style='margin-top:7px'>评分："+stars+"</div></div>";
   }).join("");
 }
 
-function share(url,title){
-  var payload={title:title,text:"推荐一个 GitHub 项目："+title,url:url};
-  if(navigator.share){navigator.share(payload).catch(function(){});return}
-  var done=function(){toast("链接已复制")};
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(url).then(done).catch(function(){toast(url)});
-  }else{toast(url)}
+function renderDashboard(){
+  var total=ALL.length;
+  var pinned=ALL.filter(function(p){return gm(p.id).pin}).length;
+  var rated=ALL.filter(function(p){return gm(p.id).rating}).length;
+  var withIss=ALL.filter(function(p){return p.open_issues>0}).length;
+  var cells=[["项目总数",total],["置顶",pinned],["已评分",rated],["新手友好",withIss],
+    ["分类数",uniq("category_tags").length],["平台数",uniq("platform_tags").length]];
+  $("dashGrid").innerHTML=cells.map(function(c){return'<div class="dash-cell"><div class="n">'+c[1]
+    +'</div><div class="l">'+c[0]+"</div></div>"}).join("");
+  var cc={};ALL.forEach(function(p){(p.category_tags||[]).forEach(function(t){cc[t]=(cc[t]||0)+1})});
+  var max=Math.max.apply(null,Object.keys(cc).map(function(k){return cc[k]}).concat([1]));
+  $("dashCats").innerHTML=Object.keys(cc).sort(function(a,b){return cc[b]-cc[a]}).map(function(k){
+    var w=Math.round(cc[k]/max*160);
+    return '<div class="bar-row"><span style="width:78px">'+esc(k)+"</span><div class='bar' style='width:"
+      +w+"px'></div><span>"+cc[k]+"</span></div>"}).join("");
 }
 
-["kw","catSel","platSel","sortSel"].forEach(function(id){
+function share(p){
+  var payload={title:p.title,text:"推荐一个 GitHub 项目："+p.title,url:p.github_url};
+  if(navigator.share){navigator.share(payload).catch(function(){});return}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(p.github_url).then(function(){toast("链接已复制")})
+  }else{toast(p.github_url)}
+}
+
+["kw","catSel","platSel","licSel","groupSel","sortSel","fNewbie","fCn"].forEach(function(id){
   $(id).addEventListener("input",render);
 });
+$("dashToggle").addEventListener("click",function(){
+  $("dashBox").hidden=!$("dashBox").hidden;
+  if(!$("dashBox").hidden)renderDashboard();
+});
+$("addGroupBtn").addEventListener("click",function(){
+  var g=prompt("新分组名称：");g=(g||"").trim();
+  if(g&&GROUPS.indexOf(g)<0){GROUPS.push(g);localStorage.setItem(LS_GROUP,JSON.stringify(GROUPS));
+    fillGroupSel();renderDashboard();toast("已建分组 "+g)}
+});
 $("list").addEventListener("click",function(e){
-  var b=e.target.closest(".share-btn");
-  if(b)share(b.getAttribute("data-url"),b.getAttribute("data-title"));
+  var b=e.target.closest("[data-act]");if(!b)return;
+  var id=b.getAttribute("data-id"),act=b.getAttribute("data-act"),p=ALL.filter(function(x){return x.id===id})[0];
+  if(act==="pin"){m(id).pin=!m(id).pin;saveMeta();render();renderDashboard()}
+  else if(act==="rate"){m(id).rating=parseInt(b.getAttribute("data-v"),10);saveMeta();render()}
+  else if(act==="note"){var n=prompt("写备注：",m(id).note||"");if(n!==null){m(id).note=n;saveMeta();render()}}
+  else if(act==="share"){share(p)}
+});
+$("list").addEventListener("change",function(e){
+  var s=e.target.closest('select[data-act="group"]');if(!s)return;
+  m(s.getAttribute("data-id")).group=s.value;saveMeta();render();
 });
 })();
 </script>

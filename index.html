@@ -2,23 +2,17 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#2f6feb">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon.svg">
+<meta name="referrer" content="no-referrer">
 <title>GitHub 项目搜索收集器（单文件版）</title>
 <style>
 :root{
   --bg:#f6f7f9; --card:#fff; --border:#e5e7eb; --text:#1f2328;
   --muted:#6b7280; --accent:#2f6feb; --accent-weak:#e8f0fe; --danger:#d93025; --ok:#188038;
   --radius:10px;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0f1216; --card:#171b21; --border:#2a313a; --text:#e6e8eb;
-    --muted:#9aa3ad; --accent:#6ea1ff; --accent-weak:#1d2a45; --danger:#ff6b6b; --ok:#4ec978;
-  }
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
@@ -132,7 +126,7 @@ textarea{resize:vertical;min-height:54px}
   <div class="topbar">
     <div>
       <h1>GitHub 项目搜索收集器</h1>
-      <div class="sub">单文件离线版 · 浏览器直连 GitHub · 收藏存在本机</div>
+      <div class="sub">浏览器直连 GitHub · 收藏存在本机 · <a href="digest.html" style="color:var(--accent)">每日收录库</a></div>
     </div>
     <div class="tabs">
       <button class="active" data-view="search">搜索</button>
@@ -184,14 +178,29 @@ textarea{resize:vertical;min-height:54px}
           <option value="100">100</option></select>
         </div>
       </div>
+      <div class="grid">
+        <div><div class="fld-label">作者 / 组织（user:）</div><input id="author" placeholder="例如：facebook"></div>
+        <div><div class="fld-label">Fork 最低数</div><input type="number" id="minForks" min="0" placeholder="不限"></div>
+        <div><div class="fld-label">排除关键词（空格分隔）</div><input id="excludeWords" placeholder="例如：awesome list"></div>
+        <div><div class="fld-label">客户端热度排序</div>
+          <select id="hotSort"><option value="">关（用接口排序）</option>
+          <option value="hot">综合热度</option><option value="star">本地按星标</option></select></div>
+      </div>
       <div class="chk-group">
         <label><input type="checkbox" id="excludeFork" checked>排除 fork 仓库（防刷榜）</label>
         <label><input type="checkbox" id="excludeArchived" checked>排除归档仓库</label>
         <label><input type="checkbox" id="mergeSame" checked>结果中同名项目归并（保留 star 最高）</label>
+        <label><input type="checkbox" id="cnExpand">中文词自动扩展英文</label>
+        <label><input type="checkbox" id="batchMode">批量关键词模式（每行一个，自动合并去重）</label>
+      </div>
+      <div id="batchBox" hidden style="margin-bottom:10px">
+        <div class="fld-label">批量关键词（每行一个，串行检索后合并，按仓库ID去重）</div>
+        <textarea id="batchKw" rows="4" style="width:100%;border:1px solid var(--border);border-radius:8px;padding:9px;font-family:inherit;font-size:14px"></textarea>
       </div>
       <div class="filter-actions">
         <button class="btn btn-primary" id="searchBtn">搜索</button>
         <button class="btn btn-ghost" id="resetBtn">重置条件</button>
+        <button class="btn btn-ghost" id="saveSubBtn">存为订阅</button>
       </div>
     </div>
 
@@ -365,15 +374,39 @@ Array.prototype.forEach.call(document.querySelectorAll(".tabs button"),function(
 /* ---------- 查询构建 ---------- */
 function daysAgo(n){n=parseInt(n,10);if(!n)return"";
   var d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10)}
-function buildQuery(){
+/* 中文 -> 英文扩展词表，提升召回 */
+var CN_EN_MAP={
+  "大模型":["llm","large language model"],"智能体":["agent"],"知识库":["rag","knowledge base"],
+  "播放器":["player"],"视频":["video"],"音频":["audio"],"语音克隆":["voice cloning","tts"],
+  "绘图":["image generation","diffusion"],"翻译":["translation"],"密码管理":["password manager"],
+  "自动化":["automation"],"监控":["monitor"],"模拟器":["emulator"],"固件":["firmware"],
+  "逆向":["reverse engineering"],"笔记":["note"],"二维码":["qrcode"],"网盘":["cloud storage"]
+};
+function expandCn(q){
+  var extra=[];
+  Object.keys(CN_EN_MAP).forEach(function(k){
+    if(q.indexOf(k)>=0)CN_EN_MAP[k].forEach(function(e){if(extra.indexOf(e)<0)extra.push(e)});
+  });
+  return extra;
+}
+function buildQuery(overrideQ){
   var parts=[];
-  if($("q").value.trim())parts.push($("q").value.trim());
+  var q=(overrideQ!=null?overrideQ:$("q").value).trim();
+  if(q){
+    parts.push(q);
+    if($("cnExpand").checked)expandCn(q).forEach(function(e){parts.push(e)});
+  }
   if($("lang").value.trim())parts.push("language:"+$("lang").value.trim());
   var ms=parseInt($("minStar").value||"0",10);if(ms>0)parts.push("stars:>="+ms);
   var c=daysAgo($("createdDays").value);if(c)parts.push("created:>="+c);
   var p=daysAgo($("pushedDays").value);if(p)parts.push("pushed:>="+p);
   if($("topic").value.trim())parts.push("topic:"+$("topic").value.trim());
   if($("licenseKey").value.trim())parts.push("license:"+$("licenseKey").value.trim());
+  if($("author").value.trim())parts.push("user:"+$("author").value.trim());
+  var mf=parseInt($("minForks").value||"0",10);if(mf>0)parts.push("forks:>="+mf);
+  $("excludeWords").value.trim().split(/\s+/).filter(Boolean).forEach(function(w){
+    parts.push("NOT "+w);
+  });
   if($("excludeFork").checked)parts.push("fork:false");
   if($("excludeArchived").checked)parts.push("archived:false");
   return parts.join(" ")
@@ -381,13 +414,16 @@ function buildQuery(){
 function normalize(it){var lic=it.license||{};return{
   id:(it.full_name||"").toLowerCase(),gh_id:it.id||0,full_name:it.full_name,title:it.name||it.full_name.split("/")[1],
   url:it.html_url,summary:(it.description||"").trim(),star:it.stargazers_count||0,forks:it.forks_count||0,
+  open_issues:it.open_issues_count||0,watchers:it.subscribers_count||it.watchers_count||0,
+  homepage:(it.homepage||"").trim(),
   language:it.language||"",topics:it.topics||[],created_at:(it.created_at||"").slice(0,10),
   pushed_at:(it.pushed_at||"").slice(0,10),is_fork:!!it.fork,is_archived:!!it.archived,
   license:lic.spdx_id||"",default_branch:it.default_branch||""}}
 
 /* ---------- 搜索 ---------- */
-function fetchPage(page){
-  var params=new URLSearchParams({q:buildQuery(),per_page:$("perPage").value,page:String(page)});
+function fetchPage(page,queryOverride){
+  var q=queryOverride!=null?queryOverride:buildQuery();
+  var params=new URLSearchParams({q:q,per_page:$("perPage").value,page:String(page)});
   if($("sort").value){params.set("sort",$("sort").value);params.set("order","desc")}
   return githubFetch("https://api.github.com/search/repositories?"+params.toString(),
     {headers:authHeaders()}).then(function(r){
@@ -397,23 +433,70 @@ function fetchPage(page){
       if(!r.ok)throw new Error("GitHub 返回 "+r.status);
       return r.json();
     }).then(function(d){
-      state.rawCount=d.total_count||0;
-      var all=(d.items||[]).map(normalize);
-      if($("mergeSame").checked){
-        var seen={};all=all.filter(function(it){var k=it.title.toLowerCase();
-          if(seen[k])return false;seen[k]=1;return true})
-      }
-      return all;
+      return {rawCount:d.total_count||0,items:(d.items||[]).map(normalize)};
     });
 }
+function applyMerge(list){
+  if(!$("mergeSame").checked)return list;
+  var seen={};return list.filter(function(it){var k=it.title.toLowerCase();
+    if(seen[k])return false;seen[k]=1;return true});
+}
+function applyHotSort(list){
+  var mode=$("hotSort").value;
+  if(!mode)return list;
+  var score=function(it){
+    if(mode==="star")return it.star;
+    // 综合热度：星标 + 2*fork + 1.5*watchers，近期更新加权
+    var ageDays=(Date.now()-new Date(it.pushed_at+"T00:00:00").getTime())/86400000;
+    var recency=Math.max(0,1-ageDays/180);
+    return it.star+2*it.forks+1.5*it.watchers+50*recency;
+  };
+  return list.slice().sort(function(a,b){return score(b)-score(a)});
+}
 function search(page){
+  state.isBatch=false;
+  if($("batchMode").checked){return batchSearch()}
   if(!buildQuery())return toast("请输入关键词或至少一个筛选条件");
   state.page=page;$("searchBtn").disabled=true;$("rateState").textContent="搜索中…";
-  fetchPage(page).then(function(all){
+  fetchPage(page).then(function(res){
     $("searchBtn").disabled=false;
-    state.items=all;state.perPage=parseInt($("perPage").value,10);
+    state.rawCount=res.rawCount;
+    state.items=applyHotSort(applyMerge(res.items));
+    state.perPage=parseInt($("perPage").value,10);
     render();
   }).catch(function(e){$("searchBtn").disabled=false;toast(e.message);$("rateState").textContent="失败"})
+}
+/* 批量关键词：逐行检索，合并、按 gh_id/url 去重 */
+function batchSearch(){
+  state.isBatch=true;
+  var words=$("batchKw").value.split("\n").map(function(s){return s.trim()}).filter(Boolean);
+  if(!words.length)return toast("请在批量框中每行填一个关键词");
+  state.page=1;$("searchBtn").disabled=true;$("rateState").textContent="批量检索 0/"+words.length;
+  var merged={},totalRaw=0,done=0;
+  var chain=Promise.resolve();
+  words.forEach(function(w){
+    chain=chain.then(function(){
+      var q=buildQuery(w);
+      return fetchPage(1,q).then(function(res){
+        totalRaw+=res.rawCount;
+        res.items.forEach(function(it){
+          var key=it.gh_id||it.id;
+          if(!merged[key])merged[key]=it;
+        });
+        done++;$("rateState").textContent="批量检索 "+done+"/"+words.length;
+      });
+    });
+  });
+  chain.then(function(){
+    $("searchBtn").disabled=false;
+    var list=Object.keys(merged).map(function(k){return merged[k]});
+    state.rawCount=totalRaw;
+    state.items=applyHotSort(applyMerge(list));
+    state.perPage=state.items.length;
+    $("rateState").textContent="正常";
+    render();
+  }).catch(function(e){$("searchBtn").disabled=false;toast(e.message);
+    $("rateState").textContent="失败"});
 }
 function updateRate(r){
   $("rateState").textContent="正常";
@@ -436,13 +519,16 @@ function render(){
   var box=$("results");
   if(!state.items.length){box.innerHTML='<div class="empty-box">没有符合条件的项目，试试放宽筛选条件</div>';
     $("pager").innerHTML="";updateSelCount();return}
+  var digestIds=(window.__digestIds||{});
   box.innerHTML=state.items.map(function(it){
     var badges=[];
     if(libIds[it.id])badges.push('<span class="badge inlib">已收藏</span>');
+    if(digestIds[it.gh_id]||digestIds[it.id])badges.push('<span class="badge lic">已收录</span>');
     if(it.is_fork)badges.push('<span class="badge fork">fork</span>');
     if(it.language)badges.push('<span class="badge lang">'+esc(it.language)+"</span>");
     if(it.license)badges.push('<span class="badge lic">'+esc(it.license)+"</span>");
     var topics=(it.topics||[]).map(function(t){return'<span class="topic-chip">'+esc(t)+"</span>"}).join("");
+    var home=it.homepage&&it.homepage.indexOf("http")===0?'<a href="'+esc(it.homepage)+'" target="_blank" rel="noopener">主页</a>':"";
     return '<div class="s-card '+(state.selected[it.id]?"selected":"")+'">'
       +'<div class="check"><input type="checkbox" data-id="'+esc(it.id)+'" '+(state.selected[it.id]?"checked":"")+"></div>"
       +'<div class="body"><div class="title-line"><a class="title" href="'+esc(it.url)+'" target="_blank" rel="noopener">'
@@ -450,7 +536,8 @@ function render(){
       +(it.summary?'<div class="summary">'+esc(it.summary)+"</div>":"")
       +(topics?'<div class="topic-line">'+topics+"</div>":"")
       +'<div class="meta"><span class="star">★ '+it.star.toLocaleString()+"</span><span>⑂ "+it.forks.toLocaleString()
-      +"</span><span>创建 "+esc(it.created_at)+"</span><span>更新 "+esc(it.pushed_at)+"</span>"
+      +"</span><span>issues "+it.open_issues.toLocaleString()+"</span><span>创建 "+esc(it.created_at)
+      +"</span><span>更新 "+esc(it.pushed_at)+"</span>"+home
       +'<button class="btn btn-ghost btn-sm" data-readme="'+esc(it.full_name)+'">README</button></div></div></div>';
   }).join("");
   Array.prototype.forEach.call(box.querySelectorAll("input[type=checkbox]"),function(cb){
@@ -463,6 +550,7 @@ function render(){
   renderPager();updateSelCount();
 }
 function renderPager(){
+  if(state.isBatch){$("pager").innerHTML="";return}
   if(!$("mergeSame").checked){
     var pages=Math.max(1,Math.ceil(state.rawCount/state.perPage));
     if(pages<=1){$("pager").innerHTML="";return}
@@ -710,21 +798,30 @@ $("searchBtn").addEventListener("click",function(){search(1)});
 $("resetBtn").addEventListener("click",function(){
   $("q").value="";$("lang").value="";$("topic").value="";$("minStar").value="5";$("licenseKey").value="";
   $("createdDays").value="7";$("pushedDays").value="90";$("sort").value="";$("perPage").value="30";
-  $("excludeFork").checked=true;$("excludeArchived").checked=true});
+  $("excludeFork").checked=true;$("excludeArchived").checked=true;
+  $("author").value="";$("minForks").value="";$("excludeWords").value="";
+  $("hotSort").value="";$("batchKw").value="";$("cnExpand").checked=false;$("batchMode").checked=false;
+  $("batchBox").hidden=true});
 $("q").addEventListener("keydown",function(e){if(e.key==="Enter")search(1)});
 $("selectPage").addEventListener("click",selectPage);
 $("selectAll").addEventListener("click",selectAllResults);
 $("clearSel").addEventListener("click",clearSelected);
 $("addLibBtn").addEventListener("click",addToLibrary);
+$("batchMode").addEventListener("change",function(){$("batchBox").hidden=!$("batchMode").checked});
+$("saveSubBtn").addEventListener("click",function(){
+  var sub={name:($("q").value||"订阅").slice(0,20),
+    q:$("q").value,lang:$("lang").value,min_star:$("minStar").value,topic:$("topic").value,
+    license_key:$("licenseKey").value,author:$("author").value,min_forks:$("minForks").value,
+    exclude:$("excludeWords").value,created_days:$("createdDays").value,pushed_days:$("pushedDays").value,
+    saved_at:new Date().toISOString()};
+  var subs=JSON.parse(localStorage.getItem("ghpf_subs_v1")||"[]");
+  subs.push(sub);localStorage.setItem("ghpf_subs_v1",JSON.stringify(subs));
+  toast("已存为订阅（共 "+subs.length+" 个），可在后端订阅文件中启用")});
 
 var dl=$("langList");LANGS.forEach(function(l){var o=document.createElement("option");o.value=l;dl.appendChild(o)});
 renderPresets();updateLibCount();backupReminder(false);
 })();
 </script>
-<script>
-if("serviceWorker" in navigator){window.addEventListener("load",function(){
-  navigator.serviceWorker.register("sw.js").catch(function(){});
-})}
-</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});})}</script>
 </body>
 </html>
