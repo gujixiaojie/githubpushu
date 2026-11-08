@@ -76,6 +76,12 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
 .dash-cell .l{font-size:12px;color:var(--muted)}
 .bar-row{display:flex;align-items:center;gap:8px;font-size:12px;margin-bottom:4px}
 .bar-row .bar{height:8px;background:var(--accent);border-radius:4px;min-width:3px}
+.hl{font-size:11.5px;padding:2px 9px;border-radius:11px;font-weight:700;color:#fff;white-space:nowrap}
+.hl-ok{background:#188038}.hl-warn{background:#f59e0b}.hl-stop{background:#9aa3ad}
+.spark{display:inline-block;vertical-align:middle}
+.review-line{font-size:12.5px;background:var(--accent-weak);color:var(--accent);
+  border-radius:7px;padding:7px 10px;margin:8px 0}
+.vel{color:#d4a017;font-weight:600}
 @media (max-width:640px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -114,6 +120,8 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
       <option value="star">星标最多</option>
       <option value="update">最近更新</option>
       <option value="rating">我的评分</option>
+      <option value="health">健康度</option>
+      <option value="velocity">星标增速</option>
     </select>
     <button class="mini-btn" id="dashToggle" style="width:100%">健康看板</button>
     <button class="mini-btn" id="addGroupBtn" style="width:100%">新建分组</button>
@@ -121,6 +129,7 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
   <div class="chk-row">
     <label><input type="checkbox" id="fNewbie">新手友好（有未关闭 issue）</label>
     <label><input type="checkbox" id="fCn">中文相关</label>
+    <label><input type="checkbox" id="fReview">显示中文点评</label>
   </div>
 
   <div class="stat" id="statLine"></div>
@@ -147,7 +156,68 @@ function gm(id){return META[id]||{}}          // 只读，不创建空条目
 function m(id){return META[id]||(META[id]={})} // 变更时使用
 function hasCjk(s){return /[\u4e00-\u9fff]/.test(s||"")}
 
-function boot(d){
+/* ===== 洞察：星标历史 / 健康评分 / 中文点评 ===== */
+var HIST={};
+var AUDIENCE={
+ "硬件固件":"适合做嵌入式、物联网和硬件改造的开发者",
+ "逆向开发":"适合安全研究、逆向分析和固件调试人员",
+ "AI&Agent":"适合搭建大模型应用、智能体和 RAG 工作流的开发者",
+ "影音播放器":"适合需要本地音视频播放与媒体处理的用户",
+ "NAS存储":"适合自建 NAS、家庭存储和私有云的用户",
+ "游戏":"适合游戏开发、模拟器和游戏模组爱好者",
+ "设计":"适合设计师和需要绘图、创意工具的用户",
+ "系统工具":"适合系统运维、效率增强和桌面工具用户",
+ "效率工具":"适合想提升日常办公与自动化效率的用户"};
+function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000)}
+function velOf(p){
+  var pts=HIST[p.id];
+  if(!pts||pts.length<2)return null;
+  pts=pts.slice().sort(function(x,y){return x.date<y.date?-1:1});
+  var days=Math.max(1,daysBetween(pts[0].date,pts[pts.length-1].date));
+  return Math.round((pts[pts.length-1].star-pts[0].star)/days*100)/100;
+}
+function healthOf(p){
+  var score=0;
+  var ref=String(p.last_commit||p.pushed_at||"").slice(0,10);
+  var age=ref?daysBetween(ref,new Date()):99999;
+  if(age<=30)score+=40;else if(age<=90)score+=30;else if(age<=180)score+=20;
+  else if(age<=365)score+=10;
+  var star=p.star||0;
+  if(star>=500)score+=20;else if(star>=100)score+=14;else if(star>=50)score+=8;else if(star>=10)score+=4;
+  var oi=p.open_issues||0;
+  if(oi>20)score+=15;else if(oi>0)score+=10;
+  var v=velOf(p);
+  if(v!==null){if(v>=5)score+=25;else if(v>=1)score+=17;else score+=9;}else score+=8;
+  if(p.is_archived)score=Math.min(score,20);
+  score=Math.max(0,Math.min(100,score));
+  var label=score>=70?"健康":score>=40?"放缓":"停滞";
+  return {score:score,label:label};
+}
+function reviewOf(p){
+  var h=healthOf(p),cats=p.category_tags||[],cat=cats[0]||"效率工具";
+  var lang=p.language||"多语言",lic=p.license||"",star=p.star||0;
+  var s="这是一个「"+cat+"」方向的 "+lang+" 项目；目前 "+star+
+    " 星，活跃度评估为「"+h.label+"」（"+h.score+" 分）；";
+  s+=lic?("采用 "+lic+" 协议，可按协议使用；"):"未标注开源协议，商用前需先确认授权；";
+  return s+(AUDIENCE[cat]||"适合关注该方向的开发者")+"。";
+}
+function spark(p){
+  var pts=HIST[p.id];
+  if(!pts||pts.length<2)return "";
+  pts=pts.slice().sort(function(x,y){return x.date<y.date?-1:1});
+  var W=72,H=24,stars=pts.map(function(x){return x.star});
+  var min=Math.min.apply(null,stars),max=Math.max.apply(null,stars),span=(max-min)||1;
+  var xy=pts.map(function(x,i){
+    var px=Math.round(i/(pts.length-1)*W);
+    var py=H-2-Math.round((x.star-min)/span*(H-4));
+    return px+","+py;
+  }).join(" ");
+  return '<svg class="spark" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+
+    '"><polyline points="'+xy+'" fill="none" stroke="#d4a017" stroke-width="1.5"/></svg>';
+}
+
+function boot(d,h){
+  HIST=h||{};
   ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
   LATEST=ALL.map(function(p){return p.crawl_date}).sort().pop()||"";
   var meta=d.meta||{};
@@ -156,13 +226,17 @@ function boot(d){
     (meta.updated_at||LATEST)+' <span class="new-pill">最新收录日 '+newest+' 条</span>';
   loadMeta();fillOptions();render();renderDashboard();
 }
-fetch("data/projects.json",{cache:"no-store"})
-  .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()})
-  .then(boot)
-  .catch(function(e){
-    $("metaLine").textContent="数据加载失败："+e.message;
-    $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
-  });
+Promise.all([
+  fetch("data/projects.json",{cache:"no-store"}).then(function(r){return r.json()}),
+  fetch("data/star_history.json",{cache:"no-store"})
+    .then(function(r){return r.ok?r.json():{history:{}}})
+    .catch(function(){return {history:{}}})
+]).then(function(res){
+  boot(res[0],(res[1]||{}).history||{})
+}).catch(function(e){
+  $("metaLine").textContent="数据加载失败："+e.message;
+  $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
+});
 
 function uniq(key){
   var s={};ALL.forEach(function(p){(p[key]||[]).forEach(function(v){s[v]=1})});
@@ -204,6 +278,11 @@ function render(){
     if(sort==="star")return(b.star||0)-(a.star||0);
     if(sort==="update")return String(b.last_commit).localeCompare(String(a.last_commit));
     if(sort==="rating")return(gm(b.id).rating||0)-(gm(a.id).rating||0);
+    if(sort==="health")return healthOf(b).score-healthOf(a).score;
+    if(sort==="velocity"){
+      var va=velOf(b),vb=velOf(a);
+      return (va==null?-1:va)-(vb==null?-1:vb);
+    }
     return String(b.crawl_date).localeCompare(String(a.crawl_date));
   });
   // 置顶优先
@@ -221,13 +300,18 @@ function render(){
     var gsel='<select data-act="group" data-id="'+esc(p.id)+'" style="width:auto;padding:3px 6px;font-size:12px">'+
       '<option value="">未分组</option>'+GROUPS.map(function(g){return'<option '+(mm.group===g?"selected":"")+'>'+esc(g)+"</option>"}).join("")+"</select>";
     var note=mm.note?'<div class="note-line">备注：'+esc(mm.note)+"</div>":"";
+    var h=healthOf(p),hlClass=h.label==="健康"?"hl-ok":h.label==="放缓"?"hl-warn":"hl-stop";
+    var hl='<span class="hl '+hlClass+'">'+h.label+" "+h.score+"</span>";
+    var v=velOf(p),vTxt=v!==null?'<span class="vel">日均 +'+v+" ★</span>":"";
+    var sp=spark(p);
+    var review=$("fReview").checked?'<div class="review-line">'+esc(reviewOf(p))+"</div>":"";
     return '<div class="card '+(mm.pin?"pinned":"")+'"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
-      +isNew+cats+plats+"</div>"
+      +isNew+hl+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
-      +note
+      +note+review
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
-      +"<span>更新 "+esc(p.last_commit)+"</span>"+pin+gsel
+      +vTxt+sp+"<span>更新 "+esc(p.last_commit)+"</span>"+pin+gsel
       +'<button class="mini-btn" data-act="note" data-id="'+esc(p.id)+'">备注</button>'
       +'<button class="mini-btn" data-act="share" data-id="'+esc(p.id)+'">分享</button>'
       +"</div><div class='meta' style='margin-top:7px'>评分："+stars+"</div></div>";
@@ -239,7 +323,11 @@ function renderDashboard(){
   var pinned=ALL.filter(function(p){return gm(p.id).pin}).length;
   var rated=ALL.filter(function(p){return gm(p.id).rating}).length;
   var withIss=ALL.filter(function(p){return p.open_issues>0}).length;
+  var hc={"健康":0,"放缓":0,"停滞":0},scoreSum=0;
+  ALL.forEach(function(p){var h=healthOf(p);hc[h.label]++;scoreSum+=h.score});
   var cells=[["项目总数",total],["置顶",pinned],["已评分",rated],["新手友好",withIss],
+    ["健康",hc["健康"]],["放缓",hc["放缓"]],["停滞",hc["停滞"]],
+    ["平均健康分",Math.round(scoreSum/total)],
     ["分类数",uniq("category_tags").length],["平台数",uniq("platform_tags").length]];
   $("dashGrid").innerHTML=cells.map(function(c){return'<div class="dash-cell"><div class="n">'+c[1]
     +'</div><div class="l">'+c[0]+"</div></div>"}).join("");
@@ -259,7 +347,7 @@ function share(p){
   }else{toast(p.github_url)}
 }
 
-["kw","catSel","platSel","licSel","groupSel","sortSel","fNewbie","fCn"].forEach(function(id){
+["kw","catSel","platSel","licSel","groupSel","sortSel","fNewbie","fCn","fReview"].forEach(function(id){
   $(id).addEventListener("input",render);
 });
 $("dashToggle").addEventListener("click",function(){
