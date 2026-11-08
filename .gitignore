@@ -1,0 +1,23 @@
+# 密钥与令牌（绝不入库）
+*token*
+*secret*
+github_token.txt
+*.pem
+*.key
+.env
+.env.*
+
+# 临时/备份文件
+*.tmp
+*.bak
+*.log
+*.swp
+*~
+
+# 系统/编辑器垃圾
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+node_modules/

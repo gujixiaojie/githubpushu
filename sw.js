@@ -1,8 +1,9 @@
 /* 离线缓存：壳资源优先缓存，数据/页面网络优先并回写缓存 */
-var CACHE = "gh-tools-v1";
+var CACHE = "gh-tools-v2";
 var SHELL = [
   "./", "./index.html", "./digest.html",
-  "./manifest.webmanifest", "./icon.svg", "./data/projects.json"
+  "./manifest.webmanifest", "./icon.svg",
+  "./data/projects.json", "./data/star_history.json"
 ];
 
 self.addEventListener("install", function (e) {
