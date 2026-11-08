@@ -82,6 +82,19 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
 .review-line{font-size:12.5px;background:var(--accent-weak);color:var(--accent);
   border-radius:7px;padding:7px 10px;margin:8px 0}
 .vel{color:#d4a017;font-weight:600}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.word-cloud{display:flex;flex-wrap:wrap;gap:9px;align-items:baseline}
+.word-cloud .w{cursor:pointer;color:var(--accent);line-height:1.2}
+.word-cloud .w:hover{text-decoration:underline}
+@media (max-width:640px){
+  .wrap{padding:10px}
+  .filters{grid-template-columns:1fr 1fr;gap:7px}
+  .card{padding:11px}
+  .title{font-size:15px}
+  .nav{gap:12px;font-size:13px}
+  .mini-btn{padding:5px 9px;font-size:12px}
+  .meta{gap:8px;font-size:12px}
+}
 @media (max-width:640px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -105,6 +118,19 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
       <h3 style="margin-top:14px">分类分布</h3>
       <div id="dashCats"></div>
     </div>
+  </div>
+
+  <div id="cloudBox" hidden>
+    <div class="dash">
+      <h3>热词趋势云（点击词即搜索）</h3>
+      <div id="wordCloud" class="word-cloud"></div>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="mini-btn" id="cloudToggle">热词云</button>
+    <button class="mini-btn" id="exportJsonBtn">导出JSON</button>
+    <button class="mini-btn" id="exportCsvBtn">导出CSV</button>
   </div>
 
   <div class="filters">
@@ -347,8 +373,73 @@ function share(p){
   }else{toast(p.github_url)}
 }
 
+/* ===== 热词云 ===== */
+var STOP_WORDS={the:"1",a:"1",an:"1",and:"1",or:"1",of:"1",to:"1",for:"1",with:"1",
+  in:"1",on:"1",is:"1",by:"1",your:"1",you:"1",using:"1",use:"1",based:"1",from:"1"};
+function renderCloud(){
+  var freq={};
+  ALL.forEach(function(p){
+    (p.title+" "+(p.summary||"")).toLowerCase()
+      .split(/[^a-z0-9一-鿿]+/).forEach(function(w){
+      if(!w||w.length<2||STOP_WORDS[w])return;
+      freq[w]=(freq[w]||0)+1;
+    });
+  });
+  var arr=Object.keys(freq).map(function(w){return[w,freq[w]]})
+    .filter(function(x){return x[1]>=2}).sort(function(a,b){return b[1]-a[1]}).slice(0,60);
+  var max=arr.length?arr[0][1]:1;
+  $("wordCloud").innerHTML=arr.map(function(x){
+    var size=12+Math.round(x[1]/max*16);
+    return '<span class="w" style="font-size:'+size+'px" data-w="'+esc(x[0])+'">'
+      +esc(x[0])+" <small>"+x[1]+"</small></span>";
+  }).join("");
+}
+
+/* ===== 导出 ===== */
+function download(obj,name,mime){
+  var blob=new Blob([obj],{type:mime});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();
+}
+function csvCell(v){
+  v=String(v==null?"":v);
+  return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+}
+function exportJson(){
+  download(JSON.stringify({projects:ALL,exported_at:new Date().toISOString()},null,2),
+    "digest-"+new Date().toISOString().slice(0,10)+".json","application/json");
+  toast("已导出 "+ALL.length+" 条 JSON");
+}
+function exportCsv(){
+  var cols=["id","title","summary","github_url","star","last_commit","language",
+    "license","open_issues","category_tags","health","review"];
+  var rows=[cols.join(",")];
+  ALL.forEach(function(p){
+    var h=healthOf(p);
+    var vals={id:p.id,title:p.title,summary:p.summary,github_url:p.github_url,
+      star:p.star,last_commit:p.last_commit,language:p.language,license:p.license,
+      open_issues:p.open_issues,category_tags:(p.category_tags||[]).join("|"),
+      health:h.label+" "+h.score,review:reviewOf(p)};
+    rows.push(cols.map(function(c){return csvCell(vals[c])}).join(","));
+  });
+  download("﻿"+rows.join("\n"),"digest-"+new Date().toISOString().slice(0,10)+".csv",
+    "text/csv;charset=utf-8");
+  toast("已导出 "+ALL.length+" 条 CSV");
+}
+
 ["kw","catSel","platSel","licSel","groupSel","sortSel","fNewbie","fCn","fReview"].forEach(function(id){
   $(id).addEventListener("input",render);
+});
+$("cloudToggle").addEventListener("click",function(){
+  $("cloudBox").hidden=!$("cloudBox").hidden;
+  if(!$("cloudBox").hidden)renderCloud();
+});
+$("exportJsonBtn").addEventListener("click",exportJson);
+$("exportCsvBtn").addEventListener("click",exportCsv);
+$("wordCloud").addEventListener("click",function(e){
+  var w=e.target.closest(".w");if(!w)return;
+  $("kw").value=w.getAttribute("data-w");render();
+  $("cloudBox").hidden=true;
+  window.scrollTo(0,0);toast("已按「"+$("kw").value+"」筛选");
 });
 $("dashToggle").addEventListener("click",function(){
   $("dashBox").hidden=!$("dashBox").hidden;

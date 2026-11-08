@@ -113,11 +113,22 @@ textarea{resize:vertical;min-height:54px}
 #readmeContent{padding:14px 16px;overflow:auto;white-space:pre-wrap;word-break:break-word;
   font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:13px;line-height:1.6}
 @media (max-width:640px){
+  .page{padding:12px 10px 84px}
+  .topbar h1{font-size:19px}
+  .topbar .sub{font-size:12px}
   .grid{grid-template-columns:1fr}
-  .s-card{flex-direction:column}
+  .grid.two{grid-template-columns:1fr 1fr}
+  .s-card{flex-direction:column;padding:11px}
   .s-card .check{flex:none}
   .lib-controls{grid-template-columns:1fr}
-  .action-inner .btn{flex:1;text-align:center}
+  .action-inner{gap:7px}
+  .action-inner .btn{flex:1;text-align:center;padding:9px 8px;font-size:13px}
+  .tabs{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  .tabs button{padding:9px 13px;font-size:14px}
+  .btn{padding:9px 12px;font-size:13px}
+  input,select{font-size:15px;max-width:100%}
+  .modal-box{max-height:92vh;border-radius:10px}
+  .pager{flex-wrap:wrap;gap:7px}
 }
 </style>
 </head>
@@ -377,10 +388,29 @@ function daysAgo(n){n=parseInt(n,10);if(!n)return"";
 /* 中文 -> 英文扩展词表，提升召回 */
 var CN_EN_MAP={
   "大模型":["llm","large language model"],"智能体":["agent"],"知识库":["rag","knowledge base"],
+  "向量":["vector","embedding"],"微调":["fine-tuning"],"推理":["inference"],"多模态":["multimodal"],
+  "机器学习":["machine learning"],"深度学习":["deep learning"],"神经网络":["neural network"],
+  "视觉":["computer vision","cv"],"语音识别":["asr","speech recognition"],
   "播放器":["player"],"视频":["video"],"音频":["audio"],"语音克隆":["voice cloning","tts"],
-  "绘图":["image generation","diffusion"],"翻译":["translation"],"密码管理":["password manager"],
-  "自动化":["automation"],"监控":["monitor"],"模拟器":["emulator"],"固件":["firmware"],
-  "逆向":["reverse engineering"],"笔记":["note"],"二维码":["qrcode"],"网盘":["cloud storage"]
+  "直播":["live streaming"],"绘图":["image generation","diffusion"],"翻译":["translation"],
+  "密码管理":["password manager"],"自动化":["automation"],"工作流":["workflow"],
+  "监控":["monitor"],"仪表盘":["dashboard"],"可视化":["visualization"],
+  "模拟器":["emulator"],"固件":["firmware"],"逆向":["reverse engineering"],
+  "反编译":["decompiler"],"抓包":["packet capture"],"渗透":["penetration testing"],
+  "漏洞":["vulnerability"],"安全":["security"],"加密":["encryption","crypto"],
+  "笔记":["note"],"二维码":["qrcode"],"网盘":["cloud storage"],"爬虫":["crawler","spider","scraping"],
+  "数据库":["database"],"缓存":["cache"],"网关":["gateway"],"代理":["proxy"],
+  "容器":["container","docker"],"编排":["kubernetes","k8s"],"部署":["deployment"],
+  "终端":["terminal"],"命令行":["cli","command line"],"编辑器":["editor"],
+  "插件":["plugin"],"主题":["theme"],"截图":["screenshot"],"录屏":["screen recording"],
+  "下载":["downloader"],"压缩":["compression"],"同步":["sync"],"备份":["backup"],
+  "机器人":["bot","robot"],"聊天":["chat"],"低代码":["low-code","no-code"],
+  "物联网":["iot"],"嵌入式":["embedded"],"单片机":["microcontroller","mcu"],
+  "路由器":["router"],"驱动":["driver"],"内核":["kernel"],"操作系统":["operating system"],
+  "串口":["serial"],"蓝牙":["bluetooth"],"定位":["gps","location"],
+  "压测":["benchmark","load testing"],"性能":["performance"],"调试":["debug"],
+  "商城":["ecommerce","shop"],"支付":["payment"],"报表":["report"],
+  "游戏":["game"],"引擎":["engine"],"模组":["mod"],"汉化":["localization","i18n"]
 };
 function expandCn(q){
   var extra=[];
@@ -822,6 +852,6 @@ var dl=$("langList");LANGS.forEach(function(l){var o=document.createElement("opt
 renderPresets();updateLibCount();backupReminder(false);
 })();
 </script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});})}</script>
 </body>
 </html>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});})}</script>
