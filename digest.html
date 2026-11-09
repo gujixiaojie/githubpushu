@@ -382,13 +382,21 @@ var STOP_WORDS={the:"1",a:"1",an:"1",and:"1",or:"1",of:"1",to:"1",for:"1",with:"
   /* 网址与仓库名碎片，避免污染热词 */
   http:"1",https:"1",www:"1",com:"1",github:"1",git:"1",io:"1",html:"1",
   api:"1",all:"1",can:"1",that:"1",this:"1",it:"1",as:"1",at:"1",be:"1",
-  do:"1",if:"1",not:"1",no:"1",so:"1",we:"1",has:"1",are:"1",was:"1",new:"1"};
+  do:"1",if:"1",not:"1",no:"1",so:"1",we:"1",has:"1",are:"1",was:"1",new:"1",
+  /* 仓库模板与通用技术词，避免热词全是废话 */
+  pre:"1",configured:"1",environment:"1",desktop:"1",deployment:"1",automated:"1",
+  support:"1",supports:"1",plugin:"1",tools:"1",tool:"1",project:"1",projects:"1",
+  app:"1",apps:"1",code:"1",build:"1",built:"1",simple:"1",fast:"1",easy:"1",
+  open:"1",source:"1",framework:"1",library:"1",made:"1",written:"1",features:"1",
+  feature:"1",provides:"1",provide:"1",system:"1",data:"1",file:"1",files:"1",
+  users:"1",user:"1",basedon:"1",which:"1",when:"1",than:"1",then:"1",also:"1"};
 function renderCloud(){
   var freq={};
   ALL.forEach(function(p){
     (p.title+" "+(p.summary||"")).toLowerCase()
       .split(/[^a-z0-9一-鿿]+/).forEach(function(w){
       if(!w||w.length<2||STOP_WORDS[w])return;
+      if(/^[0-9]+$/.test(w))return;   /* 纯数字（年份、版本号）不作热词 */
       freq[w]=(freq[w]||0)+1;
     });
   });
