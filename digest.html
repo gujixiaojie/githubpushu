@@ -252,9 +252,12 @@ function boot(d,h){
     (meta.updated_at||LATEST)+' <span class="new-pill">最新收录日 '+newest+' 条</span>';
   loadMeta();fillOptions();render();renderDashboard();
 }
+/* 按天生成缓存键：每天自动更新后必定拿到当天数据，同一天内仍可复用缓存 */
+var DAYKEY=(function(){var d=new Date();return ""+d.getFullYear()+
+  ("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2);})();
 Promise.all([
-  fetch("data/projects.json",{cache:"no-store"}).then(function(r){return r.json()}),
-  fetch("data/star_history.json",{cache:"no-store"})
+  fetch("data/projects.json?v="+DAYKEY,{cache:"no-store"}).then(function(r){return r.json()}),
+  fetch("data/star_history.json?v="+DAYKEY,{cache:"no-store"})
     .then(function(r){return r.ok?r.json():{history:{}}})
     .catch(function(){return {history:{}}})
 ]).then(function(res){
