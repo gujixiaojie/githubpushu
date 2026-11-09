@@ -1,0 +1,42 @@
+name: 每日自动更新收录
+
+on:
+  schedule:
+    # 21:30 UTC = 北京时间次日 05:30
+    - cron: "30 21 * * *"
+  workflow_dispatch:   # 也可在网页手动点运行
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 拉取仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 抓取并刷新数据
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/daily_update.py
+
+      - name: 提交变更
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "digest-bot@users.noreply.github.com"
+          git add data/projects.json data/star_history.json
+          if git diff --cached --quiet; then
+            echo "无变更，跳过提交"
+          else
+            git commit -m "自动更新收录 $(date '+%Y-%m-%d %H:%M')"
+            git push
+          fi
