@@ -36,7 +36,8 @@ SEARCH_PAGES = 3
 PER_PAGE = 50
 NEW_WINDOW_DAYS = 7
 
-BLACKLIST = ["破解", "外挂", "作弊", "盗刷", "挖矿", "木马", "盗版", "付费解锁"]
+BLACKLIST = ["破解", "外挂", "作弊", "盗刷", "挖矿", "木马", "盗版", "付费解锁",
+             "porn", "nsfw", "onlyfans", "keygen", "crack", "cheatengine"]
 
 CATEGORY_RULES = [
     ("逆向开发", ["reverse", "逆向", "decompil", "frida", "ida", "firmware", "固件", "jailbreak", "越狱", "unlock", "漏洞", "exploit"]),
@@ -200,6 +201,12 @@ def run(dry_run=False, refresh_limit=0):
         try:
             repo, headers = api_get("/repos/" + full)
         except urllib.error.HTTPError as e:
+            if e.code == 404:
+                # 仓库已被删除/封禁：自动隐藏，不再出现在收录库
+                p["is_gone"] = True
+                p["is_hidden"] = True
+                report["gone"] = report.get("gone", 0) + 1
+                continue
             report["refresh_errors"] += 1
             if e.code == 403:
                 report["note"] = "触发限流，刷新中止"
@@ -208,6 +215,7 @@ def run(dry_run=False, refresh_limit=0):
         except Exception:
             report["refresh_errors"] += 1
             continue
+        p.pop("is_gone", None)
         update_existing(p, repo)
         report["refreshed"] += 1
         try:
