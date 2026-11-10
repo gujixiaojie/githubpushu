@@ -54,7 +54,7 @@ CLASSIC_KEYWORDS = [
 HELLO_FILE = os.path.join(BASE_DIR, "hello.json")
 HELLO_RSS = "https://hellogithub.com/rss"
 HELLO_VOLUME = "https://hellogithub.com/periodical/volume/%d"
-HELLO_DAILY_MAX = 5          # 每天最多从周刊补录几条（含在当日新收录总数里）
+HELLO_DAILY_MAX = 50         # 每天最多从周刊补录几条（≈整期全收，一期通常 40+ 条）
 HELLO_STAR_MIN = 100         # 周刊项目的最低星标门槛（快照值）
 HELLO_MAX_ISSUES = 2         # 单次最多补录的期数
 
