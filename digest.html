@@ -259,6 +259,9 @@ function boot(d,h,c,e){
     forks:r[4],issue:r[5],crawl_date:r[6],repo_created:"",last_commit:"",
     github_url:"https://github.com/"+r[0],category_tags:[r[7]],
     platform_tags:[],license:"",open_issues:0,is_hidden:false,hellogithub:true}});
+  /* 同一条目若已进入每日库/经典库，以带实时数据的版本为准，避免“全部”视图重复 */
+  var mainIds={};ALL.forEach(function(p){mainIds[p.id]=1});CLASSIC.forEach(function(p){mainIds[p.id]=1});
+  HELLO=HELLO.filter(function(p){return !mainIds[p.id]});
   LATEST=ALL.map(function(p){return p.crawl_date}).sort().pop()||"";
   var meta=d.meta||{};
   var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
@@ -356,6 +359,7 @@ function render(){
     var isNew=(!p.classic&&p.crawl_date===LATEST)?'<span class="new-pill" style="margin:0">新</span>':"";
     var isClassic=p.classic?'<span class="chip" style="background:#f3ead2;color:#8a6d1f">经典库</span>':"";
     var isHH=p.hellogithub?'<span class="chip" style="background:#e8f0fb;color:#2f6fbf">HG 第'+p.issue+'期</span>':"";
+    var isHGRef=p.from_hellogithub?'<span class="chip" style="background:#fff3e0;color:#a35b00">HG 参考 第'+p.from_hellogithub+'期</span>':"";
     var pin='<button class="mini-btn '+(mm.pin?"on":"")+'" data-act="pin" data-id="'+esc(p.id)+'">置顶</button>';
     var stars=[1,2,3,4,5].map(function(n){return'<button class="rate-mini" data-act="rate" data-id="'+
       esc(p.id)+'" data-v="'+n+'">'+(n<=(mm.rating||0)?"★":"☆")+"</button>"}).join("");
@@ -369,7 +373,7 @@ function render(){
     var review=$("fReview").checked?'<div class="review-line">'+esc(reviewOf(p))+"</div>":"";
     return '<div class="card '+(mm.pin?"pinned":"")+'"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
-      +isNew+isClassic+isHH+hl+cats+plats+"</div>"
+      +isNew+isClassic+isHH+isHGRef+hl+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
       +note+review
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
