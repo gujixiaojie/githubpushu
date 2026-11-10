@@ -140,7 +140,12 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
     <select id="licSel"><option value="">全部许可证</option></select>
     <select id="groupSel"><option value="">全部分组</option><option value="__pinned">仅看置顶</option></select>
   </div>
-  <div class="filters" style="grid-template-columns:repeat(3,1fr)">
+  <div class="filters" style="grid-template-columns:repeat(4,1fr)">
+    <select id="typeSel">
+      <option value="all">全部（新收录 + 经典库）</option>
+      <option value="new">仅每日新收录</option>
+      <option value="classic">仅经典库（高星老项目）</option>
+    </select>
     <select id="sortSel">
       <option value="new">最新收录</option>
       <option value="star">星标最多</option>
@@ -166,7 +171,7 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
 <script>
 (function(){
 "use strict";
-var ALL=[],LATEST="",META={},GROUPS=[];
+var ALL=[],CLASSIC=[],LATEST="",META={},GROUPS=[];
 var LS_META="ghpf_dg_meta_v1",LS_GROUP="ghpf_dg_groups_v1";
 function $(id){return document.getElementById(id)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
@@ -242,14 +247,16 @@ function spark(p){
     '"><polyline points="'+xy+'" fill="none" stroke="#d4a017" stroke-width="1.5"/></svg>';
 }
 
-function boot(d,h){
+function boot(d,h,c){
   HIST=h||{};
   ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
+  CLASSIC=((c||{}).items||[]).filter(function(p){return!p.is_hidden});
   LATEST=ALL.map(function(p){return p.crawl_date}).sort().pop()||"";
   var meta=d.meta||{};
   var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
-  $("metaLine").innerHTML="共 "+ALL.length+" 个收录项目 · 更新于 "+
-    (meta.updated_at||LATEST)+' <span class="new-pill">最新收录日 '+newest+' 条</span>';
+  $("metaLine").innerHTML="共 "+(ALL.length+CLASSIC.length)+" 个收录项目（每日新收录 "+ALL.length+
+    " · 经典库 "+CLASSIC.length+"）· 更新于 "+(meta.updated_at||LATEST)+
+    ' <span class="new-pill">最新收录日 '+newest+' 条</span>';
   loadMeta();fillOptions();render();renderDashboard();
 }
 /* 按天生成缓存键：每天自动更新后必定拿到当天数据，同一天内仍可复用缓存 */
@@ -259,16 +266,20 @@ Promise.all([
   fetch("data/projects.json?v="+DAYKEY,{cache:"no-store"}).then(function(r){return r.json()}),
   fetch("data/star_history.json?v="+DAYKEY,{cache:"no-store"})
     .then(function(r){return r.ok?r.json():{history:{}}})
-    .catch(function(){return {history:{}}})
+    .catch(function(){return {history:{}}}),
+  fetch("data/classic.json?v="+DAYKEY,{cache:"no-store"})
+    .then(function(r){return r.ok?r.json():{items:[]}})
+    .catch(function(){return {items:[]}})
 ]).then(function(res){
-  boot(res[0],(res[1]||{}).history||{})
+  boot(res[0],(res[1]||{}).history||{},res[2]||{})
 }).catch(function(e){
   $("metaLine").textContent="数据加载失败："+e.message;
   $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
 });
 
+function allItems(){return ALL.concat(CLASSIC)}
 function uniq(key){
-  var s={};ALL.forEach(function(p){(p[key]||[]).forEach(function(v){s[v]=1})});
+  var s={};allItems().forEach(function(p){(p[key]||[]).forEach(function(v){s[v]=1})});
   return Object.keys(s).sort();
 }
 function fillOptions(){
@@ -276,7 +287,7 @@ function fillOptions(){
     o.value=v;o.textContent=v;$("catSel").appendChild(o)});
   uniq("platform_tags").forEach(function(v){var o=document.createElement("option");
     o.value=v;o.textContent=v;$("platSel").appendChild(o)});
-  var lics={};ALL.forEach(function(p){lics[p.license||"未知"]=1});
+  var lics={};allItems().forEach(function(p){lics[p.license||"未知"]=1});
   Object.keys(lics).sort().forEach(function(v){var o=document.createElement("option");
     o.value=v==="未知"?"":v;o.textContent=v;$("licSel").appendChild(o)});
   fillGroupSel();
@@ -290,8 +301,9 @@ function fillGroupSel(){
 function render(){
   var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,
       plat=$("platSel").value,lic=$("licSel").value,grp=$("groupSel").value,
-      sort=$("sortSel").value;
-  var list=ALL.filter(function(p){
+      sort=$("sortSel").value,type=$("typeSel").value;
+  var base=type==="classic"?CLASSIC:(type==="new"?ALL:ALL.concat(CLASSIC));
+  var list=base.filter(function(p){
     if(cat&&(p.category_tags||[]).indexOf(cat)<0)return false;
     if(plat&&(p.platform_tags||[]).indexOf(plat)<0)return false;
     if(lic&&(p.license||"")!==lic)return false;
@@ -316,13 +328,16 @@ function render(){
   });
   // 置顶优先
   list.sort(function(a,b){return(!!gm(b.id).pin)-(!!gm(a.id).pin)});
-  $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+ALL.length+" 个项目";
+  $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+base.length+" 个项目"+
+    (type==="all"?"（新收录 "+ALL.length+" · 经典库 "+CLASSIC.length+"）":"")+
+    (type==="classic"?"　· 经典库口径：近 7 天仍活跃且 ★≥500":"");
   if(!list.length){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';return}
   $("list").innerHTML=list.map(function(p){
     var mm=gm(p.id);
     var cats=(p.category_tags||[]).map(function(t){return'<span class="chip">'+esc(t)+"</span>"}).join("");
     var plats=(p.platform_tags||[]).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
-    var isNew=p.crawl_date===LATEST?'<span class="new-pill" style="margin:0">新</span>':"";
+    var isNew=(!p.classic&&p.crawl_date===LATEST)?'<span class="new-pill" style="margin:0">新</span>':"";
+    var isClassic=p.classic?'<span class="chip" style="background:#f3ead2;color:#8a6d1f">经典库</span>':"";
     var pin='<button class="mini-btn '+(mm.pin?"on":"")+'" data-act="pin" data-id="'+esc(p.id)+'">置顶</button>';
     var stars=[1,2,3,4,5].map(function(n){return'<button class="rate-mini" data-act="rate" data-id="'+
       esc(p.id)+'" data-v="'+n+'">'+(n<=(mm.rating||0)?"★":"☆")+"</button>"}).join("");
@@ -336,7 +351,7 @@ function render(){
     var review=$("fReview").checked?'<div class="review-line">'+esc(reviewOf(p))+"</div>":"";
     return '<div class="card '+(mm.pin?"pinned":"")+'"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
-      +isNew+hl+cats+plats+"</div>"
+      +isNew+isClassic+hl+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
       +note+review
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
@@ -441,7 +456,7 @@ function exportCsv(){
   toast("已导出 "+ALL.length+" 条 CSV");
 }
 
-["kw","catSel","platSel","licSel","groupSel","sortSel","fNewbie","fCn","fReview"].forEach(function(id){
+["kw","catSel","platSel","licSel","groupSel","sortSel","typeSel","fNewbie","fCn","fReview"].forEach(function(id){
   $(id).addEventListener("input",render);
 });
 $("cloudToggle").addEventListener("click",function(){
@@ -467,7 +482,7 @@ $("addGroupBtn").addEventListener("click",function(){
 });
 $("list").addEventListener("click",function(e){
   var b=e.target.closest("[data-act]");if(!b)return;
-  var id=b.getAttribute("data-id"),act=b.getAttribute("data-act"),p=ALL.filter(function(x){return x.id===id})[0];
+  var id=b.getAttribute("data-id"),act=b.getAttribute("data-act"),p=allItems().filter(function(x){return x.id===id})[0];
   if(act==="pin"){m(id).pin=!m(id).pin;saveMeta();render();renderDashboard()}
   else if(act==="rate"){m(id).rating=parseInt(b.getAttribute("data-v"),10);saveMeta();render()}
   else if(act==="note"){var n=prompt("写备注：",m(id).note||"");if(n!==null){m(id).note=n;saveMeta();render()}}
