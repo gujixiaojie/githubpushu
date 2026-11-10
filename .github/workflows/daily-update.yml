@@ -30,6 +30,7 @@ jobs:
         run: python3 tools/daily_update.py
 
       - name: 更新 HelloGitHub 月刊语料
+        continue-on-error: true
         run: python3 tools/hello_update.py
 
       - name: 提交变更
