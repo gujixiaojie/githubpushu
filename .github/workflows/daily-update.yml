@@ -42,5 +42,15 @@ jobs:
             echo "无变更，跳过提交"
           else
             git commit -m "自动更新收录 $(date '+%Y-%m-%d %H:%M')"
-            git push
+            # 定时任务可能排队数小时才执行，期间仓库已有网页提交，直接 push 会被拒绝
+            for i in 1 2 3; do
+              git fetch origin main
+              git rebase -X theirs origin/main >/dev/null 2>&1 || git rebase --abort >/dev/null 2>&1 || true
+              if git push; then
+                echo "推送成功（第 $i 次）"
+                break
+              fi
+              echo "推送失败，5 秒后重试（第 $i 次）"
+              sleep 5
+            done
           fi
