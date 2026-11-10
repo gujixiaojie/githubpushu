@@ -36,6 +36,23 @@ SEARCH_PAGES = 3
 PER_PAGE = 50
 NEW_WINDOW_DAYS = 7
 
+# 经典库：高星、仍在维护的老项目（不占「每日新收录」名额，独立存 classic.json）
+CLASSIC_FILE = os.path.join(DATA_DIR, "classic.json")
+CLASSIC_STAR_MIN = 500
+CLASSIC_WINDOW_DAYS = 7
+CLASSIC_DAILY_MAX = 25
+CLASSIC_TOTAL_MAX = 500
+CLASSIC_PAGES = 1
+CLASSIC_PER_KW_MAX = 2
+CLASSIC_KEYWORDS = [
+    "ai", "agent", "llm", "rag", "ollama", "player", "nas", "webdav", "sync",
+    "backup", "design", "svg", "reverse", "hook", "firmware", "esp32",
+    "emulator", "ocr", "pdf", "markdown", "docker", "terminal", "monitor",
+    "automation", "self-hosted",
+]
+# 说明：iptv / 影视资源导航 / 直播源聚合这类站点存在版权风险，不纳入自动抓取；
+# 个别由用户指定的条目走 data/classic.json 里 user_pinned 的人工补录。
+
 BLACKLIST = ["破解", "外挂", "作弊", "盗刷", "挖矿", "木马", "盗版", "付费解锁",
              "porn", "nsfw", "onlyfans", "keygen", "crack", "cheatengine"]
 
@@ -94,7 +111,12 @@ def classify(title, summary, topics):
     text = " ".join([title or "", summary or "", " ".join(topics or [])]).lower()
     for cat, words in CATEGORY_RULES:
         for w in words:
-            if w in text:
+            wl = w.lower()
+            if wl.isascii():
+                # 英文词按词边界匹配（允许复数），避免 game 命中 endgame、ai 命中 email 这类误判
+                if re.search(r"(?<![a-z0-9])" + re.escape(wl) + r"(s|es)?(?![a-z0-9])", text):
+                    return cat
+            elif wl in text:
                 return cat
     return DEFAULT_CATEGORY
 
@@ -185,11 +207,14 @@ def run(dry_run=False, refresh_limit=0):
     projects = projects_doc.get("projects", [])
     hist_doc = load_json(HISTORY_FILE, {"history": {}})
     history = hist_doc.get("history", {})
+    classic_doc = load_json(CLASSIC_FILE, {"items": [], "meta": {}})
+    classics = classic_doc.get("items", [])
 
     report = {"date": time.strftime("%Y-%m-%d"), "existing": len(projects),
               "refreshed": 0, "refresh_errors": 0,
               "candidates": 0, "added": 0,
               "skipped_dup": 0, "skipped_star": 0, "skipped_blacklist": 0,
+              "classic_total": len(classics), "classic_checked": 0, "classic_added": 0,
               "rate_remaining": None}
 
     # 1) 刷新已有项目
@@ -272,6 +297,62 @@ def run(dry_run=False, refresh_limit=0):
             break
         time.sleep(1)
 
+    # 2b) 抓经典高星老项目（近期仍活跃，独立统计，不占每日新收录名额）
+    in_main = {(p.get("github_url") or "").rstrip("/").lower() for p in projects}
+    by_cid = {(c.get("github_url") or "").rstrip("/").lower(): c for c in classics}
+    c_since = time.strftime("%Y-%m-%d",
+                            time.localtime(time.time() - CLASSIC_WINDOW_DAYS * 86400))
+    for kw in CLASSIC_KEYWORDS:
+        if report["classic_added"] >= CLASSIC_DAILY_MAX:
+            break
+        q = "%s in:name,description,readme pushed:>=%s stars:>=%d fork:false archived:false" % (
+            kw, c_since, CLASSIC_STAR_MIN)
+        try:
+            data, headers = api_get("/search/repositories", {
+                "q": q, "sort": "stars", "order": "desc",
+                "per_page": 30, "page": 1})
+        except urllib.error.HTTPError as e:
+            report["classic_note"] = "经典库搜索被拒 HTTP %s" % e.code
+            break
+        except Exception as e:
+            report["classic_note"] = "经典库搜索失败：%s" % e
+            break
+
+        report["classic_checked"] += 1
+        kw_added = 0
+        for repo in data.get("items") or []:
+            if kw_added >= CLASSIC_PER_KW_MAX:
+                break
+            url = (repo.get("html_url") or "").rstrip("/").lower()
+            if not url:
+                continue
+            if url in by_cid:
+                update_existing(by_cid[url], repo)
+                by_cid[url]["classic"] = True
+                continue
+            if url in in_main:
+                continue
+            if int(repo.get("stargazers_count") or 0) < CLASSIC_STAR_MIN:
+                continue
+            if hit_blacklist("%s %s" % (repo.get("name"), repo.get("description"))):
+                report["skipped_blacklist"] += 1
+                continue
+            if report["classic_added"] >= CLASSIC_DAILY_MAX:
+                break
+            item = to_item(repo)
+            item["classic"] = True
+            item["first_seen"] = item["crawl_date"]
+            classics.append(item)
+            by_cid[url] = item
+            report["classic_added"] += 1
+            kw_added += 1
+        time.sleep(1)
+
+    if len(classics) > CLASSIC_TOTAL_MAX:
+        classics.sort(key=lambda x: int(x.get("star") or 0), reverse=True)
+        del classics[CLASSIC_TOTAL_MAX:]
+    report["classic_total"] = len(classics)
+
     # 3) 记录星标历史
     day = time.strftime("%Y-%m-%d")
     for p in projects:
@@ -294,6 +375,12 @@ def run(dry_run=False, refresh_limit=0):
     projects_doc["projects"] = projects
     projects_doc.setdefault("meta", {})["updated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
     save_json(PROJECTS_FILE, projects_doc)
+    classic_doc["items"] = classics
+    cmeta = classic_doc.setdefault("meta", {})
+    cmeta["updated_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    cmeta["total"] = len(classics)
+    cmeta["daily_added"] = report["classic_added"]
+    save_json(CLASSIC_FILE, classic_doc)
     save_json(HISTORY_FILE, {"history": history})
     return report
 
