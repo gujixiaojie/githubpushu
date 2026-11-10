@@ -278,23 +278,33 @@ function boot(d,h,c,e){
     ' <span class="new-pill">最新收录日 '+newest+' 条</span>'+
     ' <a href="'+((HMETA.rss)||"https://hellogithub.com/rss")+'" target="_blank" rel="noopener"'+
     ' style="font-size:12px;color:#2f6fbf;text-decoration:none">HelloGitHub RSS ↗</a>';
+  if(LOADFAIL.length)$("metaLine").innerHTML+=' <span class="new-pill" style="background:#c62828;color:#fff">数据加载失败：'+esc(LOADFAIL.join("、"))+'（请刷新）</span>';
   buildSeen();loadMeta();fillOptions();render();renderDashboard();
 }
 /* 缓存键按 10 分钟分桶：Actions 每日更新后最迟 10 分钟内页面就能看到当天新数据 */
 var DAYKEY=(function(){var d=new Date();return ""+d.getFullYear()+
   ("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+
   ("0"+d.getHours()).slice(-2)+Math.floor(d.getMinutes()/10);})();
+var LOADFAIL=[];
+/* 单个数据文件失败时自动重试 2 次（换随机参数绕开缓存），仍失败则记录并提示，避免静默丢数据 */
+function fetchJson(path,fb,name){
+  function once(n){
+    var u=path+"?v="+DAYKEY+(n?"&r="+Math.random().toString(36).slice(2):"");
+    return fetch(u,{cache:"no-store"}).then(function(r){
+      if(!r.ok)throw new Error("HTTP "+r.status);
+      return r.json();
+    }).catch(function(){
+      if(n<2)return new Promise(function(res){setTimeout(res,700)}).then(function(){return once(n+1)});
+      LOADFAIL.push(name);return fb;
+    });
+  }
+  return once(0);
+}
 Promise.all([
-  fetch("data/projects.json?v="+DAYKEY,{cache:"no-store"}).then(function(r){return r.json()}),
-  fetch("data/star_history.json?v="+DAYKEY,{cache:"no-store"})
-    .then(function(r){return r.ok?r.json():{history:{}}})
-    .catch(function(){return {history:{}}}),
-  fetch("data/classic.json?v="+DAYKEY,{cache:"no-store"})
-    .then(function(r){return r.ok?r.json():{items:[]}})
-    .catch(function(){return {items:[]}}),
-  fetch("hello.json?v="+DAYKEY,{cache:"no-store"})
-    .then(function(r){return r.ok?r.json():{rows:[]}})
-    .catch(function(){return {rows:[]}})
+  fetchJson("data/projects.json",{projects:[]},"每日库"),
+  fetchJson("data/star_history.json",{history:{}},"星标历史"),
+  fetchJson("data/classic.json",{items:[]},"经典库"),
+  fetchJson("hello.json",{rows:[]},"HelloGitHub 月刊")
 ]).then(function(res){
   boot(res[0],(res[1]||{}).history||{},res[2]||{},res[3]||{})
 }).catch(function(e){
