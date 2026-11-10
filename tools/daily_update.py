@@ -50,6 +50,14 @@ CLASSIC_KEYWORDS = [
     "emulator", "ocr", "pdf", "markdown", "docker", "terminal", "monitor",
     "automation", "self-hosted",
 ]
+# HelloGitHub 参考通道：RSS 只给期号与分类统计，项目明细在期号页的 __NEXT_DATA__
+HELLO_FILE = os.path.join(BASE_DIR, "hello.json")
+HELLO_RSS = "https://hellogithub.com/rss"
+HELLO_VOLUME = "https://hellogithub.com/periodical/volume/%d"
+HELLO_DAILY_MAX = 5          # 每天最多从周刊补录几条（含在当日新收录总数里）
+HELLO_STAR_MIN = 100         # 周刊项目的最低星标门槛（快照值）
+HELLO_MAX_ISSUES = 2         # 单次最多补录的期数
+
 # 说明：iptv / 影视资源导航 / 直播源聚合这类站点存在版权风险，不纳入自动抓取；
 # 个别由用户指定的条目走 data/classic.json 里 user_pinned 的人工补录。
 
@@ -140,6 +148,49 @@ def clip(s, n=SUMMARY_MAX):
 
 # ---------------- 数据 ----------------
 
+def hello_fetch(url, timeout=20):
+    """访问 hellogithub.com（非 GitHub API，不带 Authorization）"""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def hello_new_issue_repos():
+    """RSS 发现期号 → 期号页取明细；只返回本地 hello.json 尚未覆盖的期里 star 达标的项目"""
+    if not os.path.exists(HELLO_FILE):
+        return []
+    hello_doc = load_json(HELLO_FILE, {"rows": [], "meta": {}})
+    covered = int((hello_doc.get("meta") or {}).get("issue_max") or 0)
+    xml = hello_fetch(HELLO_RSS)
+    issues = set()
+    for m in re.finditer(r"<item>(.*?)</item>", xml, re.S):
+        t = re.search(r"<title>(.*?)</title>", m.group(1), re.S)
+        if not t:
+            continue
+        n = re.search(r"第\s*(\d+)\s*期", t.group(1))
+        if n:
+            issues.add(int(n.group(1)))
+    todo = sorted(x for x in issues if x > covered)[:HELLO_MAX_ISSUES]
+    out = []
+    for n in todo:
+        try:
+            html = hello_fetch(HELLO_VOLUME % n, timeout=25)
+        except Exception:
+            continue
+        mm = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+        if not mm:
+            continue
+        vol = json.loads(mm.group(1))["props"]["pageProps"]["volume"]
+        for cat in vol.get("data") or []:
+            for it in cat.get("items") or []:
+                full = (it.get("full_name") or "").strip()
+                if not full or int(it.get("stars") or 0) < HELLO_STAR_MIN:
+                    continue
+                out.append({"full": full, "issue": n})
+        time.sleep(1)
+    return out
+
+
 def load_json(path, default):
     try:
         with open(path, encoding="utf-8") as f:
@@ -215,6 +266,8 @@ def run(dry_run=False, refresh_limit=0):
               "candidates": 0, "added": 0,
               "skipped_dup": 0, "skipped_star": 0, "skipped_blacklist": 0,
               "classic_total": len(classics), "classic_checked": 0, "classic_added": 0,
+              "hello_candidates": 0, "hello_added": 0, "hello_dup": 0, "hello_failed": 0,
+              "hello_note": None,
               "rate_remaining": None}
 
     # 1) 刷新已有项目
@@ -352,6 +405,41 @@ def run(dry_run=False, refresh_limit=0):
         classics.sort(key=lambda x: int(x.get("star") or 0), reverse=True)
         del classics[CLASSIC_TOTAL_MAX:]
     report["classic_total"] = len(classics)
+
+    # 2c) HelloGitHub 参考通道：周刊最新期的高星项目补进当日新收录
+    if os.path.exists(HELLO_FILE):
+        try:
+            cand = hello_new_issue_repos()
+        except Exception as e:
+            report["hello_note"] = "参考源读取失败：%s" % str(e)[:80]
+            cand = []
+        report["hello_candidates"] = len(cand)
+        have_ids = {(p.get("id") or "").lower() for p in projects}
+        have_ids |= {(c.get("id") or "").lower() for c in classics}
+        for c in cand:
+            if report["hello_added"] >= HELLO_DAILY_MAX:
+                break
+            full = c["full"]
+            if full.lower() in have_ids:
+                report["hello_dup"] += 1
+                continue
+            try:
+                repo, _ = api_get("/repos/" + full)
+            except Exception:
+                report["hello_failed"] += 1
+                continue
+            if int(repo.get("stargazers_count") or 0) < STAR_MIN:
+                continue
+            if hit_blacklist("%s %s" % (repo.get("name"), repo.get("description"))):
+                report["skipped_blacklist"] += 1
+                continue
+            item = to_item(repo)
+            item["from_hellogithub"] = c["issue"]
+            projects.append(item)
+            have_ids.add(full.lower())
+            by_url.add((item.get("github_url") or "").rstrip("/").lower())
+            report["added"] += 1
+            report["hello_added"] += 1
 
     # 3) 记录星标历史
     day = time.strftime("%Y-%m-%d")
