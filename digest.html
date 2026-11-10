@@ -96,9 +96,31 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
   .meta{gap:8px;font-size:12px}
 }
 @media (max-width:640px){.filters{grid-template-columns:1fr 1fr}}
+#gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+  background:rgba(250,250,252,.94);backdrop-filter:blur(3px)}
+#gate .gate-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px 28px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);width:min(86vw,340px);text-align:center}
+#gate .gate-title{font-size:17px;font-weight:600;margin-bottom:6px}
+#gate .gate-tip{font-size:12px;color:var(--dim);line-height:1.6;margin-bottom:14px}
+#gate input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--border);
+  border-radius:9px;font-size:14px;outline:none}
+#gate input:focus{border-color:#2f6fbf}
+#gate button{margin-top:12px;width:100%;padding:10px;border:0;border-radius:9px;background:#2f6fbf;
+  color:#fff;font-size:14px;cursor:pointer}
+#gate button:hover{background:#255aa0}
+#gate .gate-msg{min-height:18px;margin-top:9px;font-size:12px;color:#c62828}
 </style>
 </head>
 <body>
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-title">访问口令</div>
+    <div class="gate-tip">本站已设置访问口令，请输入后查看收录库。</div>
+    <input id="gatePw" type="password" placeholder="请输入口令" autocomplete="off">
+    <button id="gateBtn">进入</button>
+    <div class="gate-msg" id="gateMsg"></div>
+  </div>
+</div>
 <div class="wrap">
   <div class="top">
     <div>
@@ -300,17 +322,21 @@ function fetchJson(path,fb,name){
   }
   return once(0);
 }
-Promise.all([
-  fetchJson("data/projects.json",{projects:[]},"每日库"),
-  fetchJson("data/star_history.json",{history:{}},"星标历史"),
-  fetchJson("data/classic.json",{items:[]},"经典库"),
-  fetchJson("hello.json",{rows:[]},"HelloGitHub 月刊")
-]).then(function(res){
-  boot(res[0],(res[1]||{}).history||{},res[2]||{},res[3]||{})
-}).catch(function(e){
-  $("metaLine").textContent="数据加载失败："+e.message;
-  $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
-});
+var LOADED=false;
+function loadAll(){
+  if(LOADED)return;LOADED=true;
+  Promise.all([
+    fetchJson("data/projects.json",{projects:[]},"每日库"),
+    fetchJson("data/star_history.json",{history:{}},"星标历史"),
+    fetchJson("data/classic.json",{items:[]},"经典库"),
+    fetchJson("hello.json",{rows:[]},"HelloGitHub 月刊")
+  ]).then(function(res){
+    boot(res[0],(res[1]||{}).history||{},res[2]||{},res[3]||{})
+  }).catch(function(e){
+    $("metaLine").textContent="数据加载失败："+e.message;
+    $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
+  });
+}
 
 function allItems(){return ALL.concat(CLASSIC).concat(HELLO)}
 function uniq(key){
@@ -666,6 +692,50 @@ $("webExit").addEventListener("click",function(){webShow(false);render()});
 $("kw").addEventListener("keydown",function(e){
   if(e.key==="Enter"){e.preventDefault();searchWeb(false)}
 });
+
+/* ===== 访问口令（前端校验；数据文件本身仍可被直连读取，见说明） ===== */
+var GATE_HASH="e60773d59c71f26efa5b39712003242500d1049630022ad13440df8d967d7083";
+var GATE_KEY="ghpf_dg_auth_v1";
+function gateHash(pw){
+  return crypto.subtle.digest("SHA-256",new TextEncoder().encode(pw)).then(function(b){
+    var a=new Uint8Array(b),s="";
+    for(var i=0;i<a.length;i++)s+=("0"+a[i].toString(16)).slice(-2);
+    return s;
+  });
+}
+function gatePassed(){
+  $("gate").style.display="none";
+  loadAll();
+}
+function gateInit(){
+  try{
+    if(localStorage.getItem(GATE_KEY)===GATE_HASH){gatePassed();return}
+  }catch(e){}
+  $("gate").style.display="flex";
+  $("gatePw").focus();
+  function submit(){
+    var pw=$("gatePw").value;
+    if(!pw){$("gateMsg").textContent="请输入口令";return}
+    if(!(window.crypto&&crypto.subtle)){
+      $("gateMsg").textContent="当前浏览器不支持安全校验，请用 https 打开或用新版浏览器";return;
+    }
+    gateHash(pw).then(function(h){
+      if(h===GATE_HASH){
+        try{localStorage.setItem(GATE_KEY,GATE_HASH)}catch(e){}
+        $("gateMsg").textContent="";
+        gatePassed();
+      }else{
+        $("gateMsg").textContent="口令不正确";
+        $("gatePw").value="";$("gatePw").focus();
+      }
+    }).catch(function(){$("gateMsg").textContent="校验失败，请重试"});
+  }
+  $("gateBtn").addEventListener("click",submit);
+  $("gatePw").addEventListener("keydown",function(e){
+    if(e.key==="Enter"){e.preventDefault();submit()}
+  });
+}
+gateInit();
 })();
 </script>
 <script>
