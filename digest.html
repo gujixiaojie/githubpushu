@@ -142,9 +142,10 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
   </div>
   <div class="filters" style="grid-template-columns:repeat(4,1fr)">
     <select id="typeSel">
-      <option value="all">全部（新收录 + 经典库）</option>
+      <option value="all">全部（新收录 + 经典库 + HelloGitHub）</option>
       <option value="new">仅每日新收录</option>
       <option value="classic">仅经典库（高星老项目）</option>
+      <option value="hello">仅 HelloGitHub 月刊</option>
     </select>
     <select id="sortSel">
       <option value="new">最新收录</option>
@@ -165,13 +166,14 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
 
   <div class="stat" id="statLine"></div>
   <div id="list"></div>
+  <div class="stat" id="moreWrap" style="display:none;text-align:center"><button class="mini-btn" id="moreBtn" style="min-width:240px">加载更多</button></div>
 </div>
 <div id="toast"></div>
 
 <script>
 (function(){
 "use strict";
-var ALL=[],CLASSIC=[],LATEST="",META={},GROUPS=[];
+var ALL=[],CLASSIC=[],HELLO=[],LATEST="",META={},GROUPS=[],HMETA={},MORE=300,HSTEP=300;
 var LS_META="ghpf_dg_meta_v1",LS_GROUP="ghpf_dg_groups_v1";
 function $(id){return document.getElementById(id)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
@@ -247,15 +249,21 @@ function spark(p){
     '"><polyline points="'+xy+'" fill="none" stroke="#d4a017" stroke-width="1.5"/></svg>';
 }
 
-function boot(d,h,c){
+function boot(d,h,c,e){
   HIST=h||{};
   ALL=(d.projects||[]).filter(function(p){return!p.is_hidden});
   CLASSIC=((c||{}).items||[]).filter(function(p){return!p.is_hidden});
+  var eo=e||{},hrows=eo.rows||[];
+  HMETA=eo.meta||{};
+  HELLO=hrows.map(function(r){return{id:r[0],title:r[1],summary:r[2],star:r[3],
+    forks:r[4],issue:r[5],crawl_date:r[6],repo_created:"",last_commit:"",
+    github_url:"https://github.com/"+r[0],category_tags:[r[7]],
+    platform_tags:[],license:"",open_issues:0,is_hidden:false,hellogithub:true}});
   LATEST=ALL.map(function(p){return p.crawl_date}).sort().pop()||"";
   var meta=d.meta||{};
   var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
-  $("metaLine").innerHTML="共 "+(ALL.length+CLASSIC.length)+" 个收录项目（每日新收录 "+ALL.length+
-    " · 经典库 "+CLASSIC.length+"）· 更新于 "+(meta.updated_at||LATEST)+
+  $("metaLine").innerHTML="共 "+(ALL.length+CLASSIC.length+HELLO.length)+" 个收录项目（每日新收录 "+ALL.length+
+    " · 经典库 "+CLASSIC.length+" · HelloGitHub "+HELLO.length+"）· 更新于 "+(meta.updated_at||LATEST)+
     ' <span class="new-pill">最新收录日 '+newest+' 条</span>';
   loadMeta();fillOptions();render();renderDashboard();
 }
@@ -269,15 +277,18 @@ Promise.all([
     .catch(function(){return {history:{}}}),
   fetch("data/classic.json?v="+DAYKEY,{cache:"no-store"})
     .then(function(r){return r.ok?r.json():{items:[]}})
-    .catch(function(){return {items:[]}})
+    .catch(function(){return {items:[]}}),
+  fetch("hello.json?v="+DAYKEY,{cache:"no-store"})
+    .then(function(r){return r.ok?r.json():{rows:[]}})
+    .catch(function(){return {rows:[]}})
 ]).then(function(res){
-  boot(res[0],(res[1]||{}).history||{},res[2]||{})
+  boot(res[0],(res[1]||{}).history||{},res[2]||{},res[3]||{})
 }).catch(function(e){
   $("metaLine").textContent="数据加载失败："+e.message;
   $("list").innerHTML='<div class="empty">无法加载 data/projects.json</div>';
 });
 
-function allItems(){return ALL.concat(CLASSIC)}
+function allItems(){return ALL.concat(CLASSIC).concat(HELLO)}
 function uniq(key){
   var s={};allItems().forEach(function(p){(p[key]||[]).forEach(function(v){s[v]=1})});
   return Object.keys(s).sort();
@@ -302,7 +313,7 @@ function render(){
   var kw=$("kw").value.trim().toLowerCase(),cat=$("catSel").value,
       plat=$("platSel").value,lic=$("licSel").value,grp=$("groupSel").value,
       sort=$("sortSel").value,type=$("typeSel").value;
-  var base=type==="classic"?CLASSIC:(type==="new"?ALL:ALL.concat(CLASSIC));
+  var base=type==="classic"?CLASSIC:(type==="new"?ALL:(type==="hello"?HELLO:ALL.concat(CLASSIC).concat(HELLO)));
   var list=base.filter(function(p){
     if(cat&&(p.category_tags||[]).indexOf(cat)<0)return false;
     if(plat&&(p.platform_tags||[]).indexOf(plat)<0)return false;
@@ -328,16 +339,21 @@ function render(){
   });
   // 置顶优先
   list.sort(function(a,b){return(!!gm(b.id).pin)-(!!gm(a.id).pin)});
-  $("statLine").innerHTML="显示 <b>"+list.length+"</b> / "+base.length+" 个项目"+
-    (type==="all"?"（新收录 "+ALL.length+" · 经典库 "+CLASSIC.length+"）":"")+
-    (type==="classic"?"　· 经典库口径：近 7 天仍活跃且 ★≥500":"");
-  if(!list.length){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';return}
-  $("list").innerHTML=list.map(function(p){
+  var total=list.length;
+  var disp=total>MORE?list.slice(0,MORE):list;
+  $("statLine").innerHTML="显示 <b>"+total+"</b> / "+base.length+" 个项目"+
+    (type==="all"?"（新收录 "+ALL.length+" · 经典库 "+CLASSIC.length+" · HelloGitHub "+HELLO.length+"）":"")+
+    (type==="classic"?"　· 经典库口径：近 7 天仍活跃且 ★≥500":"")+
+    (type==="hello"?"　· HelloGitHub 月刊第 "+(HMETA.issue_min||1)+"-"+(HMETA.issue_max||127)+" 期（星标为站点快照）":"")+
+    (total>MORE?"　· 已渲染前 "+MORE+" 条":"");
+  if(!total){$("list").innerHTML='<div class="empty">没有符合条件的项目</div>';$("moreWrap").style.display="none";return}
+  $("list").innerHTML=disp.map(function(p){
     var mm=gm(p.id);
     var cats=(p.category_tags||[]).map(function(t){return'<span class="chip">'+esc(t)+"</span>"}).join("");
     var plats=(p.platform_tags||[]).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
     var isNew=(!p.classic&&p.crawl_date===LATEST)?'<span class="new-pill" style="margin:0">新</span>':"";
     var isClassic=p.classic?'<span class="chip" style="background:#f3ead2;color:#8a6d1f">经典库</span>':"";
+    var isHH=p.hellogithub?'<span class="chip" style="background:#e8f0fb;color:#2f6fbf">HG 第'+p.issue+'期</span>':"";
     var pin='<button class="mini-btn '+(mm.pin?"on":"")+'" data-act="pin" data-id="'+esc(p.id)+'">置顶</button>';
     var stars=[1,2,3,4,5].map(function(n){return'<button class="rate-mini" data-act="rate" data-id="'+
       esc(p.id)+'" data-v="'+n+'">'+(n<=(mm.rating||0)?"★":"☆")+"</button>"}).join("");
@@ -345,21 +361,23 @@ function render(){
       '<option value="">未分组</option>'+GROUPS.map(function(g){return'<option '+(mm.group===g?"selected":"")+'>'+esc(g)+"</option>"}).join("")+"</select>";
     var note=mm.note?'<div class="note-line">备注：'+esc(mm.note)+"</div>":"";
     var h=healthOf(p),hlClass=h.label==="健康"?"hl-ok":h.label==="放缓"?"hl-warn":"hl-stop";
-    var hl='<span class="hl '+hlClass+'">'+h.label+" "+h.score+"</span>";
+    var hl=p.hellogithub?"":'<span class="hl '+hlClass+'">'+h.label+" "+h.score+"</span>";
     var v=velOf(p),vTxt=v!==null?'<span class="vel">日均 +'+v+" ★</span>":"";
     var sp=spark(p);
     var review=$("fReview").checked?'<div class="review-line">'+esc(reviewOf(p))+"</div>":"";
     return '<div class="card '+(mm.pin?"pinned":"")+'"><div class="title-line">'
       +'<a class="title" href="'+esc(p.github_url)+'" target="_blank" rel="noopener">'+esc(p.title)+"</a>"
-      +isNew+isClassic+hl+cats+plats+"</div>"
+      +isNew+isClassic+isHH+hl+cats+plats+"</div>"
       +(p.summary?'<div class="summary">'+esc(p.summary)+"</div>":"")
       +note+review
       +'<div class="meta"><span class="star">★ '+Number(p.star||0).toLocaleString()+"</span>"
-      +vTxt+sp+"<span>更新 "+esc(p.last_commit)+"</span>"+pin+gsel
+      +vTxt+sp+"<span>"+(p.hellogithub?"收录 "+esc(p.crawl_date):"更新 "+esc(p.last_commit))+"</span>"+pin+gsel
       +'<button class="mini-btn" data-act="note" data-id="'+esc(p.id)+'">备注</button>'
       +'<button class="mini-btn" data-act="share" data-id="'+esc(p.id)+'">分享</button>'
       +"</div><div class='meta' style='margin-top:7px'>评分："+stars+"</div></div>";
   }).join("");
+  $("moreWrap").style.display=total>MORE?"":"none";
+  $("moreBtn").textContent="加载更多（已显示 "+MORE+" / "+total+" 条）";
 }
 
 function renderDashboard(){
@@ -457,8 +475,9 @@ function exportCsv(){
 }
 
 ["kw","catSel","platSel","licSel","groupSel","sortSel","typeSel","fNewbie","fCn","fReview"].forEach(function(id){
-  $(id).addEventListener("input",render);
+  $(id).addEventListener("input",function(){MORE=HSTEP;render()});
 });
+$("moreBtn").addEventListener("click",function(){MORE+=HSTEP;render()});
 $("cloudToggle").addEventListener("click",function(){
   $("cloudBox").hidden=!$("cloudBox").hidden;
   if(!$("cloudBox").hidden)renderCloud();
