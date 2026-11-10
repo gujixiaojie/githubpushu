@@ -548,6 +548,18 @@ function webShow(on){
   $("list").style.display=on?"none":"";
   if(on)$("moreWrap").style.display="none";
 }
+/* 国内直连 api.github.com 常被限速甚至超时，统一加 12 秒上限，超时后给网页搜索保底入口 */
+function fetchApi(url,ms){
+  return new Promise(function(resolve,reject){
+    var done=false;
+    var timer=setTimeout(function(){if(!done){done=true;reject(new Error("TIMEOUT"))}},ms||12000);
+    fetch(url,{headers:{Accept:"application/vnd.github+json"}}).then(function(r){
+      if(done)return;done=true;clearTimeout(timer);resolve(r);
+    }).catch(function(e){
+      if(done)return;done=true;clearTimeout(timer);reject(e);
+    });
+  });
+}
 function repoRefOf(kw){
   var m=kw.match(/(?:https?:\/\/)?(?:www\.)?github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
   if(m)return m[1]+"/"+m[2].replace(/\.git$/i,"");
@@ -567,7 +579,7 @@ function searchWeb(more){
     var repoPage="https://github.com/"+ref;
     $("webStat").innerHTML="正在按仓库地址精确查找："+esc(ref);
     $("webList").innerHTML="";$("webMoreWrap").style.display="none";
-    fetch(exactUrl,{headers:{Accept:"application/vnd.github+json"}}).then(function(r){
+    fetchApi(exactUrl,12000).then(function(r){
       var rem=r.headers.get("X-RateLimit-Remaining");
       if(rem!==null)WEB.rem=rem;
       if(r.status===403||r.status===429){var e=new Error("限流");e.status=r.status;throw e}
@@ -588,8 +600,10 @@ function searchWeb(more){
       }
     }).catch(function(e){
       WEB.busy=false;
-      var tip=(e.status===403||e.status===429)?"GitHub 接口限流（未登录每分钟 10 次），约 1 分钟后重试。":"精确查找失败："+esc(e.message);
-      $("webStat").innerHTML=tip+"　<a href=\""+esc(repoPage)+"\" target=\"_blank\" rel=\"noopener\">在 GitHub 网页打开 ↗</a>";
+      var tip=e.message==="TIMEOUT"
+        ?"连接 GitHub 接口超时（国内访问 api.github.com 常被限速），可点右侧按钮直接在 GitHub 网页打开该仓库。"
+        :((e.status===403||e.status===429)?"GitHub 接口限流（未登录每分钟 10 次），约 1 分钟后重试。":"精确查找失败："+esc(e.message));
+      $("webStat").innerHTML=tip+'<a class="mini-btn" style="text-decoration:none;background:#2f6fbf;color:#fff;border-color:#2f6fbf;margin-left:8px" href="'+esc(repoPage)+'" target="_blank" rel="noopener">在 GitHub 网页打开 ↗</a>';
       $("webList").innerHTML="";
     });
     return;
@@ -600,7 +614,7 @@ function searchWeb(more){
   $("webList").innerHTML="";$("webMoreWrap").style.display="none";
   var url="https://api.github.com/search/repositories?q="+encodeURIComponent(WEB.kw)+
     "&sort=stars&order=desc&per_page=30&page="+page;
-  fetch(url,{headers:{Accept:"application/vnd.github+json"}}).then(function(r){
+  fetchApi(url,12000).then(function(r){
     var rem=r.headers.get("X-RateLimit-Remaining");
     if(rem!==null)WEB.rem=rem;
     if(!r.ok){var e=new Error("HTTP "+r.status);e.status=r.status;throw e}
@@ -611,10 +625,13 @@ function searchWeb(more){
     renderWeb();
   }).catch(function(e){
     WEB.busy=false;
-    if(e.status===403||e.status===429){
-      $("webStat").innerHTML="<b>GitHub 接口限流</b>（未登录每分钟最多 10 次搜索，已用尽）。约 1 分钟后重试，或 <a href=\""+esc(alt)+"\" target=\"_blank\" rel=\"noopener\">直接在 GitHub 网页搜 ↗</a>";
+    var wbtn='<a class="mini-btn" style="text-decoration:none;background:#2f6fbf;color:#fff;border-color:#2f6fbf;margin-left:8px" href="'+esc(alt)+'" target="_blank" rel="noopener">在 GitHub 网页搜索「'+esc(WEB.kw)+'」 ↗</a>';
+    if(e.message==="TIMEOUT"){
+      $("webStat").innerHTML="<b>连接 GitHub 接口超时</b>（国内网络访问 api.github.com 常被限速）。建议直接用右侧按钮到 GitHub 网页搜索。"+wbtn;
+    }else if(e.status===403||e.status===429){
+      $("webStat").innerHTML="<b>GitHub 接口限流</b>（未登录每分钟最多 10 次搜索，已用尽）。约 1 分钟后重试，或"+wbtn;
     }else{
-      $("webStat").innerHTML="全站搜索失败："+esc(e.message)+"　<a href=\""+esc(alt)+"\" target=\"_blank\" rel=\"noopener\">改用 GitHub 网页搜索 ↗</a>";
+      $("webStat").innerHTML="全站搜索失败："+esc(e.message)+wbtn;
     }
   });
 }
