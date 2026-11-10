@@ -280,9 +280,10 @@ function boot(d,h,c,e){
     ' style="font-size:12px;color:#2f6fbf;text-decoration:none">HelloGitHub RSS ↗</a>';
   buildSeen();loadMeta();fillOptions();render();renderDashboard();
 }
-/* 按天生成缓存键：每天自动更新后必定拿到当天数据，同一天内仍可复用缓存 */
+/* 缓存键按 10 分钟分桶：Actions 每日更新后最迟 10 分钟内页面就能看到当天新数据 */
 var DAYKEY=(function(){var d=new Date();return ""+d.getFullYear()+
-  ("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2);})();
+  ("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+
+  ("0"+d.getHours()).slice(-2)+Math.floor(d.getMinutes()/10);})();
 Promise.all([
   fetch("data/projects.json?v="+DAYKEY,{cache:"no-store"}).then(function(r){return r.json()}),
   fetch("data/star_history.json?v="+DAYKEY,{cache:"no-store"})
