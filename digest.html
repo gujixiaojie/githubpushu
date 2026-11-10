@@ -264,7 +264,9 @@ function boot(d,h,c,e){
   var newest=ALL.filter(function(p){return p.crawl_date===LATEST}).length;
   $("metaLine").innerHTML="共 "+(ALL.length+CLASSIC.length+HELLO.length)+" 个收录项目（每日新收录 "+ALL.length+
     " · 经典库 "+CLASSIC.length+" · HelloGitHub "+HELLO.length+"）· 更新于 "+(meta.updated_at||LATEST)+
-    ' <span class="new-pill">最新收录日 '+newest+' 条</span>';
+    ' <span class="new-pill">最新收录日 '+newest+' 条</span>'+
+    ' <a href="'+((HMETA.rss)||"https://hellogithub.com/rss")+'" target="_blank" rel="noopener"'+
+    ' style="font-size:12px;color:#2f6fbf;text-decoration:none">HelloGitHub RSS ↗</a>';
   loadMeta();fillOptions();render();renderDashboard();
 }
 /* 按天生成缓存键：每天自动更新后必定拿到当天数据，同一天内仍可复用缓存 */
