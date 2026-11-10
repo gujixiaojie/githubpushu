@@ -694,11 +694,16 @@ $("kw").addEventListener("keydown",function(e){
 });
 
 /* ===== 访问口令（前端校验；数据文件本身仍可被直连读取，见说明） ===== */
-var GATE_HASH="e60773d59c71f26efa5b39712003242500d1049630022ad13440df8d967d7083";
-var GATE_KEY="ghpf_dg_auth_v1";
+var GATE_HASH="9a3b5abdee83f08471df73a35acf22bcac7aa41105996fb717875ea4325bcd6b";
+var GATE_SALT="ghpf-digest-gate-v1";
+var GATE_KEY="ghpf_dg_auth_v2";
 function gateHash(pw){
-  return crypto.subtle.digest("SHA-256",new TextEncoder().encode(pw)).then(function(b){
-    var a=new Uint8Array(b),s="";
+  if(!(window.crypto&&crypto.subtle))return Promise.reject(new Error("NO_CRYPTO"));
+  var enc=new TextEncoder();
+  return crypto.subtle.importKey("raw",enc.encode(pw),"PBKDF2",false,["deriveBits"]).then(function(k){
+    return crypto.subtle.deriveBits({name:"PBKDF2",salt:enc.encode(GATE_SALT),iterations:2000,hash:"SHA-256"},k,256);
+  }).then(function(bits){
+    var a=new Uint8Array(bits),s="";
     for(var i=0;i<a.length;i++)s+=("0"+a[i].toString(16)).slice(-2);
     return s;
   });
