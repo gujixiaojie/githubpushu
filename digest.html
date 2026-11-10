@@ -128,13 +128,14 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
   </div>
 
   <div class="btn-row">
+    <button class="mini-btn" id="webBtn" style="background:#2f6fbf;color:#fff;border-color:#2f6fbf">搜 GitHub 全站</button>
     <button class="mini-btn" id="cloudToggle">热词云</button>
     <button class="mini-btn" id="exportJsonBtn">导出JSON</button>
     <button class="mini-btn" id="exportCsvBtn">导出CSV</button>
   </div>
 
   <div class="filters">
-    <input id="kw" placeholder="搜索标题 / 简介 / 标签…">
+    <input id="kw" placeholder="搜索标题 / 简介 / 标签…（回车 = 搜 GitHub 全站）">
     <select id="catSel"><option value="">全部分类</option></select>
     <select id="platSel"><option value="">全部平台</option></select>
     <select id="licSel"><option value="">全部许可证</option></select>
@@ -165,6 +166,12 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
   </div>
 
   <div class="stat" id="statLine"></div>
+  <div id="webWrap" style="display:none">
+    <div class="stat" id="webStat"></div>
+    <div id="webList"></div>
+    <div class="stat" id="webMoreWrap" style="display:none;text-align:center"><button class="mini-btn" id="webMoreBtn" style="min-width:240px">加载更多（全站）</button></div>
+    <div class="stat" style="text-align:center"><button class="mini-btn" id="webExit">返回收录库</button></div>
+  </div>
   <div id="list"></div>
   <div class="stat" id="moreWrap" style="display:none;text-align:center"><button class="mini-btn" id="moreBtn" style="min-width:240px">加载更多</button></div>
 </div>
@@ -174,6 +181,7 @@ input,select,button{border:1px solid var(--border);border-radius:7px;padding:8px
 (function(){
 "use strict";
 var ALL=[],CLASSIC=[],HELLO=[],LATEST="",META={},GROUPS=[],HMETA={},MORE=300,HSTEP=300;
+var SEEN={},WEB={kw:"",page:0,total:0,items:[],rem:null,busy:false,on:false};
 var LS_META="ghpf_dg_meta_v1",LS_GROUP="ghpf_dg_groups_v1";
 function $(id){return document.getElementById(id)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
@@ -270,7 +278,7 @@ function boot(d,h,c,e){
     ' <span class="new-pill">最新收录日 '+newest+' 条</span>'+
     ' <a href="'+((HMETA.rss)||"https://hellogithub.com/rss")+'" target="_blank" rel="noopener"'+
     ' style="font-size:12px;color:#2f6fbf;text-decoration:none">HelloGitHub RSS ↗</a>';
-  loadMeta();fillOptions();render();renderDashboard();
+  buildSeen();loadMeta();fillOptions();render();renderDashboard();
 }
 /* 按天生成缓存键：每天自动更新后必定拿到当天数据，同一天内仍可复用缓存 */
 var DAYKEY=(function(){var d=new Date();return ""+d.getFullYear()+
@@ -382,7 +390,7 @@ function render(){
       +'<button class="mini-btn" data-act="share" data-id="'+esc(p.id)+'">分享</button>'
       +"</div><div class='meta' style='margin-top:7px'>评分："+stars+"</div></div>";
   }).join("");
-  $("moreWrap").style.display=total>MORE?"":"none";
+  $("moreWrap").style.display=(typeof WEB!=="undefined"&&WEB.on)?"none":(total>MORE?"":"none");
   $("moreBtn").textContent="加载更多（已显示 "+MORE+" / "+total+" 条）";
 }
 
@@ -516,6 +524,119 @@ $("list").addEventListener("click",function(e){
 $("list").addEventListener("change",function(e){
   var s=e.target.closest('select[data-act="group"]');if(!s)return;
   m(s.getAttribute("data-id")).group=s.value;saveMeta();render();
+});
+
+/* ===== GitHub 全站搜索（直连 api.github.com，未登录每分钟 10 次） ===== */
+function buildSeen(){
+  SEEN={};allItems().forEach(function(p){var k=(p.id||"").toLowerCase();if(k)SEEN[k]=p});
+}
+function webShow(on){
+  WEB.on=on;
+  $("webWrap").style.display=on?"":"none";
+  $("statLine").style.display=on?"none":"";
+  $("list").style.display=on?"none":"";
+  if(on)$("moreWrap").style.display="none";
+}
+function repoRefOf(kw){
+  var m=kw.match(/(?:https?:\/\/)?(?:www\.)?github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/i);
+  if(m)return m[1]+"/"+m[2].replace(/\.git$/i,"");
+  if(/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(kw))return kw;
+  return null;
+}
+function searchWeb(more){
+  var kw=$("kw").value.trim();
+  if(!kw){toast("先在搜索框里输入关键词或仓库地址（建议英文）");$("kw").focus();return}
+  if(WEB.busy)return;
+  if(!more||WEB.kw!==kw){WEB.kw=kw;WEB.page=0;WEB.items=[]}
+  WEB.busy=true;webShow(true);
+  /* 粘贴仓库地址 / owner/name 时直接查单仓库，避免全站检索漏掉 */
+  var ref=repoRefOf(kw);
+  if(ref){
+    var exactUrl="https://api.github.com/search/repositories?q="+encodeURIComponent(ref)+"&per_page=5";
+    var repoPage="https://github.com/"+ref;
+    $("webStat").innerHTML="正在按仓库地址精确查找："+esc(ref);
+    $("webList").innerHTML="";$("webMoreWrap").style.display="none";
+    fetch(exactUrl,{headers:{Accept:"application/vnd.github+json"}}).then(function(r){
+      var rem=r.headers.get("X-RateLimit-Remaining");
+      if(rem!==null)WEB.rem=rem;
+      if(r.status===403||r.status===429){var e=new Error("限流");e.status=r.status;throw e}
+      if(!r.ok){var e3=new Error("HTTP "+r.status);e3.status=r.status;throw e3}
+      return r.json();
+    }).then(function(d){
+      WEB.busy=false;WEB.page=1;
+      var items=d.items||[];
+      var exact=items.filter(function(x){return (x.full_name||"").toLowerCase()===ref.toLowerCase()})[0];
+      var show=exact?[exact]:items.slice(0,5);
+      WEB.items=show;WEB.total=exact?1:show.length;
+      renderWeb();
+      if(exact){
+        $("webStat").innerHTML="按仓库地址精确命中 <b>1</b> 个仓库：<b>"+esc(exact.full_name)+"</b>　·　<a href=\""+esc(repoPage)+"\" target=\"_blank\" rel=\"noopener\">打开仓库 ↗</a>";
+      }else{
+        $("webStat").innerHTML="GitHub 上没有找到 <b>"+esc(ref)+"</b>（可能已删除、改名或为私有仓库）"+
+          (show.length?"，下面是相近结果：":"")+"　<a href=\""+esc(repoPage)+"\" target=\"_blank\" rel=\"noopener\">在网页打开 ↗</a>";
+      }
+    }).catch(function(e){
+      WEB.busy=false;
+      var tip=(e.status===403||e.status===429)?"GitHub 接口限流（未登录每分钟 10 次），约 1 分钟后重试。":"精确查找失败："+esc(e.message);
+      $("webStat").innerHTML=tip+"　<a href=\""+esc(repoPage)+"\" target=\"_blank\" rel=\"noopener\">在 GitHub 网页打开 ↗</a>";
+      $("webList").innerHTML="";
+    });
+    return;
+  }
+  var page=WEB.page+1;
+  var alt="https://github.com/search?q="+encodeURIComponent(WEB.kw)+"&type=repositories";
+  $("webStat").innerHTML="正在搜索 GitHub 全站…（"+esc(WEB.kw)+"）";
+  $("webList").innerHTML="";$("webMoreWrap").style.display="none";
+  var url="https://api.github.com/search/repositories?q="+encodeURIComponent(WEB.kw)+
+    "&sort=stars&order=desc&per_page=30&page="+page;
+  fetch(url,{headers:{Accept:"application/vnd.github+json"}}).then(function(r){
+    var rem=r.headers.get("X-RateLimit-Remaining");
+    if(rem!==null)WEB.rem=rem;
+    if(!r.ok){var e=new Error("HTTP "+r.status);e.status=r.status;throw e}
+    return r.json();
+  }).then(function(d){
+    WEB.busy=false;WEB.page=page;WEB.total=d.total_count||0;
+    WEB.items=WEB.items.concat(d.items||[]);
+    renderWeb();
+  }).catch(function(e){
+    WEB.busy=false;
+    if(e.status===403||e.status===429){
+      $("webStat").innerHTML="<b>GitHub 接口限流</b>（未登录每分钟最多 10 次搜索，已用尽）。约 1 分钟后重试，或 <a href=\""+esc(alt)+"\" target=\"_blank\" rel=\"noopener\">直接在 GitHub 网页搜 ↗</a>";
+    }else{
+      $("webStat").innerHTML="全站搜索失败："+esc(e.message)+"　<a href=\""+esc(alt)+"\" target=\"_blank\" rel=\"noopener\">改用 GitHub 网页搜索 ↗</a>";
+    }
+  });
+}
+function renderWeb(){
+  var html=WEB.items.map(function(r){
+    var k=(r.full_name||"").toLowerCase(),local=SEEN[k];
+    var badge=local?'<span class="chip" style="background:#e6f6ea;color:#1c7a3a">已收录</span>'
+                  :'<span class="chip" style="background:#fff3e0;color:#a35b00">未收录</span>';
+    var where=local?(local.issue?"HelloGitHub 第"+local.issue+"期":(local.classic?"经典库":"每日库")):"";
+    var lang=r.language?'<span class="chip gray">'+esc(r.language)+"</span>":"";
+    var tp=(r.topics||[]).slice(0,2).map(function(t){return'<span class="chip gray">'+esc(t)+"</span>"}).join("");
+    var desc=esc(String(r.description||"（该仓库没有简介）").slice(0,150));
+    var upd=String(r.pushed_at||"").slice(0,10);
+    return '<div class="card"><div class="title-line">'
+      +'<a class="title" href="'+esc(r.html_url)+'" target="_blank" rel="noopener">'+esc(r.name||r.full_name)+"</a>"
+      +badge+lang+tp+"</div>"
+      +'<div class="summary">'+desc+"</div>"
+      +'<div class="meta"><span class="star">★ '+Number(r.stargazers_count||0).toLocaleString()+"</span>"
+      +'<span>'+esc(r.full_name||"")+" · 最近推送 "+esc(upd)+"</span>"
+      +(where?'<span class="dim">在库：'+esc(where)+"</span>":"")
+      +'<a class="mini-btn" style="text-decoration:none" href="'+esc(r.html_url)+'" target="_blank" rel="noopener">打开仓库</a>'
+      +"</div></div>";
+  }).join("");
+  $("webStat").innerHTML="GitHub 全站命中 <b>"+Number(WEB.total).toLocaleString()+"</b> 个仓库 · 已显示 "+WEB.items.length+
+    " 条"+(WEB.rem!==null?"　·　本次剩余额度 "+WEB.rem+" 次（未登录每分钟 10 次）":"");
+  $("webList").innerHTML=html||'<div class="empty">全站没有匹配的仓库，换个英文关键词试试</div>';
+  $("webMoreWrap").style.display=(WEB.items.length<WEB.total&&WEB.items.length<300)?"":"none";
+}
+$("webBtn").addEventListener("click",function(){searchWeb(false)});
+$("webMoreBtn").addEventListener("click",function(){searchWeb(true)});
+$("webExit").addEventListener("click",function(){webShow(false);render()});
+$("kw").addEventListener("keydown",function(e){
+  if(e.key==="Enter"){e.preventDefault();searchWeb(false)}
 });
 })();
 </script>
