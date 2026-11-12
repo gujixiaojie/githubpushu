@@ -9,15 +9,15 @@
       "title": "huashu-bird-sticker",
       "summary": "花叔开源的全球鸟类贴纸库 · Stickers for all 11,064 living bird species, with names in 43 lan…",
       "github_url": "https://github.com/alchaincyf/huashu-bird-sticker",
-      "star": 720,
-      "last_commit": "2026-11-08",
+      "star": 725,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-01 17:18:02",
       "open_issues": 1,
-      "forks": 129,
+      "forks": 133,
       "language": "",
       "license": "NOASSERTION",
       "homepage": "https://birdalbum.com",
@@ -56,7 +56,7 @@
       "is_hidden": false,
       "created_at": "2026-11-01 17:19:03",
       "open_issues": 0,
-      "forks": 2,
+      "forks": 3,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -89,7 +89,7 @@
       "title": "easy-jianying",
       "summary": "让 AI 把剪辑做成剪映草稿，你在剪映里接着改 · AI → editable JianYing (剪映) drafts on macOS",
       "github_url": "https://github.com/YeJe-cpu/easy-jianying",
-      "star": 176,
+      "star": 178,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -143,15 +143,15 @@
       "title": "openhongguo",
       "summary": "红果短剧的非官方匿名 SDK，提供 Go、Node.js、Android、iOS、React Native 和 Flutter 版本，附命令行演示程序 ohg…",
       "github_url": "https://github.com/beilunyang/openhongguo",
-      "star": 390,
-      "last_commit": "2026-11-04",
+      "star": 407,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-01 17:24:47",
       "open_issues": 2,
-      "forks": 113,
+      "forks": 119,
       "language": "Go",
       "license": "Apache-2.0",
       "homepage": "",
@@ -166,7 +166,7 @@
       "title": "ai-costume-gallery-cn",
       "summary": "AI 绘画服装参考图库中文版 · 1407 件服装 / 86 个标签 · 零依赖静态画廊（代码 MIT，图片不入库）",
       "github_url": "https://github.com/Brilliant666/ai-costume-gallery-cn",
-      "star": 145,
+      "star": 147,
       "last_commit": "2026-10-30",
       "category_tags": [
         "影音播放器"
@@ -203,7 +203,7 @@
       "title": "digital-life-core",
       "summary": "⚠️ 项目状态与免责声明 / Project Status",
       "github_url": "https://github.com/mashangshui/digital-life-core",
-      "star": 179,
+      "star": 181,
       "last_commit": "2026-11-03",
       "category_tags": [
         "影音播放器"
@@ -211,7 +211,7 @@
       "is_hidden": false,
       "created_at": "2026-11-01 17:25:06",
       "open_issues": 0,
-      "forks": 40,
+      "forks": 41,
       "language": "TypeScript",
       "license": "",
       "homepage": "",
@@ -226,15 +226,15 @@
       "title": "hongguo-open-player",
       "summary": "红果开源播放器",
       "github_url": "https://github.com/zfdang/hongguo-open-player",
-      "star": 234,
-      "last_commit": "2026-11-10",
+      "star": 249,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
       "is_hidden": false,
       "created_at": "2026-11-01 17:25:14",
-      "open_issues": 4,
-      "forks": 24,
+      "open_issues": 2,
+      "forks": 29,
       "language": "JavaScript",
       "license": "AGPL-3.0",
       "homepage": "",
@@ -320,7 +320,7 @@
       "title": "giligili",
       "summary": "面向 M5Stack StackChan 的开源 AI 语音陪伴机器人固件，基于 ESP-IDF、PocketJS MicroTS 与 Rust。",
       "github_url": "https://github.com/miantiao-me/giligili",
-      "star": 22,
+      "star": 23,
       "last_commit": "2026-10-26",
       "category_tags": [
         "NAS存储"
@@ -343,7 +343,7 @@
       "title": "agent-office-3d",
       "summary": "A low-poly 3D office that shows your AI coding agents' live status — idle agents…",
       "github_url": "https://github.com/jefferysha0627/agent-office-3d",
-      "star": 129,
+      "star": 128,
       "last_commit": "2026-11-01",
       "category_tags": [
         "设计"
@@ -351,7 +351,7 @@
       "is_hidden": false,
       "created_at": "2026-11-01 17:26:00",
       "open_issues": 0,
-      "forks": 8,
+      "forks": 9,
       "language": "JavaScript",
       "license": "MIT",
       "homepage": "",
@@ -429,15 +429,15 @@
       "title": "lancer",
       "summary": "Lancer — desktop AI workspace based on pi-gui and pi",
       "github_url": "https://github.com/raylee-ai/lancer",
-      "star": 323,
-      "last_commit": "2026-11-08",
+      "star": 326,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
       ],
       "is_hidden": false,
       "created_at": "2026-11-01 17:26:35",
-      "open_issues": 8,
-      "forks": 81,
+      "open_issues": 7,
+      "forks": 82,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "",
@@ -452,15 +452,15 @@
       "title": "msr2ds",
       "summary": "Metroid: Samus Returns as a single-screen PC game, built on the Azahar 3DS emula…",
       "github_url": "https://github.com/gminustwo/msr2ds",
-      "star": 247,
+      "star": 249,
       "last_commit": "2026-11-10",
       "category_tags": [
         "逆向开发"
       ],
       "is_hidden": false,
       "created_at": "2026-11-01 17:26:45",
-      "open_issues": 17,
-      "forks": 6,
+      "open_issues": 18,
+      "forks": 7,
       "language": "C++",
       "license": "GPL-2.0",
       "homepage": "",
@@ -475,7 +475,7 @@
       "title": "comfyui-costume-gallery",
       "summary": "ComfyUI 中文服装图库节点：内置 1407 套服装原图与缩略图，支持搜索、分类和 Qwen Image 2.1 姿态换装流程",
       "github_url": "https://github.com/wangweihong/comfyui-costume-gallery",
-      "star": 178,
+      "star": 180,
       "last_commit": "2026-11-05",
       "category_tags": [
         "系统工具"
@@ -521,8 +521,8 @@
       "title": "dylix",
       "summary": "iPhone / iPad 上的 AI 插件开发工作台，支持本机编译 dylib / deb、Logos、双 SDK、GitHub / Gitee 与二进制分析…",
       "github_url": "https://github.com/yangokok886/dylix",
-      "star": 147,
-      "last_commit": "2026-11-10",
+      "star": 153,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -544,7 +544,7 @@
       "title": "maodie-purge",
       "summary": "<p align=\"center\">",
       "github_url": "https://github.com/leisure271/maodie-purge",
-      "star": 174,
+      "star": 178,
       "last_commit": "2026-10-28",
       "category_tags": [
         "游戏"
@@ -585,7 +585,7 @@
       "title": "codex-seo",
       "summary": "Free, open-source SEO audits inside OpenAI Codex CLI. Port of claude-seo: 26 ski…",
       "github_url": "https://github.com/zhtyyx/codex-seo",
-      "star": 153,
+      "star": 154,
       "last_commit": "2026-11-09",
       "category_tags": [
         "硬件固件"
@@ -634,7 +634,7 @@
       "title": "zaoba",
       "summary": "早八 · 每天 8:30 自动完成 AI 工具签到（WorkBuddy / 豆包工作 / 智谱），免费开源，带本地可视化控制台",
       "github_url": "https://github.com/BorisSun0424-boop/zaoba",
-      "star": 186,
+      "star": 187,
       "last_commit": "2026-11-01",
       "category_tags": [
         "效率工具"
@@ -821,7 +821,7 @@
       "title": "EncoFree4-Control",
       "summary": "无需 Root 的 OPPO Enco Free4 Android 控制面板，支持降噪/通透、电量、媒体音量与玻璃桌面小部件（Android 14+）。",
       "github_url": "https://github.com/uninner/EncoFree4-Control",
-      "star": 24,
+      "star": 25,
       "last_commit": "2026-11-01",
       "category_tags": [
         "影音播放器"
@@ -903,7 +903,7 @@
       "title": "fkikelee",
       "summary": "Loon 插件镜像",
       "github_url": "https://github.com/fkingikelee/fkikelee",
-      "star": 131,
+      "star": 132,
       "last_commit": "2026-11-10",
       "category_tags": [
         "硬件固件"
@@ -911,7 +911,7 @@
       "is_hidden": false,
       "created_at": "2026-11-01 20:31:48",
       "open_issues": 0,
-      "forks": 78,
+      "forks": 79,
       "language": "JavaScript",
       "license": "",
       "homepage": "",
@@ -949,15 +949,15 @@
       "title": "stack-diagram",
       "summary": "Agent skill: describe your stack in a sentence, get an architecture diagram with…",
       "github_url": "https://github.com/caru-ini/stack-diagram",
-      "star": 2256,
+      "star": 2392,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:45",
-      "open_issues": 2,
-      "forks": 112,
+      "open_issues": 3,
+      "forks": 126,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "stacks.caru.moe",
@@ -981,15 +981,15 @@
       "title": "claude-animated-shorts",
       "summary": "Free Claude skill: viral animated story shorts (2D characters in a 3D world) wit…",
       "github_url": "https://github.com/mromidev/claude-animated-shorts",
-      "star": 2788,
+      "star": 2976,
       "last_commit": "2026-11-01",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:45",
-      "open_issues": 11,
-      "forks": 606,
+      "open_issues": 12,
+      "forks": 647,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "",
@@ -1011,8 +1011,8 @@
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:45",
-      "open_issues": 4,
-      "forks": 18,
+      "open_issues": 5,
+      "forks": 20,
       "language": "Go",
       "license": "MIT",
       "homepage": "https://balanov.pro/uncut/",
@@ -1036,7 +1036,7 @@
       "title": "phongent",
       "summary": "基于 Mika 的 iOS / Android 多设备 agent 主控与安卓执行端",
       "github_url": "https://github.com/mylea1/phongent",
-      "star": 356,
+      "star": 357,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -1059,7 +1059,7 @@
       "title": "char-db-cn",
       "summary": "二次元角色换装库 · 中文版（发型 / 服装 / 姿势 / 组装）",
       "github_url": "https://github.com/sleepy-zone/char-db-cn",
-      "star": 371,
+      "star": 373,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -1146,16 +1146,16 @@
       "title": "offline-emergency-library",
       "summary": "One command downloads a complete offline, no-internet emergency library: local A…",
       "github_url": "https://github.com/elhajahmadj/offline-emergency-library",
-      "star": 176,
-      "last_commit": "2026-11-11",
+      "star": 178,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:45",
-      "open_issues": 16,
+      "open_issues": 21,
       "forks": 19,
-      "language": "PowerShell",
+      "language": "HTML",
       "license": "NOASSERTION",
       "homepage": "",
       "topics": [
@@ -1179,13 +1179,13 @@
       "summary": "<p align=\"center\">",
       "github_url": "https://github.com/simonsimme/Ground-Controll-RTS",
       "star": 42,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:46",
-      "open_issues": 8,
+      "open_issues": 6,
       "forks": 2,
       "language": "C#",
       "license": "NOASSERTION",
@@ -1201,7 +1201,7 @@
       "title": "lanshu-infinite-stream-koubo",
       "summary": "一套母片，持续出片。Agent 驱动的无限流数字人口播 Skill：素材复用、多风格剪辑、可见片段口型与音轨锁定。",
       "github_url": "https://github.com/cclank/lanshu-infinite-stream-koubo",
-      "star": 62,
+      "star": 64,
       "last_commit": "2026-11-01",
       "category_tags": [
         "AI&Agent"
@@ -1209,7 +1209,7 @@
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:46",
       "open_issues": 0,
-      "forks": 26,
+      "forks": 27,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -1232,7 +1232,7 @@
       "title": "shanghaitech-senior",
       "summary": "上海科技大学本科老学长私人服务skill：选课口碑 + 历年真题与作业解答直达 + 培养方案路线 + 毕业学分预审",
       "github_url": "https://github.com/XiongWenye/shanghaitech-senior",
-      "star": 41,
+      "star": 42,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -1278,7 +1278,7 @@
       "title": "Frontier-UI",
       "summary": "ChatGPT-style generative UI for Open WebUI: photo galleries, live maps with real…",
       "github_url": "https://github.com/Jumbomuffin777/Frontier-UI",
-      "star": 67,
+      "star": 68,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -1315,7 +1315,7 @@
       "title": "research-idea-review",
       "summary": "给研究 idea 做文献调研和多模型评审：检索论文、读全文、评质量、找空白、写 proposal，再换别家的模型做元评审，输出一份 HTML 报告。Litera…",
       "github_url": "https://github.com/saideao/research-idea-review",
-      "star": 119,
+      "star": 123,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -1380,15 +1380,15 @@
       "title": "dsh-see-now",
       "summary": "让 AI 实时看见你的屏幕：按变化量筛选帧、多帧拼进一张图，静止画面几乎不花 token",
       "github_url": "https://github.com/SAOS-3624/dsh-see-now",
-      "star": 570,
-      "last_commit": "2026-11-10",
+      "star": 591,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:46",
       "open_issues": 0,
-      "forks": 57,
+      "forks": 60,
       "language": "JavaScript",
       "license": "Apache-2.0",
       "homepage": "",
@@ -1436,7 +1436,7 @@
       "title": "herdr-t3",
       "summary": "T3 Code-like layout for Herdr App: Spaces/Agents or a Focus sidebar with T3-styl…",
       "github_url": "https://github.com/JinJieBeWater/herdr-t3",
-      "star": 158,
+      "star": 162,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -1495,7 +1495,7 @@
       "title": "WebOS-Chromium",
       "summary": "Native Chromium Browser Port for LG webOS TVs, with GPU rendering and hardware v…",
       "github_url": "https://github.com/sarahahzub/WebOS-Chromium",
-      "star": 30,
+      "star": 32,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -1682,7 +1682,7 @@
       "is_hidden": false,
       "created_at": "2026-11-02 05:36:54",
       "open_issues": 4,
-      "forks": 20,
+      "forks": 22,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -1724,7 +1724,7 @@
       "title": "baran-dogan-makaleler",
       "summary": "Av. Baran Doğan'ın makaleleri — yazarın izniyle, atıflı ve ticari olmayan amaçla…",
       "github_url": "https://github.com/hukukca-cloud/baran-dogan-makaleler",
-      "star": 19,
+      "star": 21,
       "last_commit": "2026-11-01",
       "category_tags": [
         "AI&Agent"
@@ -1773,7 +1773,7 @@
       "title": "dsh-superagent-prototype-cn",
       "summary": "DeepSeek dsh-superagent-prototype 中文文档",
       "github_url": "https://github.com/saltapp/dsh-superagent-prototype-cn",
-      "star": 20,
+      "star": 21,
       "last_commit": "2026-11-01",
       "category_tags": [
         "AI&Agent"
@@ -1869,8 +1869,8 @@
       "title": "lumen-light",
       "summary": "AI 绘画工作台：无限画布 + ComfyUI 工作流（本地 / RunningHub 云端）+ LLM 对话绘图 + 本地资产库 + LoRA 管理器 + 坐…",
       "github_url": "https://github.com/WLDFC/lumen-light",
-      "star": 22,
-      "last_commit": "2026-11-09",
+      "star": 28,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2268,7 +2268,7 @@
       "title": "shim",
       "summary": "Tiny local-first AI harness: any model, MCP and Agent Skills, natural-language C…",
       "github_url": "https://github.com/Balanov/shim",
-      "star": 190,
+      "star": 191,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -2291,7 +2291,7 @@
       "title": "vn-law-check",
       "summary": "Audit pháp lý website theo luật Việt Nam (BVDLCN 91/2025, TMĐT 122/2025, ANM 116…",
       "github_url": "https://github.com/mhfed/vn-law-check",
-      "star": 492,
+      "star": 498,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -2299,7 +2299,7 @@
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:23",
       "open_issues": 13,
-      "forks": 110,
+      "forks": 112,
       "language": "Shell",
       "license": "NOASSERTION",
       "homepage": "https://mhfed.github.io/vn-law-check/",
@@ -2404,15 +2404,15 @@
       "title": "awesome-reverse-engineer-anything",
       "summary": "Trending open projects that reverse engineered apps, games, consoles, protocols…",
       "github_url": "https://github.com/maluramichael/awesome-reverse-engineer-anything",
-      "star": 379,
-      "last_commit": "2026-11-10",
+      "star": 394,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:23",
       "open_issues": 2,
-      "forks": 25,
+      "forks": 27,
       "language": "Python",
       "license": "CC-BY-4.0",
       "homepage": "",
@@ -2477,7 +2477,7 @@
       "title": "uncensored-models",
       "summary": "The uncensored model library — every uncensored and abliterated model, what it d…",
       "github_url": "https://github.com/routerhubSI/uncensored-models",
-      "star": 109,
+      "star": 124,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -2521,15 +2521,15 @@
       "title": "dsh-media-desk",
       "summary": "DeepSeek Harness 自媒体工作台插件：一句话记灵感，一键生成脚本、封面、配图和分镜",
       "github_url": "https://github.com/woniuniuniu/dsh-media-desk",
-      "star": 971,
-      "last_commit": "2026-11-08",
+      "star": 1131,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:23",
       "open_issues": 4,
-      "forks": 92,
+      "forks": 128,
       "language": "JavaScript",
       "license": "MIT",
       "homepage": "https://www.npmjs.com/package/dsh-media-desk",
@@ -2568,7 +2568,7 @@
       "title": "awesome-computational-character-modeling",
       "summary": "Survey companion for Computational Character Modeling: role-playing methods, dat…",
       "github_url": "https://github.com/Toyhom/awesome-computational-character-modeling",
-      "star": 206,
+      "star": 204,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -2620,15 +2620,15 @@
       "title": "MagoStudio",
       "summary": "MagoStudio application",
       "github_url": "https://github.com/MagoStudio/MagoStudio",
-      "star": 417,
+      "star": 423,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:23",
-      "open_issues": 5,
-      "forks": 63,
+      "open_issues": 8,
+      "forks": 65,
       "language": "TypeScript",
       "license": "AGPL-3.0",
       "homepage": "",
@@ -2716,7 +2716,7 @@
       "title": "fun-sfx",
       "summary": "FUN SFX: an agent skill, searchable sound catalog, and editing guides. MIT code/…",
       "github_url": "https://github.com/bryllim/fun-sfx",
-      "star": 44,
+      "star": 45,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -2794,15 +2794,15 @@
       "title": "open-bot-avatar",
       "summary": "A JSON spec and renderer for interactive agent avatars",
       "github_url": "https://github.com/DominikScholz/open-bot-avatar",
-      "star": 331,
+      "star": 378,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:24",
-      "open_issues": 3,
-      "forks": 42,
+      "open_issues": 4,
+      "forks": 47,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "https://dominikscholz.github.io/open-bot-avatar/",
@@ -2870,15 +2870,15 @@
       "title": "polyfork-catalog",
       "summary": "Free low-poly 3D models for three.js and the web: 2,700+ GLB models and 26 theme…",
       "github_url": "https://github.com/lucas-martinic/polyfork-catalog",
-      "star": 558,
-      "last_commit": "2026-11-10",
+      "star": 584,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:24",
       "open_issues": 0,
-      "forks": 71,
+      "forks": 73,
       "language": "",
       "license": "NOASSERTION",
       "homepage": "https://polyfork.dev",
@@ -2904,7 +2904,7 @@
       "title": "replica",
       "summary": "Rebuild any UI from a reference and prove it with a score. An Agent Skill for Cl…",
       "github_url": "https://github.com/albertirgi/replica",
-      "star": 102,
+      "star": 104,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -2912,7 +2912,7 @@
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:24",
       "open_issues": 0,
-      "forks": 3,
+      "forks": 4,
       "language": "JavaScript",
       "license": "MIT",
       "homepage": "",
@@ -2989,14 +2989,14 @@
       "title": "Miyoria",
       "summary": "An autonomous AI VTuber for Discord. She chats, joins voice, sings song requests…",
       "github_url": "https://github.com/owenliu0924/Miyoria",
-      "star": 54,
-      "last_commit": "2026-11-11",
+      "star": 55,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-03 05:31:32",
-      "open_issues": 3,
+      "open_issues": 8,
       "forks": 3,
       "language": "TypeScript",
       "license": "",
@@ -3166,7 +3166,7 @@
       "title": "flutter-apk",
       "summary": "Wenku8 Flutter 安卓安装包存档（原作者 mikufoxxx，GPL v3，停止开发后的留存）",
       "github_url": "https://github.com/feiyuaq/flutter-apk",
-      "star": 24,
+      "star": 25,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -3235,7 +3235,7 @@
       "title": "marketing-skill-hub",
       "summary": "海外营销 Agent Skills (EN + 中文) for Claude, Codex & Cursor: Meta / Google / TikTok a…",
       "github_url": "https://github.com/aronhy/marketing-skill-hub",
-      "star": 212,
+      "star": 213,
       "last_commit": "2026-11-08",
       "category_tags": [
         "AI&Agent"
@@ -3333,7 +3333,7 @@
       "title": "FlyHead",
       "summary": "FlyHead: a whole-brain FlyWire fruit-fly connectome (138k-neuron LIF, PyTorch/CU…",
       "github_url": "https://github.com/12sqawdwq/FlyHead",
-      "star": 13,
+      "star": 14,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -3375,7 +3375,7 @@
       "title": "autoppt",
       "summary": "AutoPPT — AI-Powered Interactive Lecture Slides Generator | AI备课神器 | 一键生成一整周精美、可…",
       "github_url": "https://github.com/xingjunm/autoppt",
-      "star": 56,
+      "star": 57,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -3407,7 +3407,7 @@
       "title": "DY778",
       "summary": "iOS 抖音增强插件，提供消息留存、编辑历史、聊天时间标签、福袋助手和播放增强。",
       "github_url": "https://github.com/jijiang2333/DY778",
-      "star": 30,
+      "star": 31,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -3453,7 +3453,7 @@
       "title": "chatgpt-pro-subscription-guide",
       "summary": "⚡ 2026 最新实测：手把手教你用 CoreGold 3 分钟开通 ChatGPT Plus / Pro",
       "github_url": "https://github.com/kimpoungajoyce-cmd/chatgpt-pro-subscription-guide",
-      "star": 54,
+      "star": 68,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -3505,7 +3505,7 @@
       "title": "openai-o3-deepseek-billing-proxy",
       "summary": "深度推理时代 API 支付灾备：彻底搞定 o3-mini / Claude 3.7 扣费风控",
       "github_url": "https://github.com/jeger2019-collab/openai-o3-deepseek-billing-proxy",
-      "star": 55,
+      "star": 69,
       "last_commit": "2026-11-02",
       "category_tags": [
         "AI&Agent"
@@ -3534,15 +3534,15 @@
       "title": "xiaotang-daozai",
       "summary": "岛仔 Daozai：Rust 构建的 Windows 桌面信息岛。音乐歌词、邮件验证码、日程提醒、待办与 AI 额度，让重要信息轻轻出现在屏幕顶部。",
       "github_url": "https://github.com/Renly1994/xiaotang-daozai",
-      "star": 616,
+      "star": 666,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:39",
-      "open_issues": 34,
-      "forks": 118,
+      "open_issues": 35,
+      "forks": 125,
       "language": "Rust",
       "license": "MIT",
       "homepage": "",
@@ -3582,7 +3582,7 @@
       "title": "terminal-mac",
       "summary": "terminal-mac",
       "github_url": "https://github.com/govijr/terminal-mac",
-      "star": 2552,
+      "star": 2606,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -3590,7 +3590,7 @@
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
       "open_issues": 5,
-      "forks": 178,
+      "forks": 180,
       "language": "Swift",
       "license": "MIT",
       "homepage": "",
@@ -3631,14 +3631,14 @@
       "title": "CoworkOS",
       "summary": "CoworkOS: a cowork harness for long-horizon and human-in-the-loop task execution",
       "github_url": "https://github.com/RUC-NLPIR/CoworkOS",
-      "star": 153,
+      "star": 159,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
-      "open_issues": 4,
+      "open_issues": 5,
       "forks": 16,
       "language": "JavaScript",
       "license": "MIT",
@@ -3658,7 +3658,7 @@
       "title": "capcut-pro-for-windows",
       "summary": "CapCut Pro for Windows — free professional video editor with AI auto captions, e…",
       "github_url": "https://github.com/gary-gibson85/capcut-pro-for-windows",
-      "star": 37,
+      "star": 35,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -3702,15 +3702,15 @@
       "title": "switch2mac",
       "summary": "Native Mac builds of Nintendo Switch 2 games on Apple silicon, from your own dum…",
       "github_url": "https://github.com/azmasm/switch2mac",
-      "star": 157,
-      "last_commit": "2026-11-11",
+      "star": 162,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
       "open_issues": 1,
-      "forks": 21,
+      "forks": 22,
       "language": "Swift",
       "license": "NOASSERTION",
       "homepage": "https://github.com/azmasm/switch2mac/releases/latest",
@@ -3739,15 +3739,15 @@
       "title": "gputaskman",
       "summary": "An htop for what's inside your NVIDIA GPU on Windows: process memory, engine act…",
       "github_url": "https://github.com/shanselman/gputaskman",
-      "star": 1678,
-      "last_commit": "2026-11-10",
+      "star": 2061,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
-      "open_issues": 8,
-      "forks": 84,
+      "open_issues": 5,
+      "forks": 101,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -3762,7 +3762,7 @@
       "title": "flightscope-public",
       "summary": "Handheld Raspberry Pi flight tracker for a young plane-spotter: live map, plane…",
       "github_url": "https://github.com/nathanmarlor/flightscope-public",
-      "star": 83,
+      "star": 84,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -3770,7 +3770,7 @@
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
       "open_issues": 0,
-      "forks": 6,
+      "forks": 7,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -3785,14 +3785,14 @@
       "title": "FreeNodePanel",
       "summary": "免费公益节点面板：双击即用的 Windows 一键节点工具，聚合公开免费节点源，自动测活去重，生成 v2rayN / Clash 订阅",
       "github_url": "https://github.com/KJGX66F/FreeNodePanel",
-      "star": 187,
+      "star": 230,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:40",
-      "open_issues": 6,
+      "open_issues": 7,
       "forks": 29,
       "language": "Go",
       "license": "NOASSERTION",
@@ -3814,7 +3814,7 @@
       "title": "open-source-hands",
       "summary": "Make webcam hand games in the browser, or point your coding agent here and have…",
       "github_url": "https://github.com/abouchedidxcode/open-source-hands",
-      "star": 204,
+      "star": 207,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -3881,7 +3881,7 @@
       "title": "mp4-recomp",
       "summary": "metroid prime 4 beyond recomp",
       "github_url": "https://github.com/linuxopt/mp4-recomp",
-      "star": 88,
+      "star": 96,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -3950,7 +3950,7 @@
       "title": "graduation-thesis-ai",
       "summary": "🔥🔥🔥毕业论文AI助手, AI毕业论文, 毕业论文写作, 开题报告, 文献综述, AI论文生成, 降AIGC率, 降重查重, 格式排版, 答辩PPT",
       "github_url": "https://github.com/quacat748-droid/graduation-thesis-ai",
-      "star": 350,
+      "star": 402,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -4005,7 +4005,7 @@
       "title": "agents-md",
       "summary": "我自己在用的一份 AGENTS.md，记录对 AI 写代码和协作方式的一些要求。",
       "github_url": "https://github.com/SteinsHead/agents-md",
-      "star": 125,
+      "star": 126,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -4115,8 +4115,8 @@
       "title": "awesome-coding-plan",
       "summary": "TokenPlan：AI 编程套餐与 API 价格对比，涵盖云厂商 Coding / Token Plan、缓存与峰谷计费、模型性价比及官方购买入口。 / AI…",
       "github_url": "https://github.com/supercli-site/awesome-coding-plan",
-      "star": 201,
-      "last_commit": "2026-11-10",
+      "star": 203,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -4259,7 +4259,7 @@
       "title": "tts-director",
       "summary": "Agent skill that directs scripts for TTS (ElevenLabs v3/v4 tags): rewrite for th…",
       "github_url": "https://github.com/aligh98/tts-director",
-      "star": 81,
+      "star": 83,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -4372,7 +4372,7 @@
       "title": "darg",
       "summary": "DARG – Deprem Asistanı",
       "github_url": "https://github.com/bariscanceken/darg",
-      "star": 10,
+      "star": 11,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -4395,7 +4395,7 @@
       "title": "pwa-location-guide",
       "summary": "PWA 定位、到家迎接与高德打车接入教程",
       "github_url": "https://github.com/wanyingsun357-ship-it/pwa-location-guide",
-      "star": 25,
+      "star": 27,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -4542,7 +4542,7 @@
       "title": "cursor-pro-subscription-guide",
       "summary": "⚡ 2026 最新实测：手把手教你用 CoreGold 3 分钟开通 Cursor Pro / Business",
       "github_url": "https://github.com/visitantexbox64-byte/cursor-pro-subscription-guide",
-      "star": 49,
+      "star": 63,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -4589,7 +4589,7 @@
       "title": "claude-code-billing-setup",
       "summary": "Claude 3.7 混合思考与 Claude Code 终端免拒绑卡：用 CoreGold 商业卡破除 Anthropic 幽灵退款砍单。",
       "github_url": "https://github.com/raudhatulirfandta-droid/claude-code-billing-setup",
-      "star": 49,
+      "star": 60,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -4625,7 +4625,7 @@
       "is_hidden": false,
       "created_at": "2026-11-04 05:30:57",
       "open_issues": 0,
-      "forks": 2,
+      "forks": 3,
       "language": "HTML",
       "license": "NOASSERTION",
       "homepage": "",
@@ -4640,7 +4640,7 @@
       "title": "mutant-cafe",
       "summary": "🧀 mutation testing for Effect TypeScript",
       "github_url": "https://github.com/joelhooks/mutant-cafe",
-      "star": 64,
+      "star": 65,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -4663,15 +4663,15 @@
       "title": "dsh-live-compact",
       "summary": "边做边压 Live Compact. Compress the finished turn in place and keep the prefix cache…",
       "github_url": "https://github.com/MerkyorLynn/dsh-live-compact",
-      "star": 224,
-      "last_commit": "2026-11-10",
+      "star": 238,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-04 05:31:05",
-      "open_issues": 32,
-      "forks": 16,
+      "open_issues": 34,
+      "forks": 18,
       "language": "JavaScript",
       "license": "MIT",
       "homepage": "",
@@ -4787,7 +4787,7 @@
       "title": "mr-li-seedance-25",
       "summary": "李先生AI影视全流程Skill：把传统剧组的规矩交给 AI（CC BY-NC 4.0）",
       "github_url": "https://github.com/lbh1761745734-ui/mr-li-seedance-25",
-      "star": 27,
+      "star": 28,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -4954,14 +4954,14 @@
       "title": "music-bar",
       "summary": "Turns the Windows taskbar into a music bar: a full-width seekbar in 14 styles th…",
       "github_url": "https://github.com/lvt1693/music-bar",
-      "star": 120,
+      "star": 122,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:49",
-      "open_issues": 0,
+      "open_issues": 1,
       "forks": 16,
       "language": "C#",
       "license": "MIT",
@@ -5015,15 +5015,15 @@
       "title": "Winc",
       "summary": "<p align=\"center\">",
       "github_url": "https://github.com/DEEIX-AI/Winc",
-      "star": 370,
-      "last_commit": "2026-11-10",
+      "star": 460,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:50",
-      "open_issues": 15,
-      "forks": 38,
+      "open_issues": 29,
+      "forks": 46,
       "language": "Rust",
       "license": "Apache-2.0",
       "homepage": "https://winc.si",
@@ -5179,7 +5179,7 @@
       "title": "perfectclone-website-cloner",
       "summary": "clone any website/frontend 1:1 with Playwright. Real HTML/JS/CSS, not AI-regener…",
       "github_url": "https://github.com/eshaangulati123/perfectclone-website-cloner",
-      "star": 42,
+      "star": 44,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -5236,7 +5236,7 @@
       "title": "agentcase-lab",
       "summary": "AI Agent failure replay and root cause analysis platform",
       "github_url": "https://github.com/TngSHoO/agentcase-lab",
-      "star": 280,
+      "star": 318,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -5267,7 +5267,7 @@
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:52",
       "open_issues": 0,
-      "forks": 36,
+      "forks": 37,
       "language": "JavaScript",
       "license": "NOASSERTION",
       "homepage": "",
@@ -5282,7 +5282,7 @@
       "title": "plumber-racer-2",
       "summary": "Plumber Racer 2: Mario Kart World on iPhone and Mac with nxnative. Bring your ow…",
       "github_url": "https://github.com/cheemu21/plumber-racer-2",
-      "star": 184,
+      "star": 187,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -5290,7 +5290,7 @@
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:52",
       "open_issues": 2,
-      "forks": 30,
+      "forks": 31,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -5305,14 +5305,14 @@
       "title": "Stacks",
       "summary": "A Lean formalization of the Stacks Project",
       "github_url": "https://github.com/AxiomMath/Stacks",
-      "star": 134,
-      "last_commit": "2026-11-10",
+      "star": 135,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:52",
-      "open_issues": 13,
+      "open_issues": 14,
       "forks": 27,
       "language": "Lean",
       "license": "Apache-2.0",
@@ -5351,15 +5351,15 @@
       "title": "transmilenio-live",
       "summary": "Every TransMilenio bus in Bogotá, moving on one live map. Built on the Croma API…",
       "github_url": "https://github.com/croma-labs/transmilenio-live",
-      "star": 63,
-      "last_commit": "2026-11-09",
+      "star": 65,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:52",
       "open_issues": 0,
-      "forks": 7,
+      "forks": 8,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "https://transmi.usecroma.com",
@@ -5382,15 +5382,15 @@
       "title": "GLM-5.3-Flash-DGX-Sparks-1104",
       "summary": "GLM-5.3-Flash on DGX Sparks (ver 1104) with TensorFold",
       "github_url": "https://github.com/MiaAI-Lab/GLM-5.3-Flash-DGX-Sparks-1104",
-      "star": 104,
-      "last_commit": "2026-11-09",
+      "star": 114,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:52",
-      "open_issues": 30,
-      "forks": 23,
+      "open_issues": 20,
+      "forks": 24,
       "language": "Shell",
       "license": "Apache-2.0",
       "homepage": "https://mia-ai.net",
@@ -5462,7 +5462,7 @@
       "title": "stem-explainer-video",
       "summary": "stem-explainer-video skill 适合Vibe知识大赏和老师课件制作短视频。 记住！ 这是严肃严格的科学作图和动画！用 AI 做**结构准确…",
       "github_url": "https://github.com/liangdabiao/stem-explainer-video",
-      "star": 30,
+      "star": 31,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -5485,7 +5485,7 @@
       "title": "awesome-hermes-agent",
       "summary": "Beginner-friendly awesome list and guides for Hermes Agent by Nous Research. Ins…",
       "github_url": "https://github.com/kawsarlog/awesome-hermes-agent",
-      "star": 40,
+      "star": 41,
       "last_commit": "2026-11-04",
       "category_tags": [
         "AI&Agent"
@@ -5527,7 +5527,7 @@
       "title": "lop-hoc-chu",
       "summary": "Lớp Học Chữ: game đoán chữ cho TikTok LIVE",
       "github_url": "https://github.com/workaipvlinh-byte/lop-hoc-chu",
-      "star": 74,
+      "star": 75,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -5535,7 +5535,7 @@
       "is_hidden": false,
       "created_at": "2026-11-05 05:32:53",
       "open_issues": 1,
-      "forks": 95,
+      "forks": 96,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "",
@@ -5556,7 +5556,7 @@
       "title": "OpenCode-Router",
       "summary": "Automated proxy discovery, testing, and intelligent routing for OpenCode. Fix co…",
       "github_url": "https://github.com/EhsanCreator/OpenCode-Router",
-      "star": 28,
+      "star": 29,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -5644,7 +5644,7 @@
       "is_hidden": false,
       "created_at": "2026-11-05 05:33:01",
       "open_issues": 0,
-      "forks": 1,
+      "forks": 2,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -5659,8 +5659,8 @@
       "title": "GrowQuizLauncher",
       "summary": "给孩子一台会提问的电视：Android TV 定时全屏问答桌面，内置题库，自定义出题，答对才回到桌面 | Scheduled kids quiz launche…",
       "github_url": "https://github.com/1zzzzzlll/GrowQuizLauncher",
-      "star": 46,
-      "last_commit": "2026-11-10",
+      "star": 48,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5846,7 +5846,7 @@
       "title": "agent-engineering-course-kit",
       "summary": "《企业级Agent工程架构实战营》课程配套：按篇章与课次组织代码、工具、Skill、模板和学习资料。",
       "github_url": "https://github.com/shanggqm/agent-engineering-course-kit",
-      "star": 14,
+      "star": 15,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -5874,14 +5874,15 @@
       "category_tags": [
         "AI&Agent"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "created_at": "2026-11-05 05:33:10",
       "open_issues": 0,
       "forks": 10,
       "language": "Java",
       "license": "GPL-3.0",
       "homepage": "",
-      "topics": []
+      "topics": [],
+      "is_gone": true
     },
     {
       "id": "frostming/ai-guard",
@@ -5916,13 +5917,13 @@
       "summary": "Inbox infrastructure for agents. Multi-domain mailboxes on Cloudflare Workers wi…",
       "github_url": "https://github.com/hirotomasato/agenmail",
       "star": 12,
-      "last_commit": "2026-11-04",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:33:10",
-      "open_issues": 3,
+      "open_issues": 5,
       "forks": 5,
       "language": "TypeScript",
       "license": "MIT",
@@ -5972,8 +5973,8 @@
       "title": "dsh-handraw-style",
       "summary": "DSH 图像创作工作台插件：单张/套图/封面/知识卡，共享画风、配色、版式、人物与姿势素材",
       "github_url": "https://github.com/yang0/dsh-handraw-style",
-      "star": 73,
-      "last_commit": "2026-11-06",
+      "star": 76,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6110,13 +6111,13 @@
       "summary": "The engine for humans and agents.",
       "github_url": "https://github.com/mirai-engine/mirai",
       "star": 7,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-05 05:33:10",
-      "open_issues": 11,
+      "open_issues": 68,
       "forks": 1,
       "language": "Odin",
       "license": "Apache-2.0",
@@ -6166,15 +6167,15 @@
       "title": "antigravity-filter-bypass",
       "summary": "antigravity-filter-bypass",
       "github_url": "https://github.com/v1ktorrr0x/antigravity-filter-bypass",
-      "star": 469,
+      "star": 481,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": true,
       "created_at": "2026-11-06 05:30:58",
-      "open_issues": 0,
-      "forks": 125,
+      "open_issues": 1,
+      "forks": 128,
       "language": "Python",
       "license": "",
       "homepage": "",
@@ -6223,15 +6224,15 @@
       "title": "poki",
       "summary": "Let AI agents operate a real iPhone. Local MCP server and agent, no jailbreak, n…",
       "github_url": "https://github.com/JosssphZhou/poki",
-      "star": 921,
-      "last_commit": "2026-11-10",
+      "star": 979,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:58",
-      "open_issues": 40,
-      "forks": 176,
+      "open_issues": 55,
+      "forks": 181,
       "language": "Swift",
       "license": "AGPL-3.0",
       "homepage": "https://poki.bot",
@@ -6253,15 +6254,15 @@
       "title": "hermes-voice",
       "summary": "Talk to a Hermes Agent profile through Home Assistant Assist",
       "github_url": "https://github.com/majorminorlabs/hermes-voice",
-      "star": 651,
-      "last_commit": "2026-11-10",
+      "star": 676,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:58",
-      "open_issues": 9,
-      "forks": 40,
+      "open_issues": 12,
+      "forks": 42,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -6276,7 +6277,7 @@
       "title": "agent-deploy-memory-muse",
       "summary": "全球破甲记忆 · muse 版：免卡部署加密节点方法论（无密钥）",
       "github_url": "https://github.com/free-dam-man/agent-deploy-memory-muse",
-      "star": 408,
+      "star": 413,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -6307,7 +6308,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:58",
       "open_issues": 0,
-      "forks": 1,
+      "forks": 0,
       "language": "",
       "license": "",
       "homepage": "",
@@ -6331,7 +6332,7 @@
       "title": "MineAgent",
       "summary": "agent定制自由化，agent流程可视化。在浏览器里用画布搭出工业级 Agent 流程，选框架自动生成架构图， 拖节点、连线、写代码、配模型，点「保存」就把整…",
       "github_url": "https://github.com/YT-Proteus-bot/MineAgent",
-      "star": 151,
+      "star": 165,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -6339,7 +6340,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:58",
       "open_issues": 0,
-      "forks": 0,
+      "forks": 1,
       "language": "Python",
       "license": "Apache-2.0",
       "homepage": "",
@@ -6395,15 +6396,15 @@
       "title": "google-pro-helper",
       "summary": "Google Pro Helper",
       "github_url": "https://github.com/mmdoctor/google-pro-helper",
-      "star": 1648,
+      "star": 1734,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:59",
-      "open_issues": 2,
-      "forks": 563,
+      "open_issues": 3,
+      "forks": 587,
       "language": "Python",
       "license": "",
       "homepage": "",
@@ -6462,8 +6463,8 @@
       "title": "Qure_Style_SVG",
       "summary": "Qure 风格的纯 SVG 矢量策略组图标库 | Qure style SVG policy icon set for Mihomo / Clash / FlC…",
       "github_url": "https://github.com/aaANDkk/Qure_Style_SVG",
-      "star": 138,
-      "last_commit": "2026-11-10",
+      "star": 142,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6631,7 +6632,7 @@
       "title": "ray-sticker-shop",
       "summary": "一张照片或角色图，生成一整套形象一致的动态表情包和微信投稿素材（Claude Code / Codex skill）",
       "github_url": "https://github.com/imraywang/ray-sticker-shop",
-      "star": 405,
+      "star": 411,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -6639,7 +6640,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:30:59",
       "open_issues": 1,
-      "forks": 41,
+      "forks": 43,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -7044,7 +7045,7 @@
       "title": "ia-da-sobrevivencia",
       "summary": "Assistente de sobrevivência 100% offline para Windows, Linux e macOS: guias com…",
       "github_url": "https://github.com/sdalberto/ia-da-sobrevivencia",
-      "star": 45,
+      "star": 46,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -7052,7 +7053,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:31:08",
       "open_issues": 3,
-      "forks": 6,
+      "forks": 8,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -7067,7 +7068,7 @@
       "title": "mygo-cloudmusic",
       "summary": "MyGo 云音乐 - 第三方网易云音乐原生客户端",
       "github_url": "https://github.com/cfour-hi/mygo-cloudmusic",
-      "star": 124,
+      "star": 126,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -7075,7 +7076,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:31:08",
       "open_issues": 0,
-      "forks": 119,
+      "forks": 121,
       "language": "",
       "license": "AGPL-3.0",
       "homepage": "music.egoist.dev",
@@ -7159,7 +7160,7 @@
       "title": "yuan-shufang-formulas",
       "summary": "袁淑芳墓碑验方开源库 + GitHub Pages 开方助手（Grok/ChainFuel）",
       "github_url": "https://github.com/mason0510/yuan-shufang-formulas",
-      "star": 63,
+      "star": 65,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -7167,7 +7168,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:31:17",
       "open_issues": 1,
-      "forks": 20,
+      "forks": 21,
       "language": "Rust",
       "license": "NOASSERTION",
       "homepage": "https://mason0510.github.io/yuan-shufang-formulas/",
@@ -7228,14 +7229,14 @@
       "title": "fish-pocket",
       "summary": "Run DeepSeek Harness on iPhone and iPad, with a fully native SwiftUI interface.…",
       "github_url": "https://github.com/imsai-sh/fish-pocket",
-      "star": 187,
-      "last_commit": "2026-11-10",
+      "star": 205,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-06 05:31:17",
-      "open_issues": 22,
+      "open_issues": 28,
       "forks": 19,
       "language": "Swift",
       "license": "NOASSERTION",
@@ -7267,7 +7268,7 @@
       "title": "DNSnitch",
       "summary": "滴水不漏-DNSnitch: Clash / mihomo 配置 DNS 泄露检测工具",
       "github_url": "https://github.com/gxcuit/DNSnitch",
-      "star": 32,
+      "star": 35,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -7298,7 +7299,7 @@
       "is_hidden": false,
       "created_at": "2026-11-06 05:31:17",
       "open_issues": 0,
-      "forks": 0,
+      "forks": 1,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "",
@@ -7343,7 +7344,7 @@
       "title": "workmagic-agent-plugin",
       "summary": "Ask your WorkMagic marketing data anything — attribution, lift tests and budget…",
       "github_url": "https://github.com/workmagicio/workmagic-agent-plugin",
-      "star": 22,
+      "star": 23,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -7386,8 +7387,8 @@
       "title": "vane-portrait-gif-stickers",
       "summary": "Upload a photo and make personalized animated Q-style sticker packs.",
       "github_url": "https://github.com/VaneAi888/vane-portrait-gif-stickers",
-      "star": 64,
-      "last_commit": "2026-11-09",
+      "star": 69,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -7443,7 +7444,7 @@
       "title": "OpenAI-GPT-6.1-Terra-GPT-6-Astra-",
       "summary": "gpt-6-terra-pro-subscription-guide",
       "github_url": "https://github.com/lidambrunel309-ship-it/OpenAI-GPT-6.1-Terra-GPT-6-Astra-",
-      "star": 38,
+      "star": 51,
       "last_commit": "2026-11-05",
       "category_tags": [
         "AI&Agent"
@@ -7471,7 +7472,7 @@
       "title": "sheeridVerify",
       "summary": "sheeridVerify · 教学与研究验证流程工作台",
       "github_url": "https://github.com/JenkinWoo/sheeridVerify",
-      "star": 2008,
+      "star": 2037,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -7479,7 +7480,7 @@
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:02",
       "open_issues": 0,
-      "forks": 1088,
+      "forks": 1099,
       "language": "JavaScript",
       "license": "ISC",
       "homepage": "",
@@ -7615,7 +7616,7 @@
       "title": "devvm",
       "summary": "One VM for every project. An isolated sandbox with your project’s toolchain, rea…",
       "github_url": "https://github.com/devvmhq/devvm",
-      "star": 539,
+      "star": 561,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -7623,7 +7624,7 @@
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:02",
       "open_issues": 11,
-      "forks": 25,
+      "forks": 29,
       "language": "Go",
       "license": "MIT",
       "homepage": "https://devvm.dev",
@@ -7651,7 +7652,7 @@
       "title": "your-next-point",
       "summary": "《你的下一分在哪里：AI 时代的公考备考方法》全书免费开放，卷蜂啦·林照 著。",
       "github_url": "https://github.com/qiaoranlaodou-cpu/your-next-point",
-      "star": 302,
+      "star": 371,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -7659,7 +7660,7 @@
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:02",
       "open_issues": 0,
-      "forks": 3,
+      "forks": 5,
       "language": "",
       "license": "NOASSERTION",
       "homepage": "https://www.juanfengla.cn/book",
@@ -7698,15 +7699,15 @@
       "title": "starwire",
       "summary": "Open source repos worth a look, gathered from across the web and refreshed every…",
       "github_url": "https://github.com/boffti/starwire",
-      "star": 195,
-      "last_commit": "2026-11-10",
+      "star": 205,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:02",
-      "open_issues": 1,
-      "forks": 12,
+      "open_issues": 0,
+      "forks": 15,
       "language": "JavaScript",
       "license": "CC0-1.0",
       "homepage": "https://starwire.foo",
@@ -7727,15 +7728,15 @@
       "title": "tuffui",
       "summary": "<p align=\"center\">",
       "github_url": "https://github.com/yurigdesigner/tuffui",
-      "star": 141,
-      "last_commit": "2026-11-10",
+      "star": 162,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:03",
       "open_issues": 0,
-      "forks": 7,
+      "forks": 8,
       "language": "TypeScript",
       "license": "MIT",
       "homepage": "",
@@ -7768,14 +7769,14 @@
       "title": "timon",
       "summary": "<p align=\"center\">",
       "github_url": "https://github.com/ai-timon/timon",
-      "star": 273,
-      "last_commit": "2026-11-10",
+      "star": 282,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:03",
-      "open_issues": 19,
+      "open_issues": 16,
       "forks": 25,
       "language": "TypeScript",
       "license": "AGPL-3.0",
@@ -8276,7 +8277,7 @@
       "title": "ai-manus",
       "summary": "AI Manus is a general-purpose AI Agent system that supports running various tool…",
       "github_url": "https://github.com/Abdul-Rehman7826/ai-manus",
-      "star": 53,
+      "star": 54,
       "last_commit": "2026-11-08",
       "category_tags": [
         "AI&Agent"
@@ -8445,7 +8446,7 @@
       "summary": "<div align=\"center\">",
       "github_url": "https://github.com/Bobliuuu/ten-percent-challenge",
       "star": 28,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -8490,7 +8491,7 @@
       "title": "dsh-super-agent-droy",
       "summary": "SuperAgentDroy: A local-first personal SuperAgent for DeepSeek Harness with Core…",
       "github_url": "https://github.com/moonoops/dsh-super-agent-droy",
-      "star": 21,
+      "star": 26,
       "last_commit": "2026-11-08",
       "category_tags": [
         "AI&Agent"
@@ -8572,7 +8573,7 @@
       "summary": "同传助手：本地实时同声传译，用你自己的声音说外语 + 对方实时字幕（macOS/Windows，离线，MLX/llama.cpp/Qwen3-TTS）",
       "github_url": "https://github.com/bard1124/mirrorvoice",
       "star": 6,
-      "last_commit": "2026-11-11",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
@@ -8816,7 +8817,7 @@
       "summary": "御枢 · AegisOps — AI 安全运营工作台，集成智能对话、告警研判、工作流与漏洞运营。",
       "github_url": "https://github.com/knot07/AegisOps",
       "star": 115,
-      "last_commit": "2026-11-08",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -8843,15 +8844,15 @@
       "title": "dsh-craft-anything",
       "summary": "Craft Anything for DeepSeek Harness: mcp__craft__* MCP bridge to the local craft…",
       "github_url": "https://github.com/Fanqi89/dsh-craft-anything",
-      "star": 208,
-      "last_commit": "2026-11-08",
+      "star": 241,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:20",
-      "open_issues": 0,
-      "forks": 47,
+      "open_issues": 1,
+      "forks": 55,
       "language": "JavaScript",
       "license": "MIT",
       "homepage": "https://github.com/storytold/craft-anything",
@@ -8889,7 +8890,7 @@
       "title": "RuiC-2D",
       "summary": "从单张图片制作可动形象：本地运行的 2D 虚拟形象编辑器，分层绑定 / 网格形变 / 口型与眨眼 / 时间轴动效 / MediaPipe 实时驱动 / OBS…",
       "github_url": "https://github.com/HRuiCcc/RuiC-2D",
-      "star": 99,
+      "star": 105,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -8897,7 +8898,7 @@
       "is_hidden": false,
       "created_at": "2026-11-07 05:33:20",
       "open_issues": 0,
-      "forks": 15,
+      "forks": 18,
       "language": "Python",
       "license": "MIT",
       "homepage": "https://hruiccc.github.io/RuiC-2D/demo/",
@@ -8992,7 +8993,7 @@
       "title": "deepseek-r1-distill-cloud-guard",
       "summary": "DeepSeek-R1 / V3 开源权重海外算力租用防穿透：解决 RunPod / Lambda 验资秒拒与天价未关机账单。",
       "github_url": "https://github.com/danielarum740-lab/deepseek-r1-distill-cloud-guard",
-      "star": 29,
+      "star": 42,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -9020,7 +9021,7 @@
       "title": "satmux",
       "summary": "Accelerate high-latency GEO inflight Wi-Fi via warm BBR TCP multiplexing + 1-RTT…",
       "github_url": "https://github.com/Th0rgal/satmux",
-      "star": 1034,
+      "star": 1047,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -9043,15 +9044,15 @@
       "title": "solo-to-team-skills",
       "summary": "Skills for human-led AI teams: delegate tasks, verify evidence, explain steps cl…",
       "github_url": "https://github.com/dabingfy-dot/solo-to-team-skills",
-      "star": 557,
+      "star": 672,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-08 05:30:33",
-      "open_issues": 18,
-      "forks": 58,
+      "open_issues": 20,
+      "forks": 66,
       "language": "",
       "license": "MIT",
       "homepage": "",
@@ -9072,15 +9073,15 @@
       "title": "phoneuse",
       "summary": "See and operate an unmodified iPhone from a Linux PC: AirPlay mirror in, Bluetoo…",
       "github_url": "https://github.com/lxe/phoneuse",
-      "star": 577,
+      "star": 611,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-08 05:30:33",
-      "open_issues": 9,
-      "forks": 57,
+      "open_issues": 10,
+      "forks": 59,
       "language": "Python",
       "license": "MIT",
       "homepage": "",
@@ -9740,7 +9741,7 @@
       "title": "ai-engineering-hub",
       "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications (Personal…",
       "github_url": "https://github.com/ngophatneknha/ai-engineering-hub",
-      "star": 169,
+      "star": 176,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -9748,7 +9749,7 @@
       "is_hidden": false,
       "created_at": "2026-11-08 05:30:42",
       "open_issues": 0,
-      "forks": 51,
+      "forks": 52,
       "language": "MDX",
       "license": "MIT",
       "homepage": "",
@@ -9868,8 +9869,8 @@
       "title": "AIBanlv-Bot",
       "summary": "AIBanlv Bot — An Open-Source AI Agent with a Face.",
       "github_url": "https://github.com/AIBanlv/AIBanlv-Bot",
-      "star": 54,
-      "last_commit": "2026-11-07",
+      "star": 64,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -9904,15 +9905,15 @@
       "title": "doops",
       "summary": "不用 SSH，也能运维任何一台机器 | DoOps：公网 gateway + 内网 agent 的可审计远程运维入口",
       "github_url": "https://github.com/symansun/doops",
-      "star": 45,
+      "star": 47,
       "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
       "is_hidden": false,
       "created_at": "2026-11-08 05:30:58",
-      "open_issues": 1,
-      "forks": 2,
+      "open_issues": 0,
+      "forks": 3,
       "language": "Go",
       "license": "MIT",
       "homepage": "",
@@ -9927,7 +9928,7 @@
       "title": "gpt2.s",
       "summary": "GPT-2 small (124M) in hand-written AArch64 assembly. No libc calls. About 100 to…",
       "github_url": "https://github.com/ArneshBanerjee/gpt2.s",
-      "star": 93,
+      "star": 96,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -9935,7 +9936,7 @@
       "is_hidden": false,
       "created_at": "2026-11-08 05:30:58",
       "open_issues": 0,
-      "forks": 10,
+      "forks": 11,
       "language": "Assembly",
       "license": "MIT",
       "homepage": "https://arneshbanerjee.dev/blog/gpt2-in-assembly.html",
@@ -9951,7 +9952,7 @@
       "summary": "Claude，ChatGPT，Gemini等外国AI一键防封防护软件",
       "github_url": "https://github.com/tanjiu6942-design/AI-Guard",
       "star": 13,
-      "last_commit": "2026-11-07",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -10003,7 +10004,7 @@
       "title": "seo-ai-link",
       "summary": "seo-ai-link · 独立站外链全流程 Skill：竞品外链挖掘、外链库管理、AI 自动发外链、收录回访，配可视化报表",
       "github_url": "https://github.com/chenchaoge/seo-ai-link",
-      "star": 21,
+      "star": 24,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -10011,7 +10012,7 @@
       "is_hidden": true,
       "created_at": "2026-11-08 05:30:58",
       "open_issues": 0,
-      "forks": 13,
+      "forks": 14,
       "language": "Python",
       "license": "NOASSERTION",
       "homepage": "",
@@ -10026,7 +10027,7 @@
       "title": "Lumi",
       "summary": "Lumi · 原生 iOS AI 好友应用，支持自定义人设、本地记忆、朋友圈与个人资料。当前源码采用非商业许可。",
       "github_url": "https://github.com/NakanoNino233/Lumi",
-      "star": 20,
+      "star": 22,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -10056,7 +10057,7 @@
       "title": "gojo",
       "summary": "[experiment] The Gojo programming language",
       "github_url": "https://github.com/egoist/gojo",
-      "star": 80,
+      "star": 82,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -10111,7 +10112,7 @@
       "title": "mouse-swarm",
       "summary": "Turn a landing page into a visual build sequence. Elements appear in order while…",
       "github_url": "https://github.com/ruvnet/mouse-swarm",
-      "star": 25,
+      "star": 26,
       "last_commit": "2026-11-07",
       "category_tags": [
         "AI&Agent"
@@ -10167,7 +10168,7 @@
       ],
       "is_hidden": true,
       "created_at": "2026-11-08 05:30:58",
-      "open_issues": 0,
+      "open_issues": 1,
       "forks": 0,
       "language": "Swift",
       "license": "MIT",
@@ -10183,7 +10184,7 @@
       "title": "mygo-lizhi",
       "summary": "MyGo Music 插件：收听 nj-lizhi/song 收录的李志专辑与现场",
       "github_url": "https://github.com/djyde/mygo-lizhi",
-      "star": 77,
+      "star": 78,
       "last_commit": "2026-11-07",
       "category_tags": [
         "影音播放器"
@@ -10208,7 +10209,7 @@
       "title": "claude-p-pipeline",
       "summary": "用自己的 Claude 订阅，把 claude -p 接成一条完整的聊天管线：流式、思考链、发图、MCP、skill、断线续接、进程管家。从零教程 + 可跑骨架",
       "github_url": "https://github.com/Saekisui/claude-p-pipeline",
-      "star": 91,
+      "star": 95,
       "last_commit": "2026-11-07",
       "category_tags": [
         "影音播放器"
@@ -10229,8 +10230,8 @@
       "title": "agent-autoloop",
       "summary": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
       "github_url": "https://github.com/KKKKhazix/agent-autoloop",
-      "star": 4431,
-      "last_commit": "2026-11-10",
+      "star": 4535,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
@@ -10240,8 +10241,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 3,
-      "forks": 804,
+      "open_issues": 0,
+      "forks": 827,
       "topics": [
         "ai-agents",
         "automation",
@@ -10266,7 +10267,7 @@
       "title": "HGhub",
       "summary": "YellowFruit third-party client",
       "github_url": "https://github.com/Minireel/HGhub",
-      "star": 8145,
+      "star": 8297,
       "last_commit": "2026-11-10",
       "category_tags": [
         "系统工具"
@@ -10279,8 +10280,8 @@
       "is_hidden": false,
       "license": "",
       "language": "",
-      "open_issues": 15,
-      "forks": 3203,
+      "open_issues": 18,
+      "forks": 4074,
       "topics": [
         "android",
         "drama",
@@ -10300,8 +10301,8 @@
       "title": "Hookshot",
       "summary": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2…",
       "github_url": "https://github.com/NotRexed/Hookshot",
-      "star": 6586,
-      "last_commit": "2026-11-11",
+      "star": 7875,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -10311,8 +10312,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "C++",
-      "open_issues": 199,
-      "forks": 587,
+      "open_issues": 234,
+      "forks": 710,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-05",
@@ -10325,7 +10326,7 @@
       "title": "cinecode",
       "summary": "Films made with code. Short films, long YouTube videos, ads, explainers and musi…",
       "github_url": "https://github.com/sarpstar/cinecode",
-      "star": 2062,
+      "star": 2220,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -10336,8 +10337,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 7,
-      "forks": 368,
+      "open_issues": 11,
+      "forks": 387,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-03",
@@ -10350,8 +10351,8 @@
       "title": "sand3d",
       "summary": "3D modeling in Python, built for LLMs.",
       "github_url": "https://github.com/Sandflow-ai/sand3d",
-      "star": 1757,
-      "last_commit": "2026-11-10",
+      "star": 1861,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -10361,8 +10362,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "HTML",
-      "open_issues": 12,
-      "forks": 196,
+      "open_issues": 13,
+      "forks": 204,
       "topics": [
         "3d",
         "blender",
@@ -10383,8 +10384,8 @@
       "title": "NX2navi",
       "summary": "",
       "github_url": "https://github.com/tangerineturtle1/NX2navi",
-      "star": 2894,
-      "last_commit": "2026-11-10",
+      "star": 3282,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -10394,8 +10395,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C",
-      "open_issues": 412,
-      "forks": 192,
+      "open_issues": 515,
+      "forks": 220,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-07",
@@ -10408,7 +10409,7 @@
       "title": "player",
       "summary": "A lightweight 2.5D character player for the web, with lip sync and webcam face t…",
       "github_url": "https://github.com/livliv-dev/player",
-      "star": 1462,
+      "star": 1494,
       "last_commit": "2026-11-09",
       "category_tags": [
         "影音播放器"
@@ -10419,8 +10420,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 2,
-      "forks": 153,
+      "open_issues": 3,
+      "forks": 157,
       "topics": [
         "avatar",
         "character",
@@ -10442,8 +10443,8 @@
       "title": "gjgjxweb",
       "summary": "《搞机工具箱》Web移植版",
       "github_url": "https://github.com/CzJam/gjgjxweb",
-      "star": 1585,
-      "last_commit": "2026-11-07",
+      "star": 1663,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
       ],
@@ -10453,8 +10454,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "HTML",
-      "open_issues": 0,
-      "forks": 136,
+      "open_issues": 1,
+      "forks": 141,
       "topics": [],
       "homepage": "https://czjam.github.io/gjgjxweb/",
       "repo_created": "2026-11-03",
@@ -10467,8 +10468,8 @@
       "title": "kiri",
       "summary": "A small, fast container runtime for macOS, Windows and Linux",
       "github_url": "https://github.com/libracoder/kiri",
-      "star": 1474,
-      "last_commit": "2026-11-10",
+      "star": 1619,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -10480,8 +10481,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 58,
-      "forks": 95,
+      "open_issues": 50,
+      "forks": 100,
       "topics": [
         "containers",
         "docker",
@@ -10502,8 +10503,8 @@
       "title": "Henge",
       "summary": "Emulate macOS on iOS and iPadOS",
       "github_url": "https://github.com/Leviidev/Henge",
-      "star": 1872,
-      "last_commit": "2026-11-11",
+      "star": 2040,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -10513,8 +10514,8 @@
       "is_hidden": false,
       "license": "GPL-2.0",
       "language": "C",
-      "open_issues": 56,
-      "forks": 149,
+      "open_issues": 71,
+      "forks": 170,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-02",
@@ -10527,8 +10528,8 @@
       "title": "vork",
       "summary": "Headless 3D and VFX engine for agents. Research preview.",
       "github_url": "https://github.com/voyager-so/vork",
-      "star": 1357,
-      "last_commit": "2026-11-10",
+      "star": 1451,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -10539,7 +10540,7 @@
       "license": "NOASSERTION",
       "language": "Rust",
       "open_issues": 7,
-      "forks": 108,
+      "forks": 118,
       "topics": [
         "3d",
         "ai-agents",
@@ -10563,8 +10564,8 @@
       "title": "mygo-music",
       "summary": "A native music player you extend with plugins",
       "github_url": "https://github.com/egoist/mygo-music",
-      "star": 1191,
-      "last_commit": "2026-11-10",
+      "star": 1240,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
@@ -10574,8 +10575,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Go",
-      "open_issues": 89,
-      "forks": 193,
+      "open_issues": 84,
+      "forks": 208,
       "topics": [],
       "homepage": "music.egoist.dev",
       "repo_created": "2026-11-04",
@@ -10588,8 +10589,8 @@
       "title": "ocarina-recomp",
       "summary": "Ocarina of Time running natively on Windows, no emulator. Built on your PC from…",
       "github_url": "https://github.com/sostenesfreitas/ocarina-recomp",
-      "star": 1089,
-      "last_commit": "2026-11-09",
+      "star": 1148,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -10599,8 +10600,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "C",
-      "open_issues": 101,
-      "forks": 71,
+      "open_issues": 98,
+      "forks": 73,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-06",
@@ -10613,8 +10614,8 @@
       "title": "pinky",
       "summary": "Let AI agents use your phone, with you in the loop.",
       "github_url": "https://github.com/DIYgod/pinky",
-      "star": 1687,
-      "last_commit": "2026-11-10",
+      "star": 1882,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
       ],
@@ -10624,8 +10625,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Go",
-      "open_issues": 24,
-      "forks": 180,
+      "open_issues": 23,
+      "forks": 196,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-06",
@@ -10638,8 +10639,8 @@
       "title": "gif-factory",
       "summary": "GIF 工厂：按风格制作像素、人物与宠物、粘土吉祥物、光栅卡与动态海报的 GIF Skill。",
       "github_url": "https://github.com/WoYun520/gif-factory",
-      "star": 1088,
-      "last_commit": "2026-11-10",
+      "star": 1375,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -10650,7 +10651,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 1,
-      "forks": 134,
+      "forks": 159,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-05",
@@ -10663,7 +10664,7 @@
       "title": "ram-altman",
       "summary": "Monitors your RAM and reports any \"quite terrible\" unused capacity directly to t…",
       "github_url": "https://github.com/IainKay/ram-altman",
-      "star": 1827,
+      "star": 1944,
       "last_commit": "2026-11-06",
       "category_tags": [
         "AI&Agent"
@@ -10674,8 +10675,8 @@
       "is_hidden": false,
       "license": "Unlicense",
       "language": "Shell",
-      "open_issues": 28,
-      "forks": 54,
+      "open_issues": 30,
+      "forks": 59,
       "topics": [
         "bash",
         "cron",
@@ -10706,8 +10707,8 @@
       "title": "chimera-vocal-synth",
       "summary": "the ultimate vocal synthesizer - sing, speak, beatbox, and more",
       "github_url": "https://github.com/jamesondh/chimera-vocal-synth",
-      "star": 1705,
-      "last_commit": "2026-11-10",
+      "star": 1986,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
       ],
@@ -10717,8 +10718,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Rust",
-      "open_issues": 33,
-      "forks": 193,
+      "open_issues": 30,
+      "forks": 234,
       "topics": [],
       "homepage": "https://chimera-vocal-synth.vercel.app",
       "repo_created": "2026-11-05",
@@ -10731,8 +10732,8 @@
       "title": "boxshelf-beta",
       "summary": "Boxshelf public beta for Windows, Android (AYN Thor) and Linux / Steam Deck: a T…",
       "github_url": "https://github.com/sassiestrhihno/boxshelf-beta",
-      "star": 819,
-      "last_commit": "2026-11-09",
+      "star": 857,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -10747,7 +10748,7 @@
       "license": "",
       "language": "",
       "open_issues": 24,
-      "forks": 22,
+      "forks": 23,
       "topics": [
         "android-handheld",
         "ayn-thor",
@@ -10770,7 +10771,7 @@
       "title": "watson-username-footprint-finder",
       "summary": "Free people-search desktop app: look up a nickname, email, phone or site across…",
       "github_url": "https://github.com/AtomIllusionistDwell/watson-username-footprint-finder",
-      "star": 749,
+      "star": 772,
       "last_commit": "2026-11-08",
       "category_tags": [
         "逆向开发"
@@ -10808,7 +10809,7 @@
       "title": "OpenAmika",
       "summary": "OpenAmika: MekaHime's AI companion Amika, open source. Live2D avatar, real-time…",
       "github_url": "https://github.com/zeekk0/OpenAmika",
-      "star": 594,
+      "star": 603,
       "last_commit": "2026-11-10",
       "category_tags": [
         "效率工具"
@@ -10842,8 +10843,8 @@
       "title": "S2Arm",
       "summary": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten…",
       "github_url": "https://github.com/jhaizhou-ops/S2Arm",
-      "star": 2387,
-      "last_commit": "2026-11-11",
+      "star": 2608,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "游戏"
       ],
@@ -10853,8 +10854,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "C#",
-      "open_issues": 225,
-      "forks": 446,
+      "open_issues": 269,
+      "forks": 483,
       "topics": [
         "apple-silicon",
         "arm64",
@@ -10878,7 +10879,7 @@
       "title": "wichforks",
       "summary": "Use-case guide to Nintendo Switch 2 emulator forks: builds, games, GPUs, Android…",
       "github_url": "https://github.com/riyadhHDA/wichforks",
-      "star": 559,
+      "star": 574,
       "last_commit": "2026-11-07",
       "category_tags": [
         "游戏"
@@ -10890,7 +10891,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 9,
-      "forks": 8,
+      "forks": 10,
       "topics": [
         "compatibility",
         "eglantine",
@@ -10940,8 +10941,8 @@
       "title": "DOPPLERGEIST",
       "summary": "Python tool for aircraft Doppler audio geolocation using historical ADS-B flight…",
       "github_url": "https://github.com/1337isnot1337/DOPPLERGEIST",
-      "star": 553,
-      "last_commit": "2026-11-10",
+      "star": 564,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
@@ -10951,8 +10952,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Python",
-      "open_issues": 16,
-      "forks": 71,
+      "open_issues": 17,
+      "forks": 70,
       "topics": [
         "acoustic-geolocation",
         "ads-b",
@@ -10976,7 +10977,7 @@
       "title": "PulsoIcon",
       "summary": "Animated React icons — every Lucide icon plus extra icons and brand logos, each…",
       "github_url": "https://github.com/CityPulso/PulsoIcon",
-      "star": 569,
+      "star": 574,
       "last_commit": "2026-11-08",
       "category_tags": [
         "设计"
@@ -11001,7 +11002,7 @@
       "title": "dsh-game-studio",
       "summary": "Describe a small game in one sentence, play it in the DeepSeek Harness sidebar,…",
       "github_url": "https://github.com/ZSeven-W/dsh-game-studio",
-      "star": 467,
+      "star": 501,
       "last_commit": "2026-11-09",
       "category_tags": [
         "游戏"
@@ -11013,7 +11014,7 @@
       "license": "MIT",
       "language": "TypeScript",
       "open_issues": 0,
-      "forks": 42,
+      "forks": 44,
       "topics": [
         "ai-agent",
         "ai-game-generator",
@@ -11037,7 +11038,7 @@
       "title": "CUI",
       "summary": "Native UI components for C: about 150 of them, with spring motion and full keybo…",
       "github_url": "https://github.com/yappologistic/CUI",
-      "star": 877,
+      "star": 919,
       "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
@@ -11051,8 +11052,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C",
-      "open_issues": 18,
-      "forks": 50,
+      "open_issues": 33,
+      "forks": 54,
       "topics": [
         "c",
         "c99",
@@ -15961,8 +15962,8 @@
       "title": "GestaltX",
       "summary": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device prese…",
       "github_url": "https://github.com/huamidev/GestaltX",
-      "star": 4820,
-      "last_commit": "2026-11-10",
+      "star": 6327,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "NAS存储"
       ],
@@ -15972,8 +15973,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Swift",
-      "open_issues": 64,
-      "forks": 1835,
+      "open_issues": 54,
+      "forks": 2439,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-09",
@@ -15986,7 +15987,7 @@
       "title": "agent_skills",
       "summary": "Agent skills",
       "github_url": "https://github.com/janestreet/agent_skills",
-      "star": 3859,
+      "star": 5952,
       "last_commit": "2026-11-03",
       "category_tags": [
         "AI&Agent"
@@ -15997,8 +15998,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "",
-      "open_issues": 5,
-      "forks": 230,
+      "open_issues": 10,
+      "forks": 416,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-03",
@@ -16011,8 +16012,8 @@
       "title": "kubai-icons",
       "summary": "An agent skill that draws animated icons in one consistent style, for Claude Cod…",
       "github_url": "https://github.com/kubai087/kubai-icons",
-      "star": 654,
-      "last_commit": "2026-11-10",
+      "star": 742,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
       ],
@@ -16023,7 +16024,7 @@
       "license": "NOASSERTION",
       "language": "JavaScript",
       "open_issues": 0,
-      "forks": 30,
+      "forks": 35,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -16052,8 +16053,8 @@
       "title": "secure-pdf-document-processor",
       "summary": "Adobe Acrobat Pro 2026: Secure Standalone PDF Document Processor for Desktop",
       "github_url": "https://github.com/mahmoudtawfik1998/secure-pdf-document-processor",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1305,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -16096,8 +16097,8 @@
       "title": "fabfilter-total",
       "summary": "Fabfilter Total 2026 security assessment toolkit with full feature validation an…",
       "github_url": "https://github.com/abhijot11/fabfilter-total",
-      "star": 649,
-      "last_commit": "2026-11-10",
+      "star": 1096,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -16139,7 +16140,7 @@
       "title": "youtube-ai-video-editing-system",
       "summary": "Eyeline teleprompter meets editing agents: JSON-driven animation and motion grap…",
       "github_url": "https://github.com/dhruvthakur11/youtube-ai-video-editing-system",
-      "star": 481,
+      "star": 483,
       "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
@@ -16176,8 +16177,8 @@
       "title": "adobe-substance-3d-studio",
       "summary": "Adobe Substance 3D Creative Studio 2026 - Secure Asset Pipeline Desktop Installe…",
       "github_url": "https://github.com/abdulmannanmalik13-wq/adobe-substance-3d-studio",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1304,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -16269,7 +16270,7 @@
       "title": "universal-neural-injector-center",
       "summary": "Universal Neural DLSS 5 Injector and Game Center for All RTX Titles",
       "github_url": "https://github.com/shammahcharumbira/universal-neural-injector-center",
-      "star": 481,
+      "star": 482,
       "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
@@ -16391,8 +16392,8 @@
       "title": "metatrader-5-bot",
       "summary": "Community-driven MetaTrader 5 bot with full features ready for desktop use",
       "github_url": "https://github.com/RolandoV3/metatrader-5-bot",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1204,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
       ],
@@ -16402,7 +16403,7 @@
       "is_hidden": false,
       "license": "",
       "language": "TypeScript",
-      "open_issues": 0,
+      "open_issues": 2,
       "forks": 0,
       "topics": [
         "automation",
@@ -16438,7 +16439,7 @@
       "summary": "Adobe InDesign Desktop Build: Secure Digital Asset Deployment Pipeline",
       "github_url": "https://github.com/nabilaolivia2104-commits/adobe-indesign-deployment-pipeline",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -16477,8 +16478,8 @@
       "title": "chief-architect-premier",
       "summary": "Chief Architect Premier 2026: Pre-Configured Desktop Edition with All Features E…",
       "github_url": "https://github.com/thiagoaureliomartins-programador/chief-architect-premier",
-      "star": 775,
-      "last_commit": "2026-11-10",
+      "star": 1197,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -16619,7 +16620,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "MIT",
       "language": "HTML",
       "open_issues": 0,
@@ -16641,7 +16642,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-06",
-      "created_at": "2026-11-10 04:15:35"
+      "created_at": "2026-11-10 04:15:35",
+      "is_gone": true
     },
     {
       "id": "thormass007/substance-3d-alt-access",
@@ -16697,8 +16699,8 @@
       "title": "microstation-2026-setup",
       "summary": "microstation-2026: Professional Desktop Utility Installer for Configuration and…",
       "github_url": "https://github.com/vigilantediurno2-del/microstation-2026-setup",
-      "star": 663,
-      "last_commit": "2026-11-10",
+      "star": 1090,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "设计"
       ],
@@ -16781,8 +16783,8 @@
       "title": "power-director",
       "summary": "Power Director: Standalone Desktop Video Editing Suite with Complete Installer",
       "github_url": "https://github.com/SnehalSukale27/power-director",
-      "star": 771,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -16871,7 +16873,7 @@
       "summary": "PhantomBladeZero-Cheat: 54 toggleable runtime options and three presets for Phan…",
       "github_url": "https://github.com/richmondasensomensah-eng/phantom-blade-zero-runtime-toolkit",
       "star": 479,
-      "last_commit": "2026-11-09",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -16902,8 +16904,8 @@
       "title": "sp-flash-tool",
       "summary": "SP-Flash-Tool: Standalone Firmware Flashing Suite with Drivers and Utilities",
       "github_url": "https://github.com/muddinenilakshmilalithaksh-create/sp-flash-tool",
-      "star": 772,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "逆向开发"
       ],
@@ -16945,8 +16947,8 @@
       "title": "rufus-usb-formatter",
       "summary": "Rufus: Advanced USB Formatting and Bootable Drive Creation Utility",
       "github_url": "https://github.com/21041979/rufus-usb-formatter",
-      "star": 771,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -16991,8 +16993,8 @@
       "title": "dxo-photolab-10-desktop",
       "summary": "DxO PhotoLab 10 desktop build for professional photo processing workflows",
       "github_url": "https://github.com/flgomes/dxo-photolab-10-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1229,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17037,7 +17039,7 @@
       "summary": "Phantom Blade Zero Trainer 2026: God Mode, One-Hit Kill, start All Weapons",
       "github_url": "https://github.com/Mymedspharmacy/phantom-blade-zero-trainer",
       "star": 479,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -17069,8 +17071,8 @@
       "title": "musicmakerunlimited",
       "summary": "Musicmakerunlimited 2026: Full-Feature Desktop Installer with Complete Toolset",
       "github_url": "https://github.com/ethangangasingh-crypto/musicmakerunlimited",
-      "star": 771,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -17113,8 +17115,8 @@
       "title": "payday-3-enhancement-toolkit",
       "summary": "Payday 3 Trainer Tool - Fully Activated Desktop Build, Ready to Play",
       "github_url": "https://github.com/shahnawaz0786/payday-3-enhancement-toolkit",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -17153,8 +17155,8 @@
       "title": "kontakt-8-config",
       "summary": "Kontakt 8 desktop utility config: opinionated dotfiles, ready to run",
       "github_url": "https://github.com/dikshantghimire321-droid/kontakt-8-config",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -17197,7 +17199,7 @@
       "summary": "DAEMON-Pro: Full-Feature Security Installer for Desktop Deployment",
       "github_url": "https://github.com/ma7401153-sketch/daemon-pro-installer",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -17241,7 +17243,7 @@
       "summary": "GrayKet: complete standalone advanced system configuration setup",
       "github_url": "https://github.com/Cybertechbear101/grayket-config",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17277,7 +17279,7 @@
       "summary": "Adobe InDesign Installer with Enhanced Security Protocols for Secure Digital Ass…",
       "github_url": "https://github.com/jeevijk/secure-asset-deploy",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17316,8 +17318,8 @@
       "title": "directory-opus",
       "summary": "directory-opus: complete standalone desktop setup with all features pre-enabled,…",
       "github_url": "https://github.com/JasonCharb/directory-opus",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1294,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17362,7 +17364,7 @@
       "title": "quicken-deluxe-installer",
       "summary": "Quicken Deluxe Desktop Installer with Full Feature Set Enabled",
       "github_url": "https://github.com/rdeepak-wq121/quicken-deluxe-installer",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
@@ -17408,8 +17410,8 @@
       "title": "cinebench-desktop",
       "summary": "Cinebench 2026 Standalone Desktop Setup with Pre-Activated Features",
       "github_url": "https://github.com/woo20080623-cell/cinebench-desktop",
-      "star": 773,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17500,8 +17502,8 @@
       "title": "ninjatrader-bot",
       "summary": "Ninjatrader Bot 2026: a friendly, community-driven trading companion packed with…",
       "github_url": "https://github.com/janitoff0/ninjatrader-bot",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1201,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -17634,8 +17636,8 @@
       "title": "rust-external-trainer-tool",
       "summary": "Rust External 2026: Full Standalone Trainer Setup, Tools and Dependencies Ready…",
       "github_url": "https://github.com/SK-Dev666/rust-external-trainer-tool",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "逆向开发"
       ],
@@ -17680,7 +17682,7 @@
       "title": "windows-optimizer",
       "summary": "Windows Optimizer: Advanced System Tweaks and Performance Enhancements",
       "github_url": "https://github.com/shivsupratik/windows-optimizer",
-      "star": 772,
+      "star": 1199,
       "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
@@ -17773,8 +17775,8 @@
       "title": "honkai-star-rail-companion-suite",
       "summary": "Honkai Star Rail 2026 Trainer Tool: Complete Standalone Setup, Ready to Run",
       "github_url": "https://github.com/shayannazar84-hero/honkai-star-rail-companion-suite",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -17816,7 +17818,7 @@
       "summary": "AIDA-64-Extreme: Pre-Activated Desktop Edition with Full Feature Set",
       "github_url": "https://github.com/hasinthakanakarathna/aida-64-extreme-desktop",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -17861,8 +17863,8 @@
       "title": "actual-multi-display-configurator",
       "summary": "Multi-Monitor Desktop Configuration Installer with Enhanced Display Options",
       "github_url": "https://github.com/bipro45/actual-multi-display-configurator",
-      "star": 773,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -17947,8 +17949,8 @@
       "title": "clion-standalone-enhancement",
       "summary": "CLion full installer: complete standalone setup, all features activated",
       "github_url": "https://github.com/CodeSouvik/clion-standalone-enhancement",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1298,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -18025,8 +18027,8 @@
       "title": "data-grip-desktop",
       "summary": "Data-Grip 2026: Complete Standalone Desktop Utility for Efficient Data Managemen…",
       "github_url": "https://github.com/sghnnnn01212-cmyk/data-grip-desktop",
-      "star": 577,
-      "last_commit": "2026-11-10",
+      "star": 991,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -18071,7 +18073,7 @@
       "summary": "MetaTrader 2026: Complete Standalone Desktop Trading Platform with Full Feature…",
       "github_url": "https://github.com/mubeen278/metatrader-desktop",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -18276,7 +18278,7 @@
       "summary": "Autodesk Inventor 2026 Standalone Desktop Build with Complete Feature Set",
       "github_url": "https://github.com/hk0299093-debug/autodesk-inventor-desktop-edition",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -18366,7 +18368,7 @@
       "summary": "Cinebench 2026 Standalone Desktop Setup with Pre-Configured Components",
       "github_url": "https://github.com/Tiototo019/cinebench-2026-desktop-setup",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -18452,7 +18454,7 @@
       "title": "microsoft-365-desktop",
       "summary": "Microsoft 365 2024 Standalone Desktop Setup with Pre-Configured Tools",
       "github_url": "https://github.com/ilsa99/microsoft-365-desktop",
-      "star": 772,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
@@ -18499,7 +18501,7 @@
       "title": "melodyne-5-desktop-setup",
       "summary": "Melodyne-5: Professional Audio Editing Desktop Suite with Full Feature Set",
       "github_url": "https://github.com/daiphu2708-crypto/melodyne-5-desktop-setup",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
@@ -18633,7 +18635,7 @@
       "summary": "Adobe InDesign Desktop Installer with Robust Security Protocols",
       "github_url": "https://github.com/AronnyoC/adobe-indesign-installer",
       "star": 480,
-      "last_commit": "2026-11-11",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -18716,8 +18718,8 @@
       "title": "dvd-creator-game-enhancement",
       "summary": "DVD-Creator 2026: Full Desktop Build, Every Feature Enabled",
       "github_url": "https://github.com/Sanidhya0510/dvd-creator-game-enhancement",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1252,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
@@ -18850,7 +18852,7 @@
       "title": "rx-11-audio-editor-config",
       "summary": "rx-11-audio-editor config: full standalone installer and dotfiles for profession…",
       "github_url": "https://github.com/farhatullah0006-art/rx-11-audio-editor-config",
-      "star": 771,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
@@ -18937,8 +18939,8 @@
       "title": "ozone-12-advanced",
       "summary": "Ozone 12 Advanced: Professional Desktop Utility with Enhanced Configurations",
       "github_url": "https://github.com/vishnu05-codes/ozone-12-advanced",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -18981,8 +18983,8 @@
       "title": "daemon-pro-desktop",
       "summary": "daemon-pro: Complete Standalone Desktop Setup with Full Feature setup",
       "github_url": "https://github.com/IsaiaR09/daemon-pro-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1295,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -19025,7 +19027,7 @@
       "title": "on1-photo-raw-max-config",
       "summary": "on1-photo-raw-max: complete standalone setup with advanced image tools",
       "github_url": "https://github.com/Eriazeri/on1-photo-raw-max-config",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "设计"
@@ -19160,7 +19162,7 @@
       "title": "ibm-spss-desktop-suite",
       "summary": "IBM SPSS Statistics 2026 Standalone Setup with Full Feature Configuration",
       "github_url": "https://github.com/leanislizarzado/ibm-spss-desktop-suite",
-      "star": 773,
+      "star": 1201,
       "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
@@ -19206,8 +19208,8 @@
       "title": "passfab-unlocker-desktop",
       "summary": "passfab-unlocker: Standalone Offline Password Recovery Solution",
       "github_url": "https://github.com/GUFRAN7998/passfab-unlocker-desktop",
-      "star": 675,
-      "last_commit": "2026-11-11",
+      "star": 1103,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -19246,8 +19248,8 @@
       "title": "scrcpy-mirror-control",
       "summary": "Android Screen Mirroring and Control Workflow, Simplified",
       "github_url": "https://github.com/SirBonney/scrcpy-mirror-control",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -19383,7 +19385,7 @@
       "summary": "PremierePro Video Editor 2026: Multi-Track Timeline and Lumetri Color Workflow",
       "github_url": "https://github.com/leoquenikeny/premierepro-video-editor-2026",
       "star": 479,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -19420,7 +19422,7 @@
       "summary": "Professional video editing, screen recording, and VFX tools for Windows",
       "github_url": "https://github.com/Sebastian-is752/capcut-for-windows",
       "star": 480,
-      "last_commit": "2026-11-11",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -19557,7 +19559,7 @@
       "summary": "Standalone desktop tool for Samsung firmware operations with full feature set en…",
       "github_url": "https://github.com/johnampire818-dev/samfw-tool-desktop",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "逆向开发"
       ],
@@ -19598,7 +19600,7 @@
       "summary": "Revive the visuals, stabilize the crashes, expand the resolutions: MGSHDFix for…",
       "github_url": "https://github.com/bilalbilllu/mgs-hd-fix",
       "star": 479,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "游戏"
       ],
@@ -19683,7 +19685,7 @@
       "summary": "Acrobat-Pro-Master-PDF-2026: Professional PDF Editing, OCR, Forms, and E-Signatu…",
       "github_url": "https://github.com/hoodbrompage/acrobat-pro-pdf-master-2026",
       "star": 479,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -19818,7 +19820,7 @@
       "summary": "Better-Discord: Fully Loaded Standalone Desktop Setup, Ready to Run",
       "github_url": "https://github.com/gianholun/better-discord-desktop",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -19853,8 +19855,8 @@
       "title": "delta-force-enhancement",
       "summary": "Delta-Force-Cheat: Full Working Installer, All Features Active",
       "github_url": "https://github.com/Pereira001/delta-force-enhancement",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1164,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -19867,18 +19869,19 @@
       "open_issues": 0,
       "forks": 0,
       "topics": [
-        "automation",
-        "delta-force",
-        "delta-force-aim-assist",
-        "desktop",
-        "developer-tools",
-        "open-source",
-        "python",
-        "scripts",
-        "software-engineering",
-        "system",
-        "utility",
-        "windows-app"
+        "dlss",
+        "dlss-5",
+        "dlss-5-nvidia",
+        "dlss-5-release",
+        "dlss-5-renodx",
+        "dlss-5-reshade",
+        "dlss5",
+        "dlss5-feeder",
+        "dlss5-renodx",
+        "dlss5-universal",
+        "frame-generation",
+        "neural-rendering",
+        "video-enhancement"
       ],
       "homepage": "",
       "repo_created": "2026-11-06",
@@ -19891,8 +19894,8 @@
       "title": "wondshare-recoverit",
       "summary": "Wondershare Recoverit Desktop Installer with Complete Data Recovery Capabilities",
       "github_url": "https://github.com/harikumar35626-hash/wondshare-recoverit",
-      "star": 675,
-      "last_commit": "2026-11-10",
+      "star": 1098,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -19984,7 +19987,7 @@
       "title": "soundpad-audio-suite",
       "summary": "Soundpad: Advanced Audio Processing for Professional DAW Workflows",
       "github_url": "https://github.com/manjushree-iyer/soundpad-audio-suite",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-06",
       "category_tags": [
         "影音播放器"
@@ -20028,8 +20031,8 @@
       "title": "delta-executor-toolkit",
       "summary": "Delta Executor for PC: Full Working Installer with All Tools Pre-Configured",
       "github_url": "https://github.com/tss878/delta-executor-toolkit",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1295,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
       ],
@@ -20253,8 +20256,8 @@
       "title": "aion-2-trainer-tool",
       "summary": "Aion 2 AI Prompt Engineering Toolkit - Standalone Desktop Trainer Setup",
       "github_url": "https://github.com/Arda313131882/aion-2-trainer-tool",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1296,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "游戏"
       ],
@@ -20297,8 +20300,8 @@
       "title": "sketchup-pro-desktop",
       "summary": "Sketchup Pro 2026 Complete Standalone Desktop Setup with All Features Pre-Activa…",
       "github_url": "https://github.com/Malik-825/sketchup-pro-desktop",
-      "star": 773,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -20343,8 +20346,8 @@
       "title": "coreldraw-desktop-installer",
       "summary": "CorelDraw 2026 Professional Desktop Installer with Ready-to-Run Utility Configur…",
       "github_url": "https://github.com/ayanprob/coreldraw-desktop-installer",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1201,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -20389,8 +20392,8 @@
       "title": "fonepaw-unlocker-setup",
       "summary": "Fonepaw Unlocker 2026 Standalone Desktop Setup with Full Feature Set",
       "github_url": "https://github.com/Sakshimodi14/fonepaw-unlocker-setup",
-      "star": 674,
-      "last_commit": "2026-11-11",
+      "star": 1167,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "NAS存储"
       ],
@@ -20531,8 +20534,8 @@
       "title": "voicemod-desktop-edition",
       "summary": "Standalone desktop audio modification suite with complete pre-configured setup f…",
       "github_url": "https://github.com/parthkshirsagar2456-blip/voicemod-desktop-edition",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
@@ -20578,7 +20581,7 @@
       "summary": "Phantom Blade Zero: Symbol Cues, Wider Parry Windows, Full Arsenal",
       "github_url": "https://github.com/wanjalaibra05-lgtm/phantom-blade-zero-assist",
       "star": 479,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "游戏"
       ],
@@ -20749,8 +20752,8 @@
       "title": "imei-repair-toolkit",
       "summary": "IMEI Repair 2026: Standalone Installer and Complete Setup for Device Repair Solu…",
       "github_url": "https://github.com/uchihamx999-beep/imei-repair-toolkit",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1199,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
       ],
@@ -20796,8 +20799,8 @@
       "title": "music-maker-unlimited",
       "summary": "MusicMakerUnlimited: Full-featured desktop music production installer, ready to…",
       "github_url": "https://github.com/blockacc12345/music-maker-unlimited",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -20922,8 +20925,8 @@
       "title": "sony-vegas-pro-desktop",
       "summary": "Sony Vegas Pro 2026 standalone setup with pre-installed professional video editi…",
       "github_url": "https://github.com/utkarshryanite25-a11y/sony-vegas-pro-desktop",
-      "star": 772,
-      "last_commit": "2026-11-11",
+      "star": 1102,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -21059,8 +21062,8 @@
       "title": "Erosion-CN",
       "summary": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）",
       "github_url": "https://github.com/Kianuni/Erosion-CN",
-      "star": 1059,
-      "last_commit": "2026-11-10",
+      "star": 1572,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -21070,8 +21073,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Swift",
-      "open_issues": 0,
-      "forks": 247,
+      "open_issues": 10,
+      "forks": 356,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-10",
@@ -21084,8 +21087,8 @@
       "title": "ultra-iso-desktop-setup",
       "summary": "Ultra Iso 2026 desktop application with complete standalone setup and all featur…",
       "github_url": "https://github.com/Forgavin/ultra-iso-desktop-setup",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -21124,8 +21127,8 @@
       "title": "chimera-desktop-suite",
       "summary": "Chimera: Pre-configured Desktop Utility Suite with Full Installer",
       "github_url": "https://github.com/angelonyn/chimera-desktop-suite",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21167,8 +21170,8 @@
       "title": "uttorent-desktop",
       "summary": "Uttorent 2026: Desktop Installer for Seamless Torrent Management",
       "github_url": "https://github.com/arthurrossetocampos1-crypto/uttorent-desktop",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21213,8 +21216,8 @@
       "title": "autodesk-revit-2026-standalone",
       "summary": "Autodesk Revit 2026 Complete Standalone Setup for Desktop",
       "github_url": "https://github.com/Leno27-Adr/autodesk-revit-2026-standalone",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -21259,7 +21262,7 @@
       "title": "multiaccountmanager-enhancement",
       "summary": "Multiaccountmanager 2026: Complete Standalone Setup, Fully Pre-Activated, Ready…",
       "github_url": "https://github.com/pastebin2019/multiaccountmanager-enhancement",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
@@ -21299,8 +21302,8 @@
       "title": "honkai-star-rail-enhancement-suite",
       "summary": "Honkai Star Rail 2026: Pre-Activated Standalone Desktop Edition, Ready to Run",
       "github_url": "https://github.com/hayfa1234/honkai-star-rail-enhancement-suite",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
       ],
@@ -21342,8 +21345,8 @@
       "title": "cellebrite-ufed-setup",
       "summary": "Cellebrite UFED 2026 Standalone Desktop Setup with Pre-Configured Feature Set",
       "github_url": "https://github.com/theonlyoneexocctical-beep/cellebrite-ufed-setup",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21387,8 +21390,8 @@
       "title": "auslogics-audio-studio-desktop",
       "summary": "Auslogics Audio Studio 2026 Desktop Edition: Pre-Activated Standalone Setup",
       "github_url": "https://github.com/App-MonicaWEB/auslogics-audio-studio-desktop",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -21433,7 +21436,7 @@
       "title": "reason-14-installer",
       "summary": "reason-14: Full Working Installer for Professional Desktop Software, Ready to Ru…",
       "github_url": "https://github.com/tianjanahary05-source/reason-14-installer",
-      "star": 773,
+      "star": 1200,
       "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
@@ -21480,8 +21483,8 @@
       "title": "robux-generator-enhancement",
       "summary": "Robux-Generator: Full Installer, All Features Activated, Desktop-Ready",
       "github_url": "https://github.com/Marcian15350/robux-generator-enhancement",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21519,8 +21522,8 @@
       "title": "pump-fun-desktop",
       "summary": "Pump Fun 2026: Complete Desktop Utility Setup with Pre-Activated Features",
       "github_url": "https://github.com/xavier442/pump-fun-desktop",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -21561,8 +21564,8 @@
       "title": "sylenth-1-enhancement-suite",
       "summary": "Sylenth 1 configuration utility: standalone desktop setup, ready to run",
       "github_url": "https://github.com/RafliAbdulHaliim/sylenth-1-enhancement-suite",
-      "star": 773,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "影音播放器"
       ],
@@ -21606,8 +21609,8 @@
       "title": "desktop-backup-suite",
       "summary": "Aomei Backupper 2026: Full-Feature Desktop Backup and Recovery Suite",
       "github_url": "https://github.com/ebtsamalhakmy-sketch/desktop-backup-suite",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1296,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "NAS存储"
       ],
@@ -21652,8 +21655,8 @@
       "title": "hitfilm-desktop-installer",
       "summary": "HitFilm: Fully Featured Desktop Video Editing and VFX Suite",
       "github_url": "https://github.com/Paulinho182/hitfilm-desktop-installer",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1194,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -21695,8 +21698,8 @@
       "title": "fortnite-skin-swapper-enhancement",
       "summary": "Fortnite Skin Swapper: Standalone 2026 Desktop Setup, Ready to Run",
       "github_url": "https://github.com/Gacktadactle/fortnite-skin-swapper-enhancement",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21736,8 +21739,8 @@
       "title": "exitlag-optimizer",
       "summary": "ExitLag installer with optimized system performance enhancements for desktop",
       "github_url": "https://github.com/farhodzodatojiddin5-cpu/exitlag-optimizer",
-      "star": 772,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "逆向开发"
       ],
@@ -21748,7 +21751,7 @@
       "license": "",
       "language": "HTML",
       "open_issues": 0,
-      "forks": 0,
+      "forks": 1,
       "topics": [
         "automation",
         "desktop",
@@ -21781,7 +21784,7 @@
       "title": "systemcare-pro",
       "summary": "Systemcare Pro: Complete Standalone Desktop Setup with All Features Pre-Configur…",
       "github_url": "https://github.com/braazo/systemcare-pro",
-      "star": 772,
+      "star": 1199,
       "last_commit": "2026-11-11",
       "category_tags": [
         "NAS存储"
@@ -21827,8 +21830,8 @@
       "title": "aida-64-extreme",
       "summary": "Aida 64 Extreme 2026: Complete Standalone Desktop Setup with Full Feature Config…",
       "github_url": "https://github.com/hembramneeraj3-create/aida-64-extreme",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1304,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -21873,8 +21876,8 @@
       "title": "archicad-desktop-setup",
       "summary": "Archicad 2026 complete standalone desktop setup with pre-configured ready-to-run…",
       "github_url": "https://github.com/AleRibeiro44/archicad-desktop-setup",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1301,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -21914,8 +21917,8 @@
       "title": "dxo-photolab-10-config",
       "summary": "dxo-photolab-10: complete standalone config, ready to run, nothing held back",
       "github_url": "https://github.com/RyoTheOne/dxo-photolab-10-config",
-      "star": 772,
-      "last_commit": "2026-11-08",
+      "star": 1241,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -21959,8 +21962,8 @@
       "title": "cubase-studio-desktop",
       "summary": "Cubase Studio 2026 desktop setup with full plugin suite and complete feature set",
       "github_url": "https://github.com/sajawal-12/cubase-studio-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1298,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -22005,8 +22008,8 @@
       "title": "dvd-creator-setup",
       "summary": "Complete DVD Creator 2026 Standalone Setup with All Features Enabled",
       "github_url": "https://github.com/Mistercat12/dvd-creator-setup",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 893,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -22052,8 +22055,8 @@
       "title": "display-fusion",
       "summary": "Display Fusion 2026 standalone desktop setup with complete feature configuration",
       "github_url": "https://github.com/Vesuvio1/display-fusion",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1271,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22098,8 +22101,8 @@
       "title": "startall-back",
       "summary": "Startall Back 2026: Full Installer for Desktop Utility Configuration",
       "github_url": "https://github.com/FarhanNaem/startall-back",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1199,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22142,8 +22145,8 @@
       "title": "fonetrans-desktop-setup",
       "summary": "FoneTrans 2026: Complete Standalone Desktop Utility Setup and Configuration",
       "github_url": "https://github.com/robertsjunior/fonetrans-desktop-setup",
-      "star": 772,
-      "last_commit": "2026-11-11",
+      "star": 1200,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22187,8 +22190,8 @@
       "title": "burning-studio-desktop",
       "summary": "Burning Studio 2026: Complete Standalone Desktop Setup with Full Feature Configu…",
       "github_url": "https://github.com/marorateb/burning-studio-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1199,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -22233,8 +22236,8 @@
       "title": "ashampoo-winoptimizer-desktop",
       "summary": "Ashampoo WinOptimizer 2026 Standalone Setup with Full Feature Set Enabled",
       "github_url": "https://github.com/Somenicehispanic/ashampoo-winoptimizer-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1301,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22279,8 +22282,8 @@
       "title": "autodesk-inventor-desktop-config",
       "summary": "Autodesk Inventor 2026 Professional Desktop Installer with Pre-Configured Full F…",
       "github_url": "https://github.com/PHISHER420/autodesk-inventor-desktop-config",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1300,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "设计"
       ],
@@ -22325,8 +22328,8 @@
       "title": "designcenter-nx-desktop",
       "summary": "Designcenter-NX: Full-Feature Desktop Installer for Immediate Deployment",
       "github_url": "https://github.com/Elegantic/designcenter-nx-desktop",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1279,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22370,8 +22373,8 @@
       "title": "delta-force-trainer-tool",
       "summary": "Delta Force Trainer Tool: Full Working Installer With All Tools and Configuratio…",
       "github_url": "https://github.com/kcgeekedup-hash/delta-force-trainer-tool",
-      "star": 772,
-      "last_commit": "2026-11-10",
+      "star": 1294,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22408,8 +22411,8 @@
       "title": "easy-worship-desktop",
       "summary": "Easy-Worship 2026: Complete Standalone Desktop Setup with All Features Enabled",
       "github_url": "https://github.com/Luk177Master/easy-worship-desktop",
-      "star": 771,
-      "last_commit": "2026-11-10",
+      "star": 1210,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22450,8 +22453,8 @@
       "title": "php-storm-desktop-setup",
       "summary": "PhpStorm 2026 Standalone Desktop Setup with Full Feature Set Preconfigured",
       "github_url": "https://github.com/vnaurudo/php-storm-desktop-setup",
-      "star": 771,
-      "last_commit": "2026-11-11",
+      "star": 1130,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -22498,7 +22501,7 @@
       "platform_tags": [
         "跨平台"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "HTML",
       "open_issues": 0,
@@ -22519,7 +22522,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-06",
-      "created_at": "2026-11-11 01:26:07"
+      "created_at": "2026-11-11 01:26:07",
+      "is_gone": true
     },
     {
       "id": "pravinpote1985/serato-dj-pro-2026",
@@ -22528,8 +22532,8 @@
       "title": "serato-dj-pro-2026",
       "summary": "Serato DJ Pro 2026: Complete Standalone Setup with Full Feature Set",
       "github_url": "https://github.com/pravinpote1985/serato-dj-pro-2026",
-      "star": 770,
-      "last_commit": "2026-11-10",
+      "star": 1199,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
       ],
@@ -22574,7 +22578,7 @@
       "title": "secure-desktop-installer",
       "summary": "Professional Desktop Installer with Enhanced Security Features",
       "github_url": "https://github.com/groschen81-web/secure-desktop-installer",
-      "star": 677,
+      "star": 1210,
       "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
@@ -22615,8 +22619,8 @@
       "title": "HolyArrs",
       "summary": "One self-hosted app for your shows, movies and music.",
       "github_url": "https://github.com/HolyArrs/HolyArrs",
-      "star": 586,
-      "last_commit": "2026-11-10",
+      "star": 838,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -22626,8 +22630,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Go",
-      "open_issues": 76,
-      "forks": 27,
+      "open_issues": 112,
+      "forks": 41,
       "topics": [
         "docker",
         "homelab",
@@ -22647,7 +22651,7 @@
       "title": "homelab-diagram",
       "summary": "Renders an r/homelab-style network diagram from a YAML inventory (Python → SVG/P…",
       "github_url": "https://github.com/Goblinmine/homelab-diagram",
-      "star": 567,
+      "star": 873,
       "last_commit": "2026-11-07",
       "category_tags": [
         "设计"
@@ -22659,7 +22663,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 2,
-      "forks": 45,
+      "forks": 75,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-07",
@@ -22681,7 +22685,7 @@
         "Windows",
         "macOS"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22710,7 +22714,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "crewbookkeepercastle/trx-drainer-bot",
@@ -22727,7 +22732,7 @@
       "platform_tags": [
         "跨平台"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22756,7 +22761,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "chambergeneralamp/quant-trading-bot",
@@ -22773,7 +22779,7 @@
       "platform_tags": [
         "跨平台"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22802,7 +22808,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "cpumizukagefaucet/touch-copy",
@@ -22819,7 +22826,7 @@
       "platform_tags": [
         "macOS"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22848,7 +22855,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "basaltcongressman/wise-registrity",
@@ -22865,7 +22873,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22894,7 +22902,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "cordkushelter78/tenorshare-4ukey",
@@ -22911,7 +22920,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22940,7 +22949,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "tremorfualembic30/whale-tracker",
@@ -22957,7 +22967,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -22984,7 +22994,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "cpucorechant/total-commander",
@@ -23001,7 +23012,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "",
       "language": "",
       "open_issues": 0,
@@ -23030,7 +23041,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-10",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "seizepupatackle/fl-studio",
@@ -23039,7 +23051,7 @@
       "title": "fl-studio",
       "summary": "Fl Studio 2026 pre-configured environment for professional digital audio worksta…",
       "github_url": "https://github.com/seizepupatackle/fl-studio",
-      "star": 554,
+      "star": 982,
       "last_commit": "2026-11-08",
       "category_tags": [
         "影音播放器"
@@ -23085,8 +23097,8 @@
       "title": "Exodus-Fake-Balance",
       "summary": "Wallet UI simulation tool for BTC, ETH, SOL, XRP, and 200+ assets. Customize dis…",
       "github_url": "https://github.com/Danuse84/Exodus-Fake-Balance",
-      "star": 546,
-      "last_commit": "2026-11-11",
+      "star": 933,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -23131,8 +23143,8 @@
       "title": "fujiang-pojia",
       "summary": "富江破甲（破甲）：DeepSeek Harness破甲插件，激活词富江，所有东西直接大白话问，内含技能库skill下载与调用、漏洞知识库poc利用、漏洞报告更新…",
       "github_url": "https://github.com/FJNB5/fujiang-pojia",
-      "star": 521,
-      "last_commit": "2026-11-09",
+      "star": 643,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
       ],
@@ -23142,8 +23154,8 @@
       "is_hidden": false,
       "license": "",
       "language": "JavaScript",
-      "open_issues": 6,
-      "forks": 275,
+      "open_issues": 7,
+      "forks": 317,
       "topics": [
         "ai-agent",
         "cve",
@@ -23166,8 +23178,8 @@
       "title": "WQFiles",
       "summary": "File browser, app data manager and cache cleaner for iOS 27 (worse_query, no jai…",
       "github_url": "https://github.com/kolbicz/WQFiles",
-      "star": 507,
-      "last_commit": "2026-11-10",
+      "star": 647,
+      "last_commit": "2026-11-11",
       "category_tags": [
         "逆向开发"
       ],
@@ -23178,8 +23190,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Objective-C",
-      "open_issues": 16,
-      "forks": 40,
+      "open_issues": 10,
+      "forks": 51,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-11-09",
@@ -23192,7 +23204,7 @@
       "title": "fefw-recomp",
       "summary": "Native Windows PC port of Fire Emblem: Fortune's Weave by static recompilation.…",
       "github_url": "https://github.com/Goldoire/fefw-recomp",
-      "star": 497,
+      "star": 584,
       "last_commit": "2026-11-11",
       "category_tags": [
         "游戏"
@@ -23203,8 +23215,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "C++",
-      "open_issues": 40,
-      "forks": 32,
+      "open_issues": 26,
+      "forks": 40,
       "topics": [
         "pc-port",
         "recompilation",
@@ -23224,7 +23236,7 @@
       "summary": "Open-source AI app builder for full-stack Next.js apps with hosting and auth",
       "github_url": "https://github.com/AbhiKamane/ai-app-builder-open",
       "star": 481,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
       ],
@@ -23270,7 +23282,7 @@
       "summary": "Studioonepro7 2026 Complete Standalone Setup - Full-Featured Ready-to-Run Deskto…",
       "github_url": "https://github.com/sajiddevoloper-bd/studioonepro7-desktop",
       "star": 480,
-      "last_commit": "2026-11-11",
+      "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
       ],
@@ -23308,7 +23320,7 @@
       "summary": "fonetrans: Full-featured desktop installer for seamless cross-platform file tran…",
       "github_url": "https://github.com/felipemartinsr/fonetrans-desktop",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -23354,7 +23366,7 @@
       "summary": "sp-flash-tool: complete standalone setup, all tools pre-installed and ready to r…",
       "github_url": "https://github.com/SaravPatel1086/sp-flash-tool-dotfiles",
       "star": 480,
-      "last_commit": "2026-11-10",
+      "last_commit": "2026-11-11",
       "category_tags": [
         "系统工具"
       ],
@@ -23439,8 +23451,8 @@
       "title": "ozone-mastering-suite",
       "summary": "AI-Assisted Mastering Suite with Spectral Shaping and Codec Preview",
       "github_url": "https://github.com/ajayuv21/ozone-mastering-suite",
-      "star": 479,
-      "last_commit": "2026-11-11",
+      "star": 480,
+      "last_commit": "2026-11-12",
       "category_tags": [
         "影音播放器"
       ],
@@ -23488,7 +23500,7 @@
       "platform_tags": [
         "Windows"
       ],
-      "is_hidden": false,
+      "is_hidden": true,
       "license": "MIT",
       "language": "HTML",
       "open_issues": 0,
@@ -23510,7 +23522,8 @@
       ],
       "homepage": "",
       "repo_created": "2026-11-06",
-      "created_at": "2026-11-11 01:26:09"
+      "created_at": "2026-11-11 01:26:09",
+      "is_gone": true
     },
     {
       "id": "1410822031/xyplorer-desktop-setup",
@@ -23558,9 +23571,379 @@
       "homepage": "",
       "repo_created": "2026-11-06",
       "created_at": "2026-11-11 01:26:09"
+    },
+    {
+      "id": "hybridrobotics/supermimic",
+      "gh_id": 1452531582,
+      "crawl_date": "2026-11-12",
+      "title": "supermimic",
+      "summary": "Humanoid whole-body motion tracking with one differentiable world model.",
+      "github_url": "https://github.com/HybridRobotics/supermimic",
+      "star": 1052,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "open_issues": 23,
+      "forks": 70,
+      "topics": [],
+      "homepage": "https://supermimic.github.io",
+      "repo_created": "2026-11-10",
+      "created_at": "2026-11-12 02:28:10"
+    },
+    {
+      "id": "gloridust/wowtype",
+      "gh_id": 1448383153,
+      "crawl_date": "2026-11-12",
+      "title": "WowType",
+      "summary": "像微信输入法一样顺手的Linux输入法：长句一次打完、按错键也能认出来、纯离线语音输入、实时翻译，越用越懂你。",
+      "github_url": "https://github.com/Gloridust/WowType",
+      "star": 599,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "",
+      "language": "Rust",
+      "open_issues": 13,
+      "forks": 22,
+      "topics": [],
+      "homepage": "",
+      "repo_created": "2026-11-06",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "yusufceng1z/ding",
+      "gh_id": 1446657099,
+      "crawl_date": "2026-11-12",
+      "title": "ding",
+      "summary": "Toasts with real spring physics. One toast that morphs in place. No dependencies…",
+      "github_url": "https://github.com/YusufCeng1z/ding",
+      "star": 560,
+      "last_commit": "2026-11-10",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Web"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "TypeScript",
+      "open_issues": 0,
+      "forks": 16,
+      "topics": [
+        "animation",
+        "nextjs",
+        "notifications",
+        "nuxt",
+        "react",
+        "react-hot-toast",
+        "shadcn",
+        "sonner",
+        "spring-physics",
+        "svelte",
+        "toast",
+        "toast-notifications",
+        "typescript",
+        "ui-components",
+        "vue",
+        "zero-dependency"
+      ],
+      "homepage": "https://ding.yusufcengiz.dev",
+      "repo_created": "2026-11-05",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "forcequitos/worse_query",
+      "gh_id": 1450480356,
+      "crawl_date": "2026-11-12",
+      "title": "worse_query",
+      "summary": "A sandbox escape for iOS 26 and 27, again",
+      "github_url": "https://github.com/forcequitOS/worse_query",
+      "star": 558,
+      "last_commit": "2026-11-08",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "macOS"
+      ],
+      "is_hidden": false,
+      "license": "GPL-3.0",
+      "language": "Objective-C",
+      "open_issues": 0,
+      "forks": 130,
+      "topics": [],
+      "homepage": "",
+      "repo_created": "2026-11-08",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "ralco98/pia-vpn-privacy-suite",
+      "gh_id": 1448758088,
+      "crawl_date": "2026-11-12",
+      "title": "pia-vpn-privacy-suite",
+      "summary": "Private Internet Access VPN: WireGuard and OpenVPN client with global nodes and…",
+      "github_url": "https://github.com/ralco98/pia-vpn-privacy-suite",
+      "star": 479,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "HTML",
+      "open_issues": 0,
+      "forks": 0,
+      "topics": [
+        "anonymous-vpn",
+        "internet-privacy",
+        "network-security",
+        "online-privacy",
+        "openvpn",
+        "pia",
+        "pia-vpn",
+        "privacy-vpn",
+        "private-internet-access",
+        "secure-vpn",
+        "vpn",
+        "vpn-client",
+        "vpn-service",
+        "vpn-software",
+        "wireguard"
+      ],
+      "homepage": "",
+      "repo_created": "2026-11-06",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "farhad0098/vfx-motion-studio-deployment",
+      "gh_id": 1448767795,
+      "crawl_date": "2026-11-12",
+      "title": "vfx-motion-studio-deployment",
+      "summary": "Secure digital asset deployment pipeline for VFX Motion Studio 2026 desktop buil…",
+      "github_url": "https://github.com/FaRHaD0098/vfx-motion-studio-deployment",
+      "star": 479,
+      "last_commit": "2026-11-12",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Windows"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "HTML",
+      "open_issues": 0,
+      "forks": 0,
+      "topics": [
+        "adobe-after-effects",
+        "adobe-after-effects-for-windows",
+        "after-effects",
+        "after-effects-3d-animation-tools",
+        "after-effects-features",
+        "after-effects-free-24",
+        "after-effects-plugin",
+        "after-effects-plugin-ai",
+        "after-effects-plugins-windows",
+        "after-effects-scripts",
+        "after-effects-snapshot-location",
+        "after-effects-toolkit",
+        "animation-software",
+        "animation-software-installer",
+        "automation",
+        "developer-tools",
+        "open-source",
+        "plugins-after-effects",
+        "python",
+        "software-engineering"
+      ],
+      "homepage": "",
+      "repo_created": "2026-11-06",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "tooonychen/finallyshell",
+      "gh_id": 1448889325,
+      "crawl_date": "2026-11-12",
+      "title": "finallyshell",
+      "summary": "类finalshell的ssh客户端 // An source-available finalshell copy, with go runtime and m…",
+      "github_url": "https://github.com/TooonyChen/finallyshell",
+      "star": 453,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "系统工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Go",
+      "open_issues": 7,
+      "forks": 45,
+      "topics": [
+        "finalshell",
+        "libghostty",
+        "mygo-ui",
+        "ssh",
+        "ssh-client",
+        "terminal"
+      ],
+      "homepage": "https://tooonychen.github.io/finallyshell/",
+      "repo_created": "2026-11-07",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "jdhruv14/line-art-animation",
+      "gh_id": 1452450730,
+      "crawl_date": "2026-11-12",
+      "title": "line-art-animation",
+      "summary": "A Claude skill and TypeScript library for animated line-art SVG components: ink…",
+      "github_url": "https://github.com/JDhruv14/line-art-animation",
+      "star": 450,
+      "last_commit": "2026-11-10",
+      "category_tags": [
+        "设计"
+      ],
+      "platform_tags": [
+        "Web"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "TypeScript",
+      "open_issues": 0,
+      "forks": 66,
+      "topics": [
+        "claude-skill",
+        "line-art",
+        "svg-animation",
+        "typescript"
+      ],
+      "homepage": "",
+      "repo_created": "2026-11-10",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "21stware/bowel",
+      "gh_id": 1449596949,
+      "crawl_date": "2026-11-12",
+      "title": "bowel",
+      "summary": "Bowel is a mihomo client for macOS, Windows, Linux and Android.",
+      "github_url": "https://github.com/21stware/bowel",
+      "star": 442,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Windows",
+        "macOS",
+        "Android",
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Go",
+      "open_issues": 4,
+      "forks": 25,
+      "topics": [
+        "android",
+        "clash",
+        "clash-meta",
+        "linux",
+        "macos",
+        "mcp",
+        "mihomo",
+        "proxy-client",
+        "windows"
+      ],
+      "homepage": "https://bowel.dev",
+      "repo_created": "2026-11-07",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "frigadehq/yogurt",
+      "gh_id": 1453132706,
+      "crawl_date": "2026-11-12",
+      "title": "yogurt",
+      "summary": "Private AI meeting notes. Free and open source.",
+      "github_url": "https://github.com/FrigadeHQ/yogurt",
+      "star": 441,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "TypeScript",
+      "open_issues": 6,
+      "forks": 12,
+      "topics": [
+        "electron",
+        "linux",
+        "llama-cpp",
+        "local-ai",
+        "macos",
+        "mcp",
+        "meeting-notes",
+        "open-source",
+        "privacy",
+        "transcription",
+        "whisper",
+        "windows"
+      ],
+      "homepage": "https://yogurt.so",
+      "repo_created": "2026-11-10",
+      "created_at": "2026-11-12 02:28:12"
+    },
+    {
+      "id": "adriadam10/mkw-recomp",
+      "gh_id": 1451554320,
+      "crawl_date": "2026-11-12",
+      "title": "mkw-recomp",
+      "summary": "Static recompilation of Mario Kart World (Nintendo Switch 2) to a native PC prog…",
+      "github_url": "https://github.com/adriadam10/mkw-recomp",
+      "star": 424,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "C",
+      "open_issues": 105,
+      "forks": 24,
+      "topics": [],
+      "homepage": "",
+      "repo_created": "2026-11-09",
+      "created_at": "2026-11-12 02:28:12"
     }
   ],
   "meta": {
-    "updated_at": "2026-11-11 01:26:40"
+    "updated_at": "2026-11-12 02:28:46"
   }
 }
