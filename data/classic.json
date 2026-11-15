@@ -46,7 +46,7 @@
       "title": "build-your-own-x",
       "summary": "Master programming by recreating your favorite technologies from scratch.",
       "github_url": "https://github.com/codecrafters-io/build-your-own-x",
-      "star": 562352,
+      "star": 562540,
       "last_commit": "2026-11-08",
       "category_tags": [
         "效率工具"
@@ -58,7 +58,7 @@
       "license": "",
       "language": "Markdown",
       "open_issues": 703,
-      "forks": 52623,
+      "forks": 52648,
       "topics": [
         "awesome-list",
         "free",
@@ -80,7 +80,7 @@
       "title": "public-apis",
       "summary": "A collective list of free APIs",
       "github_url": "https://github.com/public-apis/public-apis",
-      "star": 498796,
+      "star": 499044,
       "last_commit": "2026-11-13",
       "category_tags": [
         "效率工具"
@@ -91,8 +91,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 2670,
-      "forks": 55870,
+      "open_issues": 2708,
+      "forks": 55917,
       "topics": [
         "api",
         "apis",
@@ -121,8 +121,8 @@
       "title": "rea",
       "summary": "Reverse engineer anything with agents, from app behavior down to native binaries…",
       "github_url": "https://github.com/morluto/rea",
-      "star": 457731,
-      "last_commit": "2026-11-13",
+      "star": 459932,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "逆向开发"
       ],
@@ -134,8 +134,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 1857,
-      "forks": 112319,
+      "open_issues": 1596,
+      "forks": 112726,
       "topics": [
         "agent-skills",
         "ai",
@@ -171,8 +171,8 @@
       "title": "openclaw",
       "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
       "github_url": "https://github.com/openclaw/openclaw",
-      "star": 394399,
-      "last_commit": "2026-11-14",
+      "star": 394461,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -182,7 +182,7 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 8156,
+      "open_issues": 8467,
       "forks": 82891,
       "topics": [
         "ai",
@@ -242,8 +242,8 @@
       "title": "awesome-python",
       "summary": "The definitive list that answers \"I want to do X in Python, which tool should I…",
       "github_url": "https://github.com/vinta/awesome-python",
-      "star": 334578,
-      "last_commit": "2026-11-13",
+      "star": 334788,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -254,7 +254,7 @@
       "license": "NOASSERTION",
       "language": "Python",
       "open_issues": 23,
-      "forks": 29101,
+      "forks": 29106,
       "topics": [
         "awesome",
         "awesome-list",
@@ -276,8 +276,8 @@
       "title": "awesome-go",
       "summary": "A curated list of awesome Go frameworks, libraries and software",
       "github_url": "https://github.com/avelino/awesome-go",
-      "star": 193780,
-      "last_commit": "2026-11-13",
+      "star": 193945,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -287,8 +287,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 128,
-      "forks": 13739,
+      "open_issues": 126,
+      "forks": 13747,
       "topics": [
         "awesome",
         "awesome-list",
@@ -310,8 +310,8 @@
       "title": "CS-Notes",
       "summary": ":books: 技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计",
       "github_url": "https://github.com/CyC2018/CS-Notes",
-      "star": 186504,
-      "last_commit": "2026-11-09",
+      "star": 186511,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "设计"
       ],
@@ -321,8 +321,8 @@
       "is_hidden": false,
       "license": "",
       "language": "JavaScript",
-      "open_issues": 178,
-      "forks": 50631,
+      "open_issues": 179,
+      "forks": 50630,
       "topics": [
         "algorithm",
         "computer-science",
@@ -346,7 +346,7 @@
       "title": "claw-code",
       "summary": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — dev…",
       "github_url": "https://github.com/ultraworkers/claw-code",
-      "star": 194783,
+      "star": 194781,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -358,7 +358,7 @@
       "license": "MIT",
       "language": "Rust",
       "open_issues": 5,
-      "forks": 107316,
+      "forks": 107297,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-03-31",
@@ -373,7 +373,7 @@
       "title": "ollama",
       "summary": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and o…",
       "github_url": "https://github.com/ollama/ollama",
-      "star": 186901,
+      "star": 186981,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -384,8 +384,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 4652,
-      "forks": 19071,
+      "open_issues": 4656,
+      "forks": 19082,
       "topics": [
         "deepseek",
         "gemma",
@@ -415,7 +415,7 @@
       "title": "project-based-learning",
       "summary": "Curated list of project-based tutorials",
       "github_url": "https://github.com/practical-tutorials/project-based-learning",
-      "star": 289687,
+      "star": 289758,
       "last_commit": "2026-11-09",
       "category_tags": [
         "效率工具"
@@ -426,8 +426,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 229,
-      "forks": 36839,
+      "open_issues": 224,
+      "forks": 36837,
       "topics": [
         "beginner-project",
         "cpp",
@@ -451,8 +451,8 @@
       "title": "yt-dlp",
       "summary": "A feature-rich command-line audio/video downloader",
       "github_url": "https://github.com/yt-dlp/yt-dlp",
-      "star": 206734,
-      "last_commit": "2026-11-04",
+      "star": 207853,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "影音播放器"
       ],
@@ -462,8 +462,8 @@
       "is_hidden": false,
       "license": "Unlicense",
       "language": "Python",
-      "open_issues": 2777,
-      "forks": 18187,
+      "open_issues": 2790,
+      "forks": 18321,
       "topics": [
         "cli",
         "downloader",
@@ -486,8 +486,8 @@
       "title": "cc-switch",
       "summary": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,D…",
       "github_url": "https://github.com/farion1231/cc-switch",
-      "star": 154236,
-      "last_commit": "2026-11-13",
+      "star": 154437,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -498,8 +498,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Rust",
-      "open_issues": 956,
-      "forks": 10115,
+      "open_issues": 961,
+      "forks": 10126,
       "topics": [
         "ai-tools",
         "claude-code",
@@ -534,8 +534,8 @@
       "title": "free-for-dev",
       "summary": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo…",
       "github_url": "https://github.com/ripienaar/free-for-dev",
-      "star": 142773,
-      "last_commit": "2026-11-13",
+      "star": 142854,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -545,8 +545,8 @@
       "is_hidden": false,
       "license": "",
       "language": "HTML",
-      "open_issues": 14,
-      "forks": 15348,
+      "open_issues": 12,
+      "forks": 15362,
       "topics": [
         "awesome-list",
         "free-for-developers"
@@ -564,7 +564,7 @@
       "title": "clash-verge-rev",
       "summary": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux…",
       "github_url": "https://github.com/clash-verge-rev/clash-verge-rev",
-      "star": 158249,
+      "star": 158439,
       "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
@@ -578,8 +578,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Rust",
-      "open_issues": 575,
-      "forks": 11391,
+      "open_issues": 574,
+      "forks": 11403,
       "topics": [
         "clash",
         "clash-meta",
@@ -603,8 +603,8 @@
       "title": "awesome-mac",
       "summary": " This project is dedicated to collecting high-quality macOS software and organi…",
       "github_url": "https://github.com/jaywcjlove/awesome-mac",
-      "star": 118469,
-      "last_commit": "2026-11-13",
+      "star": 118534,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -615,8 +615,8 @@
       "is_hidden": false,
       "license": "CC0-1.0",
       "language": "Swift",
-      "open_issues": 2131,
-      "forks": 10282,
+      "open_issues": 2144,
+      "forks": 10307,
       "topics": [
         "app",
         "apple",
@@ -652,7 +652,7 @@
       "title": "developer-roadmap",
       "summary": "Interactive roadmaps, guides and other educational content to help developers gr…",
       "github_url": "https://github.com/nilbuild/developer-roadmap",
-      "star": 371966,
+      "star": 372018,
       "last_commit": "2026-11-13",
       "category_tags": [
         "效率工具"
@@ -665,7 +665,7 @@
       "license": "NOASSERTION",
       "language": "TypeScript",
       "open_issues": 0,
-      "forks": 46304,
+      "forks": 46397,
       "topics": [
         "angular-roadmap",
         "backend-roadmap",
@@ -739,8 +739,8 @@
       "title": "hermes-agent",
       "summary": "The agent that grows with you",
       "github_url": "https://github.com/NousResearch/hermes-agent",
-      "star": 263228,
-      "last_commit": "2026-11-14",
+      "star": 263414,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -750,8 +750,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 53216,
-      "forks": 59291,
+      "open_issues": 53094,
+      "forks": 59374,
       "topics": [
         "ai",
         "ai-agent",
@@ -780,7 +780,7 @@
       "title": "ohmyzsh",
       "summary": "🙃   A delightful community-driven (with 2,500+ contributors) framework for manag…",
       "github_url": "https://github.com/ohmyzsh/ohmyzsh",
-      "star": 190605,
+      "star": 190624,
       "last_commit": "2026-11-09",
       "category_tags": [
         "系统工具"
@@ -792,8 +792,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Shell",
-      "open_issues": 312,
-      "forks": 27289,
+      "open_issues": 311,
+      "forks": 27285,
       "topics": [
         "cli",
         "cli-app",
@@ -824,7 +824,7 @@
       "title": "freeCodeCamp",
       "summary": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming,…",
       "github_url": "https://github.com/freeCodeCamp/freeCodeCamp",
-      "star": 459101,
+      "star": 459138,
       "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
@@ -835,8 +835,8 @@
       "is_hidden": false,
       "license": "BSD-3-Clause",
       "language": "TypeScript",
-      "open_issues": 189,
-      "forks": 47472,
+      "open_issues": 186,
+      "forks": 47473,
       "topics": [
         "careers",
         "certification",
@@ -867,7 +867,7 @@
       "title": "skills",
       "summary": "Skills for Real Engineers. Straight from my .agents directory.",
       "github_url": "https://github.com/mattpocock/skills",
-      "star": 323849,
+      "star": 324498,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -878,8 +878,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Shell",
-      "open_issues": 243,
-      "forks": 27179,
+      "open_issues": 246,
+      "forks": 27235,
       "topics": [],
       "homepage": "https://aihero.dev/skills",
       "repo_created": "2026-02-03",
@@ -894,8 +894,8 @@
       "title": "ui-ux-pro-max-skill",
       "summary": "An AI skill that provides design intelligence for building professional UI/UX ac…",
       "github_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
-      "star": 149117,
-      "last_commit": "2026-11-10",
+      "star": 149527,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "设计"
       ],
@@ -906,7 +906,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 83,
-      "forks": 15776,
+      "forks": 15811,
       "topics": [
         "ai-skills",
         "antigravity",
@@ -941,8 +941,8 @@
       "title": "graphify",
       "summary": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryab…",
       "github_url": "https://github.com/Graphify-Labs/graphify",
-      "star": 147305,
-      "last_commit": "2026-11-12",
+      "star": 147797,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -952,8 +952,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 1653,
-      "forks": 14118,
+      "open_issues": 1634,
+      "forks": 14164,
       "topics": [
         "ai-agents",
         "antigravity",
@@ -1016,7 +1016,7 @@
       "title": "frp",
       "summary": "A fast reverse proxy to help you expose a local server behind a NAT or firewall…",
       "github_url": "https://github.com/fatedier/frp",
-      "star": 110566,
+      "star": 110578,
       "last_commit": "2026-11-10",
       "category_tags": [
         "逆向开发"
@@ -1028,7 +1028,7 @@
       "license": "Apache-2.0",
       "language": "Go",
       "open_issues": 43,
-      "forks": 15317,
+      "forks": 15316,
       "topics": [
         "expose",
         "firewall",
@@ -1090,7 +1090,7 @@
       "title": "ECC",
       "summary": "The agent harness performance optimization system. Skills, instincts, memory, se…",
       "github_url": "https://github.com/affaan-m/ECC",
-      "star": 302478,
+      "star": 303092,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -1101,8 +1101,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 275,
-      "forks": 44618,
+      "open_issues": 279,
+      "forks": 44687,
       "topics": [
         "ai-agents",
         "anthropic",
@@ -1126,7 +1126,7 @@
       "title": "agency-agents",
       "summary": "A complete AI agency at your fingertips - From frontend wizards to Reddit commun…",
       "github_url": "https://github.com/msitarzewski/agency-agents",
-      "star": 168156,
+      "star": 168340,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -1138,7 +1138,7 @@
       "license": "MIT",
       "language": "Shell",
       "open_issues": 251,
-      "forks": 27278,
+      "forks": 27301,
       "topics": [],
       "homepage": "",
       "repo_created": "2025-10-13",
@@ -1153,8 +1153,8 @@
       "title": "ComfyUI",
       "summary": "The most powerful and modular diffusion model GUI, api and backend with a graph/…",
       "github_url": "https://github.com/Comfy-Org/ComfyUI",
-      "star": 146697,
-      "last_commit": "2026-11-14",
+      "star": 146844,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1164,8 +1164,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Python",
-      "open_issues": 5535,
-      "forks": 17494,
+      "open_issues": 5543,
+      "forks": 17516,
       "topics": [
         "ai",
         "comfy",
@@ -1187,8 +1187,8 @@
       "title": "RuView",
       "summary": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital…",
       "github_url": "https://github.com/ruvnet/RuView",
-      "star": 104242,
-      "last_commit": "2026-11-14",
+      "star": 104298,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "逆向开发"
       ],
@@ -1198,8 +1198,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Rust",
-      "open_issues": 579,
-      "forks": 13564,
+      "open_issues": 586,
+      "forks": 13570,
       "topics": [
         "claude",
         "claude-code",
@@ -1234,8 +1234,8 @@
       "title": "awesome-rust",
       "summary": "A curated list of Rust code and resources.",
       "github_url": "https://github.com/rust-unofficial/awesome-rust",
-      "star": 60520,
-      "last_commit": "2026-11-12",
+      "star": 60545,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -1245,8 +1245,8 @@
       "is_hidden": false,
       "license": "CC0-1.0",
       "language": "Rust",
-      "open_issues": 14,
-      "forks": 3808,
+      "open_issues": 8,
+      "forks": 3813,
       "topics": [
         "awesome",
         "rust"
@@ -1264,8 +1264,8 @@
       "title": "orca",
       "summary": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your o…",
       "github_url": "https://github.com/stablyai/orca",
-      "star": 124416,
-      "last_commit": "2026-11-14",
+      "star": 125080,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1275,8 +1275,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 8399,
-      "forks": 7874,
+      "open_issues": 8501,
+      "forks": 7927,
       "topics": [
         "agent-ide",
         "ai-agents",
@@ -1312,8 +1312,8 @@
       "title": "neovim",
       "summary": "Vim-fork focused on extensibility and usability",
       "github_url": "https://github.com/neovim/neovim",
-      "star": 103621,
-      "last_commit": "2026-11-13",
+      "star": 103634,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -1323,8 +1323,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Vim Script",
-      "open_issues": 2016,
-      "forks": 7422,
+      "open_issues": 2012,
+      "forks": 7423,
       "topics": [
         "api",
         "c",
@@ -1382,8 +1382,8 @@
       "title": "transformers",
       "summary": "🤗 Transformers: the model-definition framework for state-of-the-art machine lear…",
       "github_url": "https://github.com/huggingface/transformers",
-      "star": 168951,
-      "last_commit": "2026-11-14",
+      "star": 168980,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1393,8 +1393,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 1122,
-      "forks": 35190,
+      "open_issues": 1137,
+      "forks": 35202,
       "topics": [
         "audio",
         "deep-learning",
@@ -1429,8 +1429,8 @@
       "title": "firecrawl",
       "summary": "Supercharge your AI agents with data from the web and beyond. Building the libra…",
       "github_url": "https://github.com/firecrawl/firecrawl",
-      "star": 201590,
-      "last_commit": "2026-11-13",
+      "star": 201828,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1441,8 +1441,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "TypeScript",
-      "open_issues": 798,
-      "forks": 10573,
+      "open_issues": 800,
+      "forks": 10584,
       "topics": [
         "ai",
         "ai-agents",
@@ -1477,8 +1477,8 @@
       "title": "skills",
       "summary": "Public repository for Agent Skills",
       "github_url": "https://github.com/anthropics/skills",
-      "star": 193721,
-      "last_commit": "2026-11-06",
+      "star": 194636,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1488,8 +1488,8 @@
       "is_hidden": false,
       "license": "",
       "language": "Python",
-      "open_issues": 1525,
-      "forks": 22790,
+      "open_issues": 1542,
+      "forks": 22901,
       "topics": [
         "agent-skills"
       ],
@@ -1506,7 +1506,7 @@
       "title": "spec-kit",
       "summary": "💫 Toolkit to help you get started with SDD or any other process!",
       "github_url": "https://github.com/github/spec-kit",
-      "star": 149693,
+      "star": 149803,
       "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
@@ -1517,8 +1517,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 239,
-      "forks": 13445,
+      "open_issues": 240,
+      "forks": 13453,
       "topics": [
         "ai",
         "copilot",
@@ -1541,8 +1541,8 @@
       "title": "gstack",
       "summary": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO,…",
       "github_url": "https://github.com/garrytan/gstack",
-      "star": 141467,
-      "last_commit": "2026-11-14",
+      "star": 141580,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -1552,8 +1552,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 126,
-      "forks": 20892,
+      "open_issues": 134,
+      "forks": 20913,
       "topics": [],
       "homepage": "",
       "repo_created": "2026-03-11",
@@ -1568,7 +1568,7 @@
       "title": "n8n",
       "summary": "Fair-code workflow automation platform with native AI capabilities. Combine visu…",
       "github_url": "https://github.com/n8n-io/n8n",
-      "star": 210415,
+      "star": 210504,
       "last_commit": "2026-11-14",
       "category_tags": [
         "系统工具"
@@ -1579,8 +1579,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "TypeScript",
-      "open_issues": 1225,
-      "forks": 61496,
+      "open_issues": 1237,
+      "forks": 61512,
       "topics": [
         "ai",
         "apis",
@@ -1652,7 +1652,7 @@
       "title": "deepseek-harness",
       "summary": "DeepSeek Harness: Everything is a Plugin.",
       "github_url": "https://github.com/deepseek-ai/deepseek-harness",
-      "star": 280521,
+      "star": 281103,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -1664,7 +1664,7 @@
       "license": "MIT",
       "language": "TypeScript",
       "open_issues": 0,
-      "forks": 34599,
+      "forks": 34715,
       "topics": [
         "ai-agents",
         "cordis",
@@ -1684,7 +1684,7 @@
       "title": "computer-science",
       "summary": "🎓 Path to a free self-taught education in Computer Science!",
       "github_url": "https://github.com/ossu/computer-science",
-      "star": 211063,
+      "star": 211093,
       "last_commit": "2026-11-09",
       "category_tags": [
         "效率工具"
@@ -1696,7 +1696,7 @@
       "license": "MIT",
       "language": "HTML",
       "open_issues": 29,
-      "forks": 26132,
+      "forks": 26136,
       "topics": [
         "awesome-list",
         "computer-science",
@@ -1716,8 +1716,8 @@
       "title": "linux",
       "summary": "Linux kernel source tree",
       "github_url": "https://github.com/torvalds/linux",
-      "star": 255605,
-      "last_commit": "2026-11-13",
+      "star": 255695,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -1728,7 +1728,7 @@
       "license": "NOASSERTION",
       "language": "C",
       "open_issues": 3,
-      "forks": 67285,
+      "forks": 67387,
       "topics": [],
       "homepage": "",
       "repo_created": "2011-09-04",
@@ -1743,8 +1743,8 @@
       "title": "dify",
       "summary": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on o…",
       "github_url": "https://github.com/langgenius/dify",
-      "star": 161122,
-      "last_commit": "2026-11-14",
+      "star": 161166,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1754,8 +1754,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Python",
-      "open_issues": 1312,
-      "forks": 25479,
+      "open_issues": 1402,
+      "forks": 25499,
       "topics": [
         "agent",
         "agentic-ai",
@@ -1790,7 +1790,7 @@
       "title": "awesome-llm-apps",
       "summary": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
       "github_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-      "star": 144586,
+      "star": 144644,
       "last_commit": "2026-11-11",
       "category_tags": [
         "AI&Agent"
@@ -1801,8 +1801,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 14,
-      "forks": 21275,
+      "open_issues": 17,
+      "forks": 21293,
       "topics": [
         "agents",
         "llms",
@@ -1822,8 +1822,8 @@
       "title": "pi",
       "summary": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
       "github_url": "https://github.com/earendil-works/pi",
-      "star": 121875,
-      "last_commit": "2026-11-13",
+      "star": 122030,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1834,7 +1834,7 @@
       "license": "MIT",
       "language": "TypeScript",
       "open_issues": 260,
-      "forks": 15706,
+      "forks": 15733,
       "topics": [],
       "homepage": "",
       "repo_created": "2025-08-09",
@@ -1849,8 +1849,8 @@
       "title": "AutoGPT",
       "summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our…",
       "github_url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "star": 188019,
-      "last_commit": "2026-11-14",
+      "star": 188026,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1860,8 +1860,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Python",
-      "open_issues": 695,
-      "forks": 45865,
+      "open_issues": 690,
+      "forks": 45866,
       "topics": [
         "agentic-ai",
         "agents",
@@ -1888,8 +1888,8 @@
       "title": "prompts.chat",
       "summary": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the co…",
       "github_url": "https://github.com/f/prompts.chat",
-      "star": 177103,
-      "last_commit": "2026-11-13",
+      "star": 177365,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1899,8 +1899,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "MDX",
-      "open_issues": 86,
-      "forks": 22576,
+      "open_issues": 87,
+      "forks": 22609,
       "topics": [
         "ai",
         "artificial-intelligence",
@@ -1934,8 +1934,8 @@
       "title": "opencode",
       "summary": "The open source coding agent.",
       "github_url": "https://github.com/anomalyco/opencode",
-      "star": 226686,
-      "last_commit": "2026-11-13",
+      "star": 226879,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1945,8 +1945,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 3991,
-      "forks": 30690,
+      "open_issues": 3998,
+      "forks": 30735,
       "topics": [],
       "homepage": "https://opencode.ai",
       "repo_created": "2025-04-30",
@@ -1961,8 +1961,8 @@
       "title": "open-webui",
       "summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "github_url": "https://github.com/open-webui/open-webui",
-      "star": 158590,
-      "last_commit": "2026-11-13",
+      "star": 158665,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -1972,8 +1972,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Svelte",
-      "open_issues": 327,
-      "forks": 23057,
+      "open_issues": 350,
+      "forks": 23070,
       "topics": [
         "ai",
         "llm",
@@ -2004,8 +2004,8 @@
       "title": "langflow",
       "summary": "Langflow is a powerful tool for building and deploying AI-powered agents and wor…",
       "github_url": "https://github.com/langflow-ai/langflow",
-      "star": 156613,
-      "last_commit": "2026-11-14",
+      "star": 156644,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2015,8 +2015,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 1333,
-      "forks": 10398,
+      "open_issues": 1338,
+      "forks": 10407,
       "topics": [
         "agents",
         "chatgpt",
@@ -2038,8 +2038,8 @@
       "title": "claude-code",
       "summary": "Claude Code is an agentic coding tool that lives in your terminal, understands y…",
       "github_url": "https://github.com/anthropics/claude-code",
-      "star": 155573,
-      "last_commit": "2026-11-14",
+      "star": 155690,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "系统工具"
       ],
@@ -2049,8 +2049,8 @@
       "is_hidden": false,
       "license": "",
       "language": "TypeScript",
-      "open_issues": 17109,
-      "forks": 24969,
+      "open_issues": 17228,
+      "forks": 24994,
       "topics": [],
       "homepage": "https://code.claude.com/docs/en/overview",
       "repo_created": "2025-02-22",
@@ -2065,7 +2065,7 @@
       "title": "langchain",
       "summary": "The agent engineering platform.",
       "github_url": "https://github.com/langchain-ai/langchain",
-      "star": 149470,
+      "star": 149521,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -2076,8 +2076,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 739,
-      "forks": 25130,
+      "open_issues": 743,
+      "forks": 25129,
       "topics": [
         "agents",
         "ai",
@@ -2113,7 +2113,7 @@
       "title": "MoneyPrinterTurbo",
       "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyw…",
       "github_url": "https://github.com/harry0703/MoneyPrinterTurbo",
-      "star": 143311,
+      "star": 143590,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -2124,8 +2124,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 84,
-      "forks": 22940,
+      "open_issues": 87,
+      "forks": 23006,
       "topics": [
         "ai-video-generator",
         "content-creation",
@@ -2155,7 +2155,7 @@
       "title": "generative-ai-for-beginners",
       "summary": "21 Lessons, Get Started Building with Generative AI",
       "github_url": "https://github.com/microsoft/generative-ai-for-beginners",
-      "star": 123462,
+      "star": 123515,
       "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
@@ -2167,7 +2167,7 @@
       "license": "MIT",
       "language": "Jupyter Notebook",
       "open_issues": 22,
-      "forks": 66372,
+      "forks": 66414,
       "topics": [
         "ai",
         "azure",
@@ -2197,8 +2197,8 @@
       "title": "Scrapling",
       "summary": "🕷️ The BEST Web Scraping framework that handles everything from a single request…",
       "github_url": "https://github.com/D4Vinci/Scrapling",
-      "star": 102509,
-      "last_commit": "2026-11-11",
+      "star": 102947,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -2208,8 +2208,8 @@
       "is_hidden": false,
       "license": "BSD-3-Clause",
       "language": "Python",
-      "open_issues": 30,
-      "forks": 10676,
+      "open_issues": 21,
+      "forks": 10723,
       "topics": [
         "ai",
         "ai-scraping",
@@ -2278,8 +2278,8 @@
       "title": "browser-use",
       "summary": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealt…",
       "github_url": "https://github.com/browser-use/browser-use",
-      "star": 120957,
-      "last_commit": "2026-11-13",
+      "star": 121038,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2289,8 +2289,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 580,
-      "forks": 13529,
+      "open_issues": 582,
+      "forks": 13537,
       "topics": [
         "ai-agents",
         "ai-tools",
@@ -2323,8 +2323,8 @@
       "title": "iptv",
       "summary": "Collection of publicly available IPTV channels from all over the world",
       "github_url": "https://github.com/iptv-org/iptv",
-      "star": 143936,
-      "last_commit": "2026-11-14",
+      "star": 144012,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "影音播放器"
       ],
@@ -2334,8 +2334,8 @@
       "is_hidden": false,
       "license": "Unlicense",
       "language": "TypeScript",
-      "open_issues": 22,
-      "forks": 8586,
+      "open_issues": 7,
+      "forks": 8595,
       "topics": [
         "iptv",
         "m3u",
@@ -2356,8 +2356,8 @@
       "title": "VoiceStudio",
       "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloni…",
       "github_url": "https://github.com/debpalash/VoiceStudio",
-      "star": 109997,
-      "last_commit": "2026-11-14",
+      "star": 110712,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "影音播放器"
       ],
@@ -2367,8 +2367,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Python",
-      "open_issues": 18,
-      "forks": 12194,
+      "open_issues": 20,
+      "forks": 12259,
       "topics": [
         "ai",
         "audiobook",
@@ -2403,8 +2403,8 @@
       "title": "awesome-public-datasets",
       "summary": "A topic-centric list of HQ open datasets.",
       "github_url": "https://github.com/awesomedata/awesome-public-datasets",
-      "star": 80105,
-      "last_commit": "2026-11-13",
+      "star": 80117,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -2415,7 +2415,7 @@
       "license": "MIT",
       "language": "",
       "open_issues": 169,
-      "forks": 11951,
+      "forks": 11953,
       "topics": [
         "aaron-swartz",
         "awesome-public-datasets",
@@ -2435,8 +2435,8 @@
       "title": "gods-eye-view",
       "summary": "A spy satellite simulator in your browser, except the data is real. Live open so…",
       "github_url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "star": 64689,
-      "last_commit": "2026-11-13",
+      "star": 64873,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -2446,8 +2446,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "JavaScript",
-      "open_issues": 438,
-      "forks": 12770,
+      "open_issues": 431,
+      "forks": 12817,
       "topics": [
         "3d-globe",
         "cesium",
@@ -2539,8 +2539,8 @@
       "title": "claude-mem",
       "summary": "Persistent Context Across Sessions for Every Agent –  Captures everything your a…",
       "github_url": "https://github.com/thedotmack/claude-mem",
-      "star": 116859,
-      "last_commit": "2026-11-13",
+      "star": 117129,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2550,8 +2550,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 125,
-      "forks": 10141,
+      "open_issues": 160,
+      "forks": 10168,
       "topics": [
         "ai",
         "ai-agents",
@@ -2587,8 +2587,8 @@
       "title": "open-design",
       "summary": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Cr…",
       "github_url": "https://github.com/nexu-io/open-design",
-      "star": 107531,
-      "last_commit": "2026-11-14",
+      "star": 107658,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2598,8 +2598,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 1398,
-      "forks": 12224,
+      "open_issues": 1402,
+      "forks": 12239,
       "topics": [
         "agent-skills",
         "ai-design",
@@ -2635,8 +2635,8 @@
       "title": "caveman",
       "summary": "🪨 why use many token when few token do trick. Viral skill + proxy for coding age…",
       "github_url": "https://github.com/JuliusBrussee/caveman",
-      "star": 119701,
-      "last_commit": "2026-11-13",
+      "star": 120083,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2647,7 +2647,7 @@
       "license": "Apache-2.0",
       "language": "Go",
       "open_issues": 88,
-      "forks": 6974,
+      "forks": 7001,
       "topics": [
         "ai",
         "anthropic",
@@ -2673,8 +2673,8 @@
       "title": "immich",
       "summary": "High performance self-hosted photo and video management solution.",
       "github_url": "https://github.com/immich-app/immich",
-      "star": 119112,
-      "last_commit": "2026-11-13",
+      "star": 119211,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "影音播放器"
       ],
@@ -2684,8 +2684,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "TypeScript",
-      "open_issues": 679,
-      "forks": 7591,
+      "open_issues": 683,
+      "forks": 7605,
       "topics": [
         "backup-tool",
         "flutter",
@@ -2717,7 +2717,7 @@
       "title": "react",
       "summary": "The library for web and native user interfaces.",
       "github_url": "https://github.com/react/react",
-      "star": 252591,
+      "star": 252615,
       "last_commit": "2026-11-13",
       "category_tags": [
         "效率工具"
@@ -2728,8 +2728,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 1533,
-      "forks": 52640,
+      "open_issues": 1538,
+      "forks": 52733,
       "topics": [
         "declarative",
         "frontend",
@@ -2751,7 +2751,7 @@
       "title": "PowerToys",
       "summary": "Microsoft PowerToys is a collection of utilities that supercharge productivity a…",
       "github_url": "https://github.com/microsoft/PowerToys",
-      "star": 140954,
+      "star": 140989,
       "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
@@ -2762,8 +2762,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C",
-      "open_issues": 8092,
-      "forks": 8736,
+      "open_issues": 8101,
+      "forks": 8741,
       "topics": [
         "advanced-paste",
         "color-picker",
@@ -2791,8 +2791,8 @@
       "title": "excalidraw",
       "summary": "Virtual whiteboard for sketching hand-drawn like diagrams",
       "github_url": "https://github.com/excalidraw/excalidraw",
-      "star": 135644,
-      "last_commit": "2026-11-13",
+      "star": 135683,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "设计"
       ],
@@ -2802,8 +2802,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 3531,
-      "forks": 16152,
+      "open_issues": 3541,
+      "forks": 16168,
       "topics": [
         "canvas",
         "collaboration",
@@ -2826,7 +2826,7 @@
       "title": "three.js",
       "summary": "JavaScript 3D Library.",
       "github_url": "https://github.com/mrdoob/three.js",
-      "star": 118327,
+      "star": 118427,
       "last_commit": "2026-11-14",
       "category_tags": [
         "设计"
@@ -2837,8 +2837,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 406,
-      "forks": 36959,
+      "open_issues": 400,
+      "forks": 36970,
       "topics": [
         "3d",
         "augmented-reality",
@@ -2866,8 +2866,8 @@
       "title": "axios",
       "summary": "Promise based HTTP client for the browser and node.js",
       "github_url": "https://github.com/axios/axios",
-      "star": 109389,
-      "last_commit": "2026-11-11",
+      "star": 109391,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -2878,8 +2878,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 123,
-      "forks": 12018,
+      "open_issues": 127,
+      "forks": 12017,
       "topics": [
         "hacktoberfest",
         "http-client",
@@ -2900,8 +2900,8 @@
       "title": "llama.cpp",
       "summary": "LLM inference in C/C++",
       "github_url": "https://github.com/ggml-org/llama.cpp",
-      "star": 134883,
-      "last_commit": "2026-11-13",
+      "star": 135071,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -2911,8 +2911,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C++",
-      "open_issues": 2596,
-      "forks": 25579,
+      "open_issues": 2606,
+      "forks": 25616,
       "topics": [
         "ggml"
       ],
@@ -2929,7 +2929,7 @@
       "title": "LLMs-from-scratch",
       "summary": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
       "github_url": "https://github.com/rasbt/LLMs-from-scratch",
-      "star": 108367,
+      "star": 108416,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -2940,8 +2940,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Jupyter Notebook",
-      "open_issues": 4,
-      "forks": 16765,
+      "open_issues": 5,
+      "forks": 16774,
       "topics": [
         "ai",
         "artificial-intelligence",
@@ -3006,7 +3006,7 @@
       "title": "Web-Dev-For-Beginners",
       "summary": "24 Lessons, 12 Weeks, Get Started as a Web Developer",
       "github_url": "https://github.com/microsoft/Web-Dev-For-Beginners",
-      "star": 97130,
+      "star": 97126,
       "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
@@ -3018,7 +3018,7 @@
       "license": "MIT",
       "language": "JavaScript",
       "open_issues": 154,
-      "forks": 16132,
+      "forks": 16133,
       "topics": [
         "css",
         "curriculum",
@@ -3042,7 +3042,7 @@
       "title": "Understand-Anything",
       "summary": "Graphs that teach > graphs that impress. Turn any code into an interactive knowl…",
       "github_url": "https://github.com/Egonex-AI/Understand-Anything",
-      "star": 92550,
+      "star": 92634,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -3053,8 +3053,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 363,
-      "forks": 7897,
+      "open_issues": 365,
+      "forks": 7903,
       "topics": [
         "antigravity-skills",
         "business-knowledge",
@@ -3087,7 +3087,7 @@
       "title": "worldmonitor",
       "summary": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitic…",
       "github_url": "https://github.com/koala73/worldmonitor",
-      "star": 90605,
+      "star": 90649,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -3098,8 +3098,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "TypeScript",
-      "open_issues": 343,
-      "forks": 14054,
+      "open_issues": 329,
+      "forks": 14065,
       "topics": [
         "agent",
         "ai",
@@ -3128,8 +3128,8 @@
       "title": "hyperframes",
       "summary": "Write HTML. Render video. Built for agents.",
       "github_url": "https://github.com/heygen-com/hyperframes",
-      "star": 83962,
-      "last_commit": "2026-11-14",
+      "star": 84354,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3139,8 +3139,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 253,
-      "forks": 7758,
+      "open_issues": 300,
+      "forks": 7802,
       "topics": [
         "ai",
         "ai-agents",
@@ -3171,8 +3171,8 @@
       "title": "ruflo",
       "summary": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate…",
       "github_url": "https://github.com/ruvnet/ruflo",
-      "star": 81650,
-      "last_commit": "2026-11-13",
+      "star": 81715,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3182,8 +3182,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 588,
-      "forks": 9617,
+      "open_issues": 593,
+      "forks": 9632,
       "topics": [
         "agent-memory",
         "agent-orchestration",
@@ -3263,8 +3263,8 @@
       "title": "chinese-independent-developer",
       "summary": "👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么",
       "github_url": "https://github.com/1c7/chinese-independent-developer",
-      "star": 62101,
-      "last_commit": "2026-11-13",
+      "star": 62111,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -3274,8 +3274,8 @@
       "is_hidden": false,
       "license": "",
       "language": "",
-      "open_issues": 7,
-      "forks": 5601,
+      "open_issues": 3,
+      "forks": 5604,
       "topics": [
         "china",
         "indie",
@@ -3294,8 +3294,8 @@
       "title": "rclone",
       "summary": "\"rsync for cloud storage\" - Google Drive, S3, Dropbox, Backblaze B2, One Drive,…",
       "github_url": "https://github.com/rclone/rclone",
-      "star": 60995,
-      "last_commit": "2026-11-12",
+      "star": 61012,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "NAS存储"
       ],
@@ -3305,8 +3305,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 1324,
-      "forks": 5693,
+      "open_issues": 1327,
+      "forks": 5696,
       "topics": [
         "azure-blob",
         "azure-blob-storage",
@@ -3342,7 +3342,7 @@
       "title": "serviette",
       "summary": "A no-code RAG server that keeps answers in sync with your documents. Works with…",
       "github_url": "https://github.com/pathwaycom/serviette",
-      "star": 58710,
+      "star": 58707,
       "last_commit": "2026-11-10",
       "category_tags": [
         "AI&Agent"
@@ -3354,7 +3354,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 5,
-      "forks": 1549,
+      "forks": 1550,
       "topics": [
         "chromadb",
         "document-qa",
@@ -3390,8 +3390,8 @@
       "title": "pytorch",
       "summary": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
       "github_url": "https://github.com/pytorch/pytorch",
-      "star": 105470,
-      "last_commit": "2026-11-14",
+      "star": 105496,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -3401,8 +3401,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Python",
-      "open_issues": 18201,
-      "forks": 30713,
+      "open_issues": 18228,
+      "forks": 30717,
       "topics": [
         "autograd",
         "deep-learning",
@@ -3426,8 +3426,8 @@
       "title": "odysseus",
       "summary": "Self-hosted AI workspace.",
       "github_url": "https://github.com/odysseus-dev/odysseus",
-      "star": 95617,
-      "last_commit": "2026-11-13",
+      "star": 95642,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -3437,8 +3437,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Python",
-      "open_issues": 1593,
-      "forks": 1976,
+      "open_issues": 1572,
+      "forks": 1985,
       "topics": [],
       "homepage": "https://odysseus-dev.github.io/odysseus",
       "repo_created": "2026-05-31",
@@ -3453,8 +3453,8 @@
       "title": "paperclip",
       "summary": "The open-source app everyone uses to manage agents at work",
       "github_url": "https://github.com/paperclipai/paperclip",
-      "star": 113711,
-      "last_commit": "2026-11-14",
+      "star": 113940,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3464,8 +3464,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 6638,
-      "forks": 18871,
+      "open_issues": 6683,
+      "forks": 18902,
       "topics": [
         "acpx",
         "agent-orchestration",
@@ -3501,7 +3501,7 @@
       "title": "localsend",
       "summary": "An open-source cross-platform alternative to AirDrop",
       "github_url": "https://github.com/localsend/localsend",
-      "star": 98870,
+      "star": 99012,
       "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
@@ -3512,8 +3512,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Dart",
-      "open_issues": 1036,
-      "forks": 5654,
+      "open_issues": 1040,
+      "forks": 5668,
       "topics": [
         "dart",
         "file-sharing",
@@ -3533,8 +3533,8 @@
       "title": "rustdesk",
       "summary": "An open-source remote desktop application designed for self-hosting, as an alter…",
       "github_url": "https://github.com/rustdesk/rustdesk",
-      "star": 129358,
-      "last_commit": "2026-11-14",
+      "star": 129476,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -3548,8 +3548,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Rust",
-      "open_issues": 219,
-      "forks": 20663,
+      "open_issues": 220,
+      "forks": 20704,
       "topics": [
         "android",
         "anydesk",
@@ -3584,7 +3584,7 @@
       "title": "ui",
       "summary": "Composable, accessible components with thoughtful defaults. Build your own compo…",
       "github_url": "https://github.com/shadcn-ui/ui",
-      "star": 128132,
+      "star": 128201,
       "last_commit": "2026-11-13",
       "category_tags": [
         "效率工具"
@@ -3595,8 +3595,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 1773,
-      "forks": 11381,
+      "open_issues": 1767,
+      "forks": 11384,
       "topics": [
         "ai",
         "base-ui",
@@ -3629,8 +3629,8 @@
       "title": "supabase",
       "summary": "The Postgres development platform. Supabase gives you a dedicated Postgres datab…",
       "github_url": "https://github.com/supabase/supabase",
-      "star": 114991,
-      "last_commit": "2026-11-13",
+      "star": 115030,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3640,8 +3640,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 1205,
-      "forks": 15126,
+      "open_issues": 1214,
+      "forks": 15131,
       "topics": [
         "ai",
         "alternative",
@@ -3676,7 +3676,7 @@
       "title": "taste-skill",
       "summary": "Agent skills that give coding agents taste: art direction, reference images and…",
       "github_url": "https://github.com/Leonxlnx/taste-skill",
-      "star": 115066,
+      "star": 115658,
       "last_commit": "2026-11-08",
       "category_tags": [
         "AI&Agent"
@@ -3688,7 +3688,7 @@
       "license": "MIT",
       "language": "JavaScript",
       "open_issues": 9,
-      "forks": 7721,
+      "forks": 7765,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -3715,7 +3715,7 @@
       "title": "ghidra",
       "summary": "Ghidra is a software reverse engineering (SRE) framework",
       "github_url": "https://github.com/NationalSecurityAgency/ghidra",
-      "star": 99961,
+      "star": 100084,
       "last_commit": "2026-11-10",
       "category_tags": [
         "逆向开发"
@@ -3726,8 +3726,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Java",
-      "open_issues": 2221,
-      "forks": 11351,
+      "open_issues": 2224,
+      "forks": 11373,
       "topics": [
         "disassembler",
         "reverse-engineering",
@@ -3746,8 +3746,8 @@
       "title": "uptime-kuma",
       "summary": "A fancy self-hosted monitoring tool",
       "github_url": "https://github.com/louislam/uptime-kuma",
-      "star": 93873,
-      "last_commit": "2026-11-14",
+      "star": 94247,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "系统工具"
       ],
@@ -3758,8 +3758,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 853,
-      "forks": 8723,
+      "open_issues": 855,
+      "forks": 8818,
       "topics": [
         "docker",
         "monitor",
@@ -3787,8 +3787,8 @@
       "title": "react-native",
       "summary": "A framework for building native applications using React",
       "github_url": "https://github.com/react/react-native",
-      "star": 126915,
-      "last_commit": "2026-11-13",
+      "star": 126924,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -3801,8 +3801,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C++",
-      "open_issues": 1411,
-      "forks": 25492,
+      "open_issues": 1406,
+      "forks": 25489,
       "topics": [
         "android",
         "app-framework",
@@ -3826,8 +3826,8 @@
       "title": "impeccable",
       "summary": "The design vocabulary for your coding agent. Steer with polish and bolder, revie…",
       "github_url": "https://github.com/pbakaus/impeccable",
-      "star": 109635,
-      "last_commit": "2026-11-14",
+      "star": 110237,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3837,8 +3837,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 70,
-      "forks": 6539,
+      "open_issues": 55,
+      "forks": 6573,
       "topics": [
         "agent-skills",
         "ai",
@@ -3859,8 +3859,8 @@
       "title": "awesome-claude-code",
       "summary": "A hand-picked collection of the finest of resources for the most awesome of agen…",
       "github_url": "https://github.com/hesreallyhim/awesome-claude-code",
-      "star": 57950,
-      "last_commit": "2026-11-14",
+      "star": 58008,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -3871,7 +3871,7 @@
       "license": "NOASSERTION",
       "language": "Python",
       "open_issues": 1278,
-      "forks": 4956,
+      "forks": 4959,
       "topics": [
         "agent-skills",
         "agentic-code",
@@ -3906,7 +3906,7 @@
       "title": "ragflow",
       "summary": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engi…",
       "github_url": "https://github.com/infiniflow/ragflow",
-      "star": 94130,
+      "star": 94158,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -3917,8 +3917,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Go",
-      "open_issues": 1274,
-      "forks": 11317,
+      "open_issues": 1288,
+      "forks": 11321,
       "topics": [
         "agent-harness",
         "agent-native-database",
@@ -3950,7 +3950,7 @@
       "title": "crawl4ai",
       "summary": "Official Crawl4AI Cloud: a hosted web scraping, extraction, and search API for A…",
       "github_url": "https://github.com/unclecode/crawl4ai",
-      "star": 87325,
+      "star": 87361,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -3962,8 +3962,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 346,
-      "forks": 9109,
+      "open_issues": 348,
+      "forks": 9115,
       "topics": [
         "ai",
         "ai-agents",
@@ -3995,7 +3995,7 @@
       "title": "OmniRoute",
       "summary": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free),…",
       "github_url": "https://github.com/cheaper-inference/OmniRoute",
-      "star": 87182,
+      "star": 87498,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -4006,8 +4006,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 544,
-      "forks": 13356,
+      "open_issues": 539,
+      "forks": 13416,
       "topics": [
         "a2a",
         "ai-agents",
@@ -4043,8 +4043,8 @@
       "title": "career-ops",
       "summary": "Open-source AI job search agent and job finder: scan job boards, score each job…",
       "github_url": "https://github.com/career-ops-hq/career-ops",
-      "star": 82411,
-      "last_commit": "2026-11-13",
+      "star": 82601,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -4054,8 +4054,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 411,
-      "forks": 15114,
+      "open_issues": 409,
+      "forks": 15129,
       "topics": [
         "agent-skills",
         "ai-agent",
@@ -4091,7 +4091,7 @@
       "title": "awesome-machine-learning",
       "summary": "A curated list of awesome Machine Learning frameworks, libraries and software.",
       "github_url": "https://github.com/josephmisiti/awesome-machine-learning",
-      "star": 74818,
+      "star": 74829,
       "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
@@ -4103,7 +4103,7 @@
       "license": "NOASSERTION",
       "language": "Python",
       "open_issues": 34,
-      "forks": 15708,
+      "forks": 15706,
       "topics": [],
       "homepage": "",
       "repo_created": "2014-07-15",
@@ -4118,7 +4118,7 @@
       "title": "awesome-cpp",
       "summary": "A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny…",
       "github_url": "https://github.com/fffaraz/awesome-cpp",
-      "star": 74404,
+      "star": 74422,
       "last_commit": "2026-11-11",
       "category_tags": [
         "效率工具"
@@ -4158,8 +4158,8 @@
       "title": "Motrix",
       "summary": "A full-featured download manager.",
       "github_url": "https://github.com/agalwood/Motrix",
-      "star": 58234,
-      "last_commit": "2026-11-09",
+      "star": 58272,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -4173,7 +4173,7 @@
       "license": "NOASSERTION",
       "language": "TypeScript",
       "open_issues": 160,
-      "forks": 5149,
+      "forks": 5152,
       "topics": [
         "aria2",
         "bt",
@@ -4200,7 +4200,7 @@
       "title": "reactive-resume",
       "summary": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secur…",
       "github_url": "https://github.com/reactive-resume/reactive-resume",
-      "star": 45727,
+      "star": 45758,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -4211,7 +4211,7 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 6,
+      "open_issues": 7,
       "forks": 4956,
       "topics": [
         "agent-skills",
@@ -4238,7 +4238,7 @@
       "title": "lx-music-desktop",
       "summary": "一个基于 Electron 的音乐软件",
       "github_url": "https://github.com/lyswhut/lx-music-desktop",
-      "star": 55320,
+      "star": 55352,
       "last_commit": "2026-11-13",
       "category_tags": [
         "影音播放器"
@@ -4250,8 +4250,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 1309,
-      "forks": 7125,
+      "open_issues": 1310,
+      "forks": 7124,
       "topics": [
         "electron",
         "javascript",
@@ -4271,8 +4271,8 @@
       "title": "cherry-studio",
       "summary": "Your AI workspace for models, agents, and productivity.",
       "github_url": "https://github.com/CherryHQ/cherry-studio",
-      "star": 53492,
-      "last_commit": "2026-11-14",
+      "star": 53520,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -4282,8 +4282,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "TypeScript",
-      "open_issues": 2712,
-      "forks": 5220,
+      "open_issues": 2748,
+      "forks": 5224,
       "topics": [
         "agent-skills",
         "agent-workspace",
@@ -4312,7 +4312,7 @@
       "title": "uv",
       "summary": "An extremely fast Python package and project manager, written in Rust.",
       "github_url": "https://github.com/astral-sh/uv",
-      "star": 91978,
+      "star": 92010,
       "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
@@ -4323,8 +4323,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 3076,
-      "forks": 3811,
+      "open_issues": 3081,
+      "forks": 3813,
       "topics": [
         "packaging",
         "python",
@@ -4344,7 +4344,7 @@
       "title": "syncthing",
       "summary": "Open Source Continuous File Synchronization",
       "github_url": "https://github.com/syncthing/syncthing",
-      "star": 90419,
+      "star": 90443,
       "last_commit": "2026-11-10",
       "category_tags": [
         "效率工具"
@@ -4355,8 +4355,8 @@
       "is_hidden": false,
       "license": "MPL-2.0",
       "language": "Go",
-      "open_issues": 401,
-      "forks": 5595,
+      "open_issues": 402,
+      "forks": 5597,
       "topics": [
         "go",
         "p2p",
@@ -4376,7 +4376,7 @@
       "title": "ppt-master",
       "summary": "AI turns documents or topics into real, native PowerPoint decks—with native shap…",
       "github_url": "https://github.com/hugohe3/ppt-master",
-      "star": 76593,
+      "star": 76847,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -4388,7 +4388,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 1,
-      "forks": 5981,
+      "forks": 6002,
       "topics": [
         "ai-agent",
         "aippt",
@@ -4414,8 +4414,8 @@
       "title": "Mole",
       "summary": "🐹 Open-source Mac and PC cleaner. Keep your machine clean, light, and running li…",
       "github_url": "https://github.com/tw93/Mole",
-      "star": 74927,
-      "last_commit": "2026-11-14",
+      "star": 75059,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "系统工具"
       ],
@@ -4427,8 +4427,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Shell",
-      "open_issues": 5,
-      "forks": 2697,
+      "open_issues": 18,
+      "forks": 2702,
       "topics": [
         "analyzer",
         "appcleaner",
@@ -4464,8 +4464,8 @@
       "title": "electron",
       "summary": ":electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS",
       "github_url": "https://github.com/electron/electron",
-      "star": 123894,
-      "last_commit": "2026-11-13",
+      "star": 123902,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -4476,7 +4476,7 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C++",
-      "open_issues": 776,
+      "open_issues": 804,
       "forks": 17939,
       "topics": [
         "c-plus-plus",
@@ -4502,8 +4502,8 @@
       "title": "archify",
       "summary": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent…",
       "github_url": "https://github.com/tt-a1i/archify",
-      "star": 96231,
-      "last_commit": "2026-11-13",
+      "star": 96448,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -4513,8 +4513,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "JavaScript",
-      "open_issues": 353,
-      "forks": 6576,
+      "open_issues": 358,
+      "forks": 6591,
       "topics": [
         "agent-skills",
         "ai-agents",
@@ -4550,8 +4550,8 @@
       "title": "storybook",
       "summary": "Storybook is the industry standard workshop for building, documenting, and testi…",
       "github_url": "https://github.com/storybookjs/storybook",
-      "star": 91558,
-      "last_commit": "2026-11-13",
+      "star": 91572,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "设计"
       ],
@@ -4561,7 +4561,7 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 1809,
+      "open_issues": 1824,
       "forks": 10515,
       "topics": [
         "angular",
@@ -4598,7 +4598,7 @@
       "title": "cs-video-courses",
       "summary": "List of Computer Science courses with video lectures.",
       "github_url": "https://github.com/Developer-Y/cs-video-courses",
-      "star": 84833,
+      "star": 84848,
       "last_commit": "2026-11-10",
       "category_tags": [
         "影音播放器"
@@ -4612,7 +4612,7 @@
       "license": "",
       "language": "",
       "open_issues": 8,
-      "forks": 11658,
+      "forks": 11661,
       "topics": [
         "algorithms",
         "bioinformatics",
@@ -4646,7 +4646,7 @@
       "title": "fzf",
       "summary": ":cherry_blossom: A command-line fuzzy finder",
       "github_url": "https://github.com/junegunn/fzf",
-      "star": 84188,
+      "star": 84205,
       "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
@@ -4658,7 +4658,7 @@
       "license": "MIT",
       "language": "Go",
       "open_issues": 333,
-      "forks": 3434,
+      "forks": 3436,
       "topics": [
         "bash",
         "cli",
@@ -4684,8 +4684,8 @@
       "title": "bun",
       "summary": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager –…",
       "github_url": "https://github.com/oven-sh/bun",
-      "star": 96679,
-      "last_commit": "2026-11-14",
+      "star": 96695,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "效率工具"
       ],
@@ -4695,8 +4695,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Rust",
-      "open_issues": 9826,
-      "forks": 5281,
+      "open_issues": 9766,
+      "forks": 5282,
       "topics": [
         "bun",
         "bundler",
@@ -4724,7 +4724,7 @@
       "title": "nvm",
       "summary": "Node Version Manager - POSIX-compliant bash script to manage multiple active nod…",
       "github_url": "https://github.com/nvm-sh/nvm",
-      "star": 96106,
+      "star": 96113,
       "last_commit": "2026-11-12",
       "category_tags": [
         "系统工具"
@@ -4735,8 +4735,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Shell",
-      "open_issues": 378,
-      "forks": 10761,
+      "open_issues": 379,
+      "forks": 10762,
       "topics": [
         "bash",
         "install",
@@ -4765,8 +4765,8 @@
       "title": "cleanyourtv",
       "summary": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
       "github_url": "https://github.com/Gathin23/cleanyourtv",
-      "star": 57448,
-      "last_commit": "2026-11-13",
+      "star": 57885,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -4776,8 +4776,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Python",
-      "open_issues": 231,
-      "forks": 7430,
+      "open_issues": 288,
+      "forks": 7515,
       "topics": [
         "adb",
         "adblock",
@@ -4810,8 +4810,8 @@
       "title": "AnyPS5",
       "summary": "Tool for automatic PS5 executables porting to Linux and Windows",
       "github_url": "https://github.com/boykopovar/AnyPS5",
-      "star": 53731,
-      "last_commit": "2026-11-14",
+      "star": 53970,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "游戏"
       ],
@@ -4822,8 +4822,8 @@
       "is_hidden": false,
       "license": "GPL-2.0",
       "language": "C++",
-      "open_issues": 1859,
-      "forks": 5125,
+      "open_issues": 1773,
+      "forks": 5154,
       "topics": [
         "anyps5",
         "dynamic-library",
@@ -4846,8 +4846,8 @@
       "title": "open-source-ios-apps",
       "summary": ":iphone: Collaborative List of Open-Source iOS Apps",
       "github_url": "https://github.com/dkhamsing/open-source-ios-apps",
-      "star": 53249,
-      "last_commit": "2026-11-13",
+      "star": 53266,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "游戏"
       ],
@@ -4859,7 +4859,7 @@
       "is_hidden": false,
       "license": "CC0-1.0",
       "language": "",
-      "open_issues": 3,
+      "open_issues": 2,
       "forks": 6183,
       "topics": [
         "app",
@@ -4896,8 +4896,8 @@
       "title": "zeroclaw",
       "summary": "Fast, small, and fully autonomous AI personal assistant infrastructure, any OS,…",
       "github_url": "https://github.com/zeroclaw-labs/zeroclaw",
-      "star": 33356,
-      "last_commit": "2026-11-13",
+      "star": 33365,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -4907,7 +4907,7 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 1213,
+      "open_issues": 1232,
       "forks": 5018,
       "topics": [
         "agent",
@@ -4932,7 +4932,7 @@
       "title": "hello-agents",
       "summary": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
       "github_url": "https://github.com/datawhalechina/hello-agents",
-      "star": 86943,
+      "star": 86992,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -4944,7 +4944,7 @@
       "license": "NOASSERTION",
       "language": "Python",
       "open_issues": 179,
-      "forks": 10851,
+      "forks": 10859,
       "topics": [
         "agent",
         "llm",
@@ -4964,7 +4964,7 @@
       "title": "MinerU",
       "summary": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/J…",
       "github_url": "https://github.com/opendatalab/MinerU",
-      "star": 83637,
+      "star": 83678,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -4976,7 +4976,7 @@
       "license": "NOASSERTION",
       "language": "Python",
       "open_issues": 10,
-      "forks": 6935,
+      "forks": 6936,
       "topics": [
         "ai4science",
         "document-analysis",
@@ -5008,7 +5008,7 @@
       "title": "OpenMontage",
       "summary": "World's first open-source, agentic video production system. 12 production pipeli…",
       "github_url": "https://github.com/OpenMontageInc/OpenMontage",
-      "star": 80289,
+      "star": 80499,
       "last_commit": "2026-11-09",
       "category_tags": [
         "AI&Agent"
@@ -5019,8 +5019,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Python",
-      "open_issues": 341,
-      "forks": 10810,
+      "open_issues": 342,
+      "forks": 10847,
       "topics": [
         "agent",
         "agentic-ai",
@@ -5055,7 +5055,7 @@
       "title": "LlamaFactory",
       "summary": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
       "github_url": "https://github.com/hiyouga/LlamaFactory",
-      "star": 76030,
+      "star": 76045,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -5067,7 +5067,7 @@
       "license": "Apache-2.0",
       "language": "Python",
       "open_issues": 1245,
-      "forks": 9368,
+      "forks": 9373,
       "topics": [
         "agent",
         "ai",
@@ -5103,8 +5103,8 @@
       "title": "remotion",
       "summary": "🎥      Make videos programmatically with React",
       "github_url": "https://github.com/remotion-dev/remotion",
-      "star": 73016,
-      "last_commit": "2026-11-13",
+      "star": 73207,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "影音播放器"
       ],
@@ -5114,8 +5114,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "TypeScript",
-      "open_issues": 202,
-      "forks": 6115,
+      "open_issues": 198,
+      "forks": 6144,
       "topics": [
         "javascript",
         "react",
@@ -5134,8 +5134,8 @@
       "title": "FFmpeg",
       "summary": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
       "github_url": "https://github.com/FFmpeg/FFmpeg",
-      "star": 67213,
-      "last_commit": "2026-11-13",
+      "star": 67288,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "影音播放器"
       ],
@@ -5146,7 +5146,7 @@
       "license": "NOASSERTION",
       "language": "C",
       "open_issues": 3,
-      "forks": 14628,
+      "forks": 14638,
       "topics": [
         "audio",
         "c",
@@ -5177,8 +5177,8 @@
       "title": "spacedrive",
       "summary": "Spacedrive is an open source cross-platform file explorer, powered by a virtual…",
       "github_url": "https://github.com/spacedriveapp/spacedrive",
-      "star": 39507,
-      "last_commit": "2026-11-13",
+      "star": 39515,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "NAS存储"
       ],
@@ -5189,7 +5189,7 @@
       "license": "Apache-2.0",
       "language": "Rust",
       "open_issues": 65,
-      "forks": 1380,
+      "forks": 1381,
       "topics": [
         "cross-platform",
         "distributed-systems",
@@ -5261,7 +5261,7 @@
       "title": "photoprism",
       "summary": "AI-Powered Photos App 🌈💎✨",
       "github_url": "https://github.com/photoprism/photoprism",
-      "star": 40444,
+      "star": 40452,
       "last_commit": "2026-11-12",
       "category_tags": [
         "效率工具"
@@ -5297,8 +5297,8 @@
       "title": "seaweedfs",
       "summary": "SeaweedFS is a distributed storage system for object storage (S3), file systems,…",
       "github_url": "https://github.com/seaweedfs/seaweedfs",
-      "star": 36062,
-      "last_commit": "2026-11-14",
+      "star": 36070,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "NAS存储"
       ],
@@ -5308,8 +5308,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Go",
-      "open_issues": 714,
-      "forks": 3117,
+      "open_issues": 709,
+      "forks": 3114,
       "topics": [
         "blob-storage",
         "cloud-drive",
@@ -5343,8 +5343,8 @@
       "title": "vaultwarden",
       "summary": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwar…",
       "github_url": "https://github.com/dani-garcia/vaultwarden",
-      "star": 70705,
-      "last_commit": "2026-11-13",
+      "star": 70740,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "系统工具"
       ],
@@ -5354,8 +5354,8 @@
       "is_hidden": false,
       "license": "AGPL-3.0",
       "language": "Rust",
-      "open_issues": 87,
-      "forks": 3449,
+      "open_issues": 86,
+      "forks": 3457,
       "topics": [
         "bitwarden",
         "bitwarden-rs",
@@ -5377,8 +5377,8 @@
       "title": "last30days-skill",
       "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymark…",
       "github_url": "https://github.com/mvanhorn/last30days-skill",
-      "star": 67565,
-      "last_commit": "2026-11-13",
+      "star": 67676,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5389,8 +5389,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 21,
-      "forks": 5939,
+      "open_issues": 25,
+      "forks": 5953,
       "topics": [
         "ai-prompts",
         "ai-skill",
@@ -5426,8 +5426,8 @@
       "title": "lobehub",
       "summary": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team a…",
       "github_url": "https://github.com/lobehub/lobehub",
-      "star": 85401,
-      "last_commit": "2026-11-14",
+      "star": 85530,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5437,8 +5437,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "TypeScript",
-      "open_issues": 1348,
-      "forks": 16293,
+      "open_issues": 1344,
+      "forks": 16317,
       "topics": [
         "agent",
         "agent-collaboration",
@@ -5464,8 +5464,8 @@
       "title": "photocraft",
       "summary": "PhotoCraft: An open-source photo editor written from scratch in pure Rust",
       "github_url": "https://github.com/storytold/photocraft",
-      "star": 79198,
-      "last_commit": "2026-11-14",
+      "star": 79417,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "设计"
       ],
@@ -5475,8 +5475,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 4531,
-      "forks": 13997,
+      "open_issues": 5295,
+      "forks": 14037,
       "topics": [
         "art",
         "image-editing",
@@ -5499,8 +5499,8 @@
       "title": "lazygit",
       "summary": "simple terminal UI for git commands",
       "github_url": "https://github.com/jesseduffield/lazygit",
-      "star": 83880,
-      "last_commit": "2026-11-13",
+      "star": 83896,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "系统工具"
       ],
@@ -5510,8 +5510,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 1075,
-      "forks": 3258,
+      "open_issues": 1074,
+      "forks": 3257,
       "topics": [
         "cli",
         "git",
@@ -5530,8 +5530,8 @@
       "title": "unsloth",
       "summary": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8…",
       "github_url": "https://github.com/unslothai/unsloth",
-      "star": 79460,
-      "last_commit": "2026-11-14",
+      "star": 79511,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5541,8 +5541,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 514,
-      "forks": 7407,
+      "open_issues": 443,
+      "forks": 7414,
       "topics": [
         "agent",
         "ai",
@@ -5578,8 +5578,8 @@
       "title": "rtk",
       "summary": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. S…",
       "github_url": "https://github.com/rtk-ai/rtk",
-      "star": 86504,
-      "last_commit": "2026-11-13",
+      "star": 86598,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5589,8 +5589,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 1697,
-      "forks": 5545,
+      "open_issues": 1702,
+      "forks": 5550,
       "topics": [
         "agentic-coding",
         "ai-coding",
@@ -5619,7 +5619,7 @@
       "title": "headroom",
       "summary": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20…",
       "github_url": "https://github.com/headroomlabs-ai/headroom",
-      "star": 79610,
+      "star": 79675,
       "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
@@ -5630,8 +5630,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 333,
-      "forks": 6230,
+      "open_issues": 304,
+      "forks": 6237,
       "topics": [
         "agent",
         "ai",
@@ -5667,8 +5667,8 @@
       "title": "colibri",
       "summary": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU…",
       "github_url": "https://github.com/JustVugg/colibri",
-      "star": 50875,
-      "last_commit": "2026-11-13",
+      "star": 51136,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -5678,8 +5678,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "C",
-      "open_issues": 203,
-      "forks": 6022,
+      "open_issues": 200,
+      "forks": 6097,
       "topics": [],
       "homepage": "https://justvugg.github.io/colibri",
       "repo_created": "2026-07-01",
@@ -5694,8 +5694,8 @@
       "title": "Handy",
       "summary": "A free, open source, and extensible speech-to-text application that works comple…",
       "github_url": "https://github.com/cjpais/Handy",
-      "star": 38691,
-      "last_commit": "2026-11-13",
+      "star": 38778,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -5705,8 +5705,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Rust",
-      "open_issues": 171,
-      "forks": 3650,
+      "open_issues": 154,
+      "forks": 3664,
       "topics": [
         "accessibility",
         "cross-platform",
@@ -5726,7 +5726,7 @@
       "title": "xiaozhi-esp32",
       "summary": "An MCP-based chatbot | 一个基于MCP的聊天机器人",
       "github_url": "https://github.com/78/xiaozhi-esp32",
-      "star": 33188,
+      "star": 33229,
       "last_commit": "2026-11-14",
       "category_tags": [
         "硬件固件"
@@ -5737,8 +5737,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "C++",
-      "open_issues": 696,
-      "forks": 7872,
+      "open_issues": 694,
+      "forks": 7891,
       "topics": [
         "chatbot",
         "esp32",
@@ -5757,7 +5757,7 @@
       "title": "lvgl",
       "summary": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to…",
       "github_url": "https://github.com/lvgl/lvgl",
-      "star": 25160,
+      "star": 25169,
       "last_commit": "2026-11-13",
       "category_tags": [
         "硬件固件"
@@ -5769,7 +5769,7 @@
       "license": "MIT",
       "language": "C",
       "open_issues": 212,
-      "forks": 4448,
+      "forks": 4450,
       "topics": [
         "arduino",
         "c",
@@ -5805,8 +5805,8 @@
       "title": "playwright",
       "summary": "Playwright is a framework for Web Testing and Automation. It allows testing Chro…",
       "github_url": "https://github.com/microsoft/playwright",
-      "star": 100114,
-      "last_commit": "2026-11-13",
+      "star": 100187,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -5817,8 +5817,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "open_issues": 30,
-      "forks": 6874,
+      "open_issues": 41,
+      "forks": 6882,
       "topics": [
         "automation",
         "chrome",
@@ -5861,7 +5861,7 @@
       "license": "MIT",
       "language": "TypeScript",
       "open_issues": 2898,
-      "forks": 4345,
+      "forks": 4347,
       "topics": [
         "serial",
         "ssh-client",
@@ -5882,8 +5882,8 @@
       "title": "Stirling-PDF",
       "summary": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
       "github_url": "https://github.com/Stirling-Tools/Stirling-PDF",
-      "star": 96524,
-      "last_commit": "2026-11-13",
+      "star": 96600,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "系统工具"
       ],
@@ -5894,8 +5894,8 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "TypeScript",
-      "open_issues": 539,
-      "forks": 9346,
+      "open_issues": 481,
+      "forks": 9351,
       "topics": [
         "docker",
         "hacktoberfest",
@@ -5963,8 +5963,8 @@
       "title": "ai-engineering-from-scratch",
       "summary": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
       "github_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-      "star": 78689,
-      "last_commit": "2026-11-13",
+      "star": 78950,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -5974,8 +5974,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 67,
-      "forks": 14017,
+      "open_issues": 71,
+      "forks": 14066,
       "topics": [
         "agents",
         "ai",
@@ -6011,7 +6011,7 @@
       "title": "strix",
       "summary": "Open-source AI penetration testing tool to find and fix your app’s vulnerabiliti…",
       "github_url": "https://github.com/usestrix/strix",
-      "star": 75415,
+      "star": 75583,
       "last_commit": "2026-11-13",
       "category_tags": [
         "AI&Agent"
@@ -6022,8 +6022,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Python",
-      "open_issues": 602,
-      "forks": 8521,
+      "open_issues": 604,
+      "forks": 8542,
       "topics": [
         "agents",
         "ai-hacking",
@@ -6059,8 +6059,8 @@
       "title": "dsh-our-free-model",
       "summary": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全…",
       "github_url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
-      "star": 72871,
-      "last_commit": "2026-11-13",
+      "star": 74367,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6070,8 +6070,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "JavaScript",
-      "open_issues": 174,
-      "forks": 2017,
+      "open_issues": 179,
+      "forks": 2078,
       "topics": [
         "ai-agents",
         "deepseek",
@@ -6134,8 +6134,8 @@
       "title": "agentic-awesome-skills",
       "summary": "2,955+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. A…",
       "github_url": "https://github.com/sickn33/agentic-awesome-skills",
-      "star": 49670,
-      "last_commit": "2026-11-13",
+      "star": 49712,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6145,8 +6145,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 6,
-      "forks": 7192,
+      "open_issues": 10,
+      "forks": 7191,
       "topics": [
         "agent-skills",
         "agentic-skills",
@@ -6194,8 +6194,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "",
-      "open_issues": 79,
-      "forks": 3416,
+      "open_issues": 82,
+      "forks": 3420,
       "topics": [
         "awesome",
         "awesome-list",
@@ -6229,8 +6229,8 @@
       "title": "magpie",
       "summary": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the…",
       "github_url": "https://github.com/yetone/magpie",
-      "star": 36120,
-      "last_commit": "2026-11-14",
+      "star": 36551,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6240,8 +6240,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 4124,
-      "forks": 3225,
+      "open_issues": 4237,
+      "forks": 3267,
       "topics": [
         "claude-code",
         "codex",
@@ -6263,8 +6263,8 @@
       "title": "rustfs",
       "summary": "RustFS is an open-source, S3-compatible high-performance object storage system s…",
       "github_url": "https://github.com/rustfs/rustfs",
-      "star": 36064,
-      "last_commit": "2026-11-14",
+      "star": 36100,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "NAS存储"
       ],
@@ -6274,8 +6274,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 58,
-      "forks": 1666,
+      "open_issues": 64,
+      "forks": 1665,
       "topics": [
         "ai-native",
         "ai-storage",
@@ -6303,8 +6303,8 @@
       "title": "koodo-reader",
       "summary": "A modern ebook manager and reader with sync and backup capacities for Windows, m…",
       "github_url": "https://github.com/koodo-reader/koodo-reader",
-      "star": 28840,
-      "last_commit": "2026-11-13",
+      "star": 28845,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "NAS存储"
       ],
@@ -6319,7 +6319,7 @@
       "license": "AGPL-3.0",
       "language": "JavaScript",
       "open_issues": 273,
-      "forks": 2167,
+      "forks": 2165,
       "topics": [
         "book",
         "cb7",
@@ -6353,8 +6353,8 @@
       "title": "coolify",
       "summary": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that…",
       "github_url": "https://github.com/coollabsio/coolify",
-      "star": 66057,
-      "last_commit": "2026-11-13",
+      "star": 66087,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "系统工具"
       ],
@@ -6364,8 +6364,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "PHP",
-      "open_issues": 251,
-      "forks": 5985,
+      "open_issues": 259,
+      "forks": 5991,
       "topics": [
         "coolify",
         "databases",
@@ -6401,8 +6401,8 @@
       "title": "hindsight",
       "summary": "Hindsight: Agent Memory That Learns",
       "github_url": "https://github.com/vectorize-io/hindsight",
-      "star": 60901,
-      "last_commit": "2026-11-13",
+      "star": 61064,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6412,8 +6412,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 227,
-      "forks": 7358,
+      "open_issues": 234,
+      "forks": 7367,
       "topics": [
         "agentic-ai",
         "agents",
@@ -6433,7 +6433,7 @@
       "title": "ai-job-search",
       "summary": "The job search that runs on your machine. AI job application framework built on…",
       "github_url": "https://github.com/ai-job-search-dev/ai-job-search",
-      "star": 71606,
+      "star": 71749,
       "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
@@ -6446,7 +6446,7 @@
       "license": "MIT",
       "language": "Python",
       "open_issues": 49,
-      "forks": 23115,
+      "forks": 23139,
       "topics": [
         "ai",
         "ai-agents",
@@ -6474,7 +6474,7 @@
       "title": "diagram-design",
       "summary": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory…",
       "github_url": "https://github.com/cathrynlavery/diagram-design",
-      "star": 66898,
+      "star": 67146,
       "last_commit": "2026-11-12",
       "category_tags": [
         "AI&Agent"
@@ -6486,7 +6486,7 @@
       "license": "MIT",
       "language": "HTML",
       "open_issues": 35,
-      "forks": 4461,
+      "forks": 4488,
       "topics": [
         "agent-skills",
         "claude-code",
@@ -6510,8 +6510,8 @@
       "title": "SecLists",
       "summary": "SecLists is the security tester's companion. It's a collection of multiple types…",
       "github_url": "https://github.com/danielmiessler/SecLists",
-      "star": 74749,
-      "last_commit": "2026-11-13",
+      "star": 74758,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "系统工具"
       ],
@@ -6537,7 +6537,7 @@
       "title": "traefik",
       "summary": "The Cloud Native Application Proxy",
       "github_url": "https://github.com/traefik/traefik",
-      "star": 65540,
+      "star": 65549,
       "last_commit": "2026-11-13",
       "category_tags": [
         "逆向开发"
@@ -6548,8 +6548,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Go",
-      "open_issues": 982,
-      "forks": 6316,
+      "open_issues": 983,
+      "forks": 6313,
       "topics": [
         "consul",
         "docker",
@@ -6579,7 +6579,7 @@
       "title": "nest",
       "summary": "A progressive TypeScript framework for Node.js backends: from a small API in one…",
       "github_url": "https://github.com/nestjs/nest",
-      "star": 77117,
+      "star": 77125,
       "last_commit": "2026-11-13",
       "category_tags": [
         "系统工具"
@@ -6590,8 +6590,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "TypeScript",
-      "open_issues": 39,
-      "forks": 8740,
+      "open_issues": 43,
+      "forks": 8739,
       "topics": [
         "framework",
         "hacktoberfest",
@@ -6620,8 +6620,8 @@
       "title": "SmartTube",
       "summary": "Browse media content with your own rules on Android TV",
       "github_url": "https://github.com/yuliskov/SmartTube",
-      "star": 36302,
-      "last_commit": "2026-11-13",
+      "star": 36339,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -6631,8 +6631,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Java",
-      "open_issues": 871,
-      "forks": 2314,
+      "open_issues": 878,
+      "forks": 2322,
       "topics": [
         "android",
         "android-tv",
@@ -6655,8 +6655,8 @@
       "title": "shadPS4",
       "summary": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
       "github_url": "https://github.com/shadps4-emu/shadPS4",
-      "star": 34168,
-      "last_commit": "2026-11-12",
+      "star": 34181,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "游戏"
       ],
@@ -6668,8 +6668,8 @@
       "is_hidden": false,
       "license": "GPL-2.0",
       "language": "C++",
-      "open_issues": 343,
-      "forks": 2898,
+      "open_issues": 344,
+      "forks": 2902,
       "topics": [
         "cpp",
         "cpp23",
@@ -6697,8 +6697,8 @@
       "title": "Tasmota",
       "summary": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration…",
       "github_url": "https://github.com/arendst/Tasmota",
-      "star": 24988,
-      "last_commit": "2026-11-13",
+      "star": 24989,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "逆向开发"
       ],
@@ -6709,8 +6709,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "C",
-      "open_issues": 11,
-      "forks": 5212,
+      "open_issues": 12,
+      "forks": 5215,
       "topics": [
         "arduino",
         "automation",
@@ -6739,8 +6739,8 @@
       "title": "slint",
       "summary": "Slint is an open-source declarative GUI toolkit to build native user interfaces…",
       "github_url": "https://github.com/slint-ui/slint",
-      "star": 24584,
-      "last_commit": "2026-11-13",
+      "star": 24592,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -6750,7 +6750,7 @@
       "is_hidden": false,
       "license": "NOASSERTION",
       "language": "Rust",
-      "open_issues": 785,
+      "open_issues": 790,
       "forks": 1071,
       "topics": [
         "cpp",
@@ -6784,8 +6784,8 @@
       "title": "openinterpreter",
       "summary": "A coding agent for open models like Kimi K3 and GLM 5.3",
       "github_url": "https://github.com/openinterpreter/openinterpreter",
-      "star": 68883,
-      "last_commit": "2026-11-14",
+      "star": 68890,
+      "last_commit": "2026-11-15",
       "category_tags": [
         "AI&Agent"
       ],
@@ -6795,8 +6795,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "Rust",
-      "open_issues": 37,
-      "forks": 5945,
+      "open_issues": 38,
+      "forks": 5947,
       "topics": [
         "acp",
         "coding-agent",
@@ -6819,7 +6819,7 @@
       "title": "v2rayNG",
       "summary": "A V2Ray client for Android, support Xray core and v2fly core",
       "github_url": "https://github.com/2dust/v2rayNG",
-      "star": 65839,
+      "star": 65900,
       "last_commit": "2026-11-13",
       "category_tags": [
         "效率工具"
@@ -6830,8 +6830,8 @@
       "is_hidden": false,
       "license": "GPL-3.0",
       "language": "Kotlin",
-      "open_issues": 44,
-      "forks": 8621,
+      "open_issues": 53,
+      "forks": 8638,
       "topics": [
         "android",
         "proxy",
@@ -6859,8 +6859,8 @@
       "title": "tesseract",
       "summary": "Tesseract Open Source OCR Engine (main repository)",
       "github_url": "https://github.com/tesseract-ocr/tesseract",
-      "star": 77503,
-      "last_commit": "2026-11-13",
+      "star": 77519,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -6870,8 +6870,8 @@
       "is_hidden": false,
       "license": "Apache-2.0",
       "language": "C++",
-      "open_issues": 503,
-      "forks": 10913,
+      "open_issues": 502,
+      "forks": 10914,
       "topics": [
         "hacktoberfest",
         "lstm",
@@ -6894,8 +6894,8 @@
       "title": "docling",
       "summary": "Get your documents ready for gen AI",
       "github_url": "https://github.com/docling-project/docling",
-      "star": 70559,
-      "last_commit": "2026-11-13",
+      "star": 70590,
+      "last_commit": "2026-11-14",
       "category_tags": [
         "效率工具"
       ],
@@ -6905,8 +6905,8 @@
       "is_hidden": false,
       "license": "MIT",
       "language": "Python",
-      "open_issues": 1005,
-      "forks": 5340,
+      "open_issues": 1026,
+      "forks": 5348,
       "topics": [
         "ai",
         "convert",
@@ -6929,11 +6929,908 @@
       "created_at": "2026-11-14 01:40:11",
       "classic": true,
       "first_seen": "2026-11-14"
+    },
+    {
+      "id": "vllm-project/vllm",
+      "gh_id": 599547518,
+      "crawl_date": "2026-11-15",
+      "title": "vllm",
+      "summary": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "github_url": "https://github.com/vllm-project/vllm",
+      "star": 96939,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "open_issues": 10382,
+      "forks": 24830,
+      "topics": [
+        "amd",
+        "blackwell",
+        "cuda",
+        "deepseek",
+        "deepseek-v3",
+        "gpt",
+        "gpt-oss",
+        "inference",
+        "kimi",
+        "llama",
+        "llm",
+        "llm-serving",
+        "model-serving",
+        "moe",
+        "openai",
+        "pytorch",
+        "qwen",
+        "qwen3",
+        "tpu",
+        "transformer"
+      ],
+      "homepage": "https://vllm.ai",
+      "repo_created": "2023-02-09",
+      "created_at": "2026-11-15 01:16:35",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "elastic/elasticsearch",
+      "gh_id": 507775,
+      "crawl_date": "2026-11-15",
+      "title": "elasticsearch",
+      "summary": "Free and Open Source, Distributed, RESTful Search Engine",
+      "github_url": "https://github.com/elastic/elasticsearch",
+      "star": 78688,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Java",
+      "open_issues": 6561,
+      "forks": 26244,
+      "topics": [
+        "elasticsearch",
+        "java",
+        "search-engine"
+      ],
+      "homepage": "https://www.elastic.co/products/elasticsearch",
+      "repo_created": "2010-02-08",
+      "created_at": "2026-11-15 01:16:37",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "redis/redis",
+      "gh_id": 156018,
+      "crawl_date": "2026-11-15",
+      "title": "redis",
+      "summary": "For developers, who are building real-time data-driven applications, Redis is th…",
+      "github_url": "https://github.com/redis/redis",
+      "star": 77502,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "系统工具"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "C",
+      "open_issues": 3114,
+      "forks": 25056,
+      "topics": [
+        "cache",
+        "caching",
+        "database",
+        "distributed-systems",
+        "in-memory",
+        "in-memory-database",
+        "json",
+        "key-value",
+        "key-value-store",
+        "message-broker",
+        "message-queue",
+        "no-sql",
+        "nosql",
+        "open-source",
+        "real-time",
+        "realtime",
+        "redis",
+        "time-series",
+        "vector-databases",
+        "vector-search"
+      ],
+      "homepage": "http://redis.io",
+      "repo_created": "2009-03-21",
+      "created_at": "2026-11-15 01:16:37",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "abi/screenshot-to-code",
+      "gh_id": 718741813,
+      "crawl_date": "2026-11-15",
+      "title": "screenshot-to-code",
+      "summary": "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
+      "github_url": "https://github.com/abi/screenshot-to-code",
+      "star": 81211,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Web"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Python",
+      "open_issues": 149,
+      "forks": 9950,
+      "topics": [],
+      "homepage": "https://screenshottocode.com",
+      "repo_created": "2023-11-14",
+      "created_at": "2026-11-15 01:16:39",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "zhulinsen/daily_stock_analysis",
+      "gh_id": 1131513930,
+      "crawl_date": "2026-11-15",
+      "title": "daily_stock_analysis",
+      "summary": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stoc…",
+      "github_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "star": 72263,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "硬件固件"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Python",
+      "open_issues": 34,
+      "forks": 57477,
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "llm",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading"
+      ],
+      "homepage": "https://dsa.zhulinsen.tech",
+      "repo_created": "2026-01-10",
+      "created_at": "2026-11-15 01:16:39",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "iina/iina",
+      "gh_id": 76838017,
+      "crawl_date": "2026-11-15",
+      "title": "iina",
+      "summary": "The modern video player for macOS.",
+      "github_url": "https://github.com/iina/iina",
+      "star": 47127,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "影音播放器"
+      ],
+      "platform_tags": [
+        "macOS"
+      ],
+      "is_hidden": false,
+      "license": "GPL-3.0",
+      "language": "Swift",
+      "open_issues": 1987,
+      "forks": 2993,
+      "topics": [
+        "hacktoberfest",
+        "macos",
+        "mpv",
+        "swift",
+        "video",
+        "video-player"
+      ],
+      "homepage": "https://iina.io",
+      "repo_created": "2016-12-19",
+      "created_at": "2026-11-15 01:16:41",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "mifi/lossless-cut",
+      "gh_id": 72343657,
+      "crawl_date": "2026-11-15",
+      "title": "lossless-cut",
+      "summary": "The swiss army knife of lossless video/audio editing",
+      "github_url": "https://github.com/mifi/lossless-cut",
+      "star": 46040,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "影音播放器"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "GPL-2.0",
+      "language": "TypeScript",
+      "open_issues": 175,
+      "forks": 2330,
+      "topics": [
+        "codec",
+        "cut",
+        "editor",
+        "ffmpeg",
+        "lossless",
+        "losslesscut",
+        "player",
+        "video",
+        "video-editor",
+        "video-files"
+      ],
+      "homepage": "https://losslesscut.app/",
+      "repo_created": "2016-10-30",
+      "created_at": "2026-11-15 01:16:41",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "lbjlaq/antigravity-manager",
+      "gh_id": 1104535633,
+      "crawl_date": "2026-11-15",
+      "title": "Antigravity-Manager",
+      "summary": "Professional Antigravity Account Manager & Switcher. One-click seamless account…",
+      "github_url": "https://github.com/lbjlaq/Antigravity-Manager",
+      "star": 33111,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Web",
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Rust",
+      "open_issues": 1702,
+      "forks": 3542,
+      "topics": [
+        "account-manager",
+        "antigravity"
+      ],
+      "homepage": "https://lbjlaq.github.io/Antigravity-Manager/",
+      "repo_created": "2025-11-26",
+      "created_at": "2026-11-15 01:16:43",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "gh_id": 1333175049,
+      "crawl_date": "2026-11-15",
+      "title": "awesome-dsh-plugin",
+      "summary": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+      "github_url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "star": 24683,
+      "last_commit": "2026-11-15",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Web"
+      ],
+      "is_hidden": false,
+      "license": "CC0-1.0",
+      "language": "JavaScript",
+      "open_issues": 301,
+      "forks": 8405,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "deepseek-harness",
+        "dsh",
+        "dsh-plugin"
+      ],
+      "homepage": "https://awesome-dsh-plugin.com",
+      "repo_created": "2026-08-13",
+      "created_at": "2026-11-15 01:16:43",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "mihomo-party-org/clash-party",
+      "gh_id": 836976013,
+      "crawl_date": "2026-11-15",
+      "title": "clash-party",
+      "summary": ":electron: Another Mihomo GUI.",
+      "github_url": "https://github.com/mihomo-party-org/clash-party",
+      "star": 27226,
+      "last_commit": "2026-11-12",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "GPL-3.0",
+      "language": "TypeScript",
+      "open_issues": 189,
+      "forks": 2138,
+      "topics": [
+        "clash",
+        "clash-meta",
+        "electron",
+        "mihomo"
+      ],
+      "homepage": "https://clashparty.org",
+      "repo_created": "2024-08-02",
+      "created_at": "2026-11-15 01:16:45",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "matteocrippa/awesome-swift",
+      "gh_id": 21696302,
+      "crawl_date": "2026-11-15",
+      "title": "awesome-swift",
+      "summary": "A collaborative list of awesome Swift libraries and resources. Feel free to cont…",
+      "github_url": "https://github.com/matteocrippa/awesome-swift",
+      "star": 26376,
+      "last_commit": "2026-11-11",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "macOS",
+        "Linux",
+        "Web"
+      ],
+      "is_hidden": false,
+      "license": "CC0-1.0",
+      "language": "Ruby",
+      "open_issues": 24,
+      "forks": 3159,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-swift",
+        "ios",
+        "linux",
+        "list",
+        "lists",
+        "swift",
+        "swift-extensions",
+        "swift-framework",
+        "swift-language",
+        "swift-library"
+      ],
+      "homepage": "",
+      "repo_created": "2014-07-10",
+      "created_at": "2026-11-15 01:16:45",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "addyosmani/agent-skills",
+      "gh_id": 1158722119,
+      "crawl_date": "2026-11-15",
+      "title": "agent-skills",
+      "summary": "Production-grade engineering skills for AI coding agents.",
+      "github_url": "https://github.com/addyosmani/agent-skills",
+      "star": 117583,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "JavaScript",
+      "open_issues": 124,
+      "forks": 12299,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "homepage": "https://skills.addy.ie",
+      "repo_created": "2026-02-15",
+      "created_at": "2026-11-15 01:16:47",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "meilisearch/meilisearch",
+      "gh_id": 130688011,
+      "crawl_date": "2026-11-15",
+      "title": "meilisearch",
+      "summary": "A lightning-fast search engine API bringing AI-powered hybrid search to your sit…",
+      "github_url": "https://github.com/meilisearch/meilisearch",
+      "star": 59863,
+      "last_commit": "2026-11-12",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Rust",
+      "open_issues": 320,
+      "forks": 2793,
+      "topics": [
+        "ai",
+        "api",
+        "app-search",
+        "database",
+        "enterprise-search",
+        "faceting",
+        "full-text-search",
+        "fuzzy-search",
+        "geosearch",
+        "hybrid-search",
+        "instantsearch",
+        "search",
+        "search-as-you-type",
+        "search-engine",
+        "semantic-search",
+        "site-search",
+        "typo-tolerance",
+        "vector-database",
+        "vector-search",
+        "vectors"
+      ],
+      "homepage": "https://www.meilisearch.com",
+      "repo_created": "2018-04-23",
+      "created_at": "2026-11-15 01:16:49",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "router-for-me/cliproxyapi",
+      "gh_id": 1012087571,
+      "crawl_date": "2026-11-15",
+      "title": "CLIProxyAPI",
+      "summary": "Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an…",
+      "github_url": "https://github.com/router-for-me/CLIProxyAPI",
+      "star": 58571,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Go",
+      "open_issues": 877,
+      "forks": 8984,
+      "topics": [
+        "antigravity",
+        "claude",
+        "claude-code",
+        "codex",
+        "devin",
+        "gemini",
+        "muse",
+        "openai"
+      ],
+      "homepage": "",
+      "repo_created": "2025-07-01",
+      "created_at": "2026-11-15 01:16:49",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "penpot/penpot",
+      "gh_id": 48769241,
+      "crawl_date": "2026-11-15",
+      "title": "penpot",
+      "summary": "Penpot: The open-source design platform for Product teams that need scalable col…",
+      "github_url": "https://github.com/penpot/penpot",
+      "star": 62357,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "设计"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MPL-2.0",
+      "language": "Clojure",
+      "open_issues": 934,
+      "forks": 4415,
+      "topics": [
+        "clojure",
+        "clojurescript",
+        "design",
+        "prototyping",
+        "ui",
+        "ux-design",
+        "ux-experience"
+      ],
+      "homepage": "https://penpot.app",
+      "repo_created": "2015-12-29",
+      "created_at": "2026-11-15 01:16:53",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "zhaoxuya520/reverse-skill",
+      "gh_id": 1237819660,
+      "crawl_date": "2026-11-15",
+      "title": "reverse-skill",
+      "summary": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill R…",
+      "github_url": "https://github.com/zhaoxuya520/reverse-skill",
+      "star": 44650,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "逆向开发"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "PowerShell",
+      "open_issues": 22,
+      "forks": 6647,
+      "topics": [],
+      "homepage": "",
+      "repo_created": "2026-05-13",
+      "created_at": "2026-11-15 01:16:58",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "storytold/craft-anything",
+      "gh_id": 1440956372,
+      "crawl_date": "2026-11-15",
+      "title": "craft-anything",
+      "summary": "Craft Anything: understand how any software works, and craft your own.",
+      "github_url": "https://github.com/storytold/craft-anything",
+      "star": 32773,
+      "last_commit": "2026-11-15",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "Apache-2.0",
+      "language": "Rust",
+      "open_issues": 374,
+      "forks": 6655,
+      "topics": [],
+      "homepage": "",
+      "repo_created": "2026-10-31",
+      "created_at": "2026-11-15 01:16:58",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "steipete/codexbar",
+      "gh_id": 1097695258,
+      "crawl_date": "2026-11-15",
+      "title": "CodexBar",
+      "summary": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+      "github_url": "https://github.com/steipete/CodexBar",
+      "star": 23168,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Swift",
+      "open_issues": 10,
+      "forks": 2228,
+      "topics": [
+        "ai",
+        "claude-code",
+        "codex",
+        "swift"
+      ],
+      "homepage": "https://codex.bar",
+      "repo_created": "2025-11-16",
+      "created_at": "2026-11-15 01:17:00",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "darkflippers/unleashed-firmware",
+      "gh_id": 470579591,
+      "crawl_date": "2026-11-15",
+      "title": "unleashed-firmware",
+      "summary": "Flipper Zero Unleashed Firmware",
+      "github_url": "https://github.com/DarkFlippers/unleashed-firmware",
+      "star": 22739,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "逆向开发"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "GPL-3.0",
+      "language": "C",
+      "open_issues": 29,
+      "forks": 1987,
+      "topics": [
+        "alternative-firmware",
+        "cfw",
+        "custom",
+        "custom-firmware",
+        "darkflippers",
+        "firmware",
+        "flipper",
+        "flipper-plugins",
+        "flipper-zero",
+        "flipperzero",
+        "jailbreak",
+        "keeloq",
+        "rolling-codes",
+        "unleashed",
+        "unlocked",
+        "unofficial"
+      ],
+      "homepage": "https://flipperunleashed.com",
+      "repo_created": "2022-03-16",
+      "created_at": "2026-11-15 01:17:00",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "ghostty-org/ghostty",
+      "gh_id": 475553026,
+      "crawl_date": "2026-11-15",
+      "title": "ghostty",
+      "summary": "👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that use…",
+      "github_url": "https://github.com/ghostty-org/ghostty",
+      "star": 64114,
+      "last_commit": "2026-11-15",
+      "category_tags": [
+        "游戏"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Zig",
+      "open_issues": 272,
+      "forks": 3921,
+      "topics": [],
+      "homepage": "https://ghostty.org",
+      "repo_created": "2022-03-29",
+      "created_at": "2026-11-15 01:17:02",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "romkatv/powerlevel10k",
+      "gh_id": 172378503,
+      "crawl_date": "2026-11-15",
+      "title": "powerlevel10k",
+      "summary": "A Zsh theme",
+      "github_url": "https://github.com/romkatv/powerlevel10k",
+      "star": 55379,
+      "last_commit": "2026-11-13",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Shell",
+      "open_issues": 153,
+      "forks": 2445,
+      "topics": [
+        "zsh"
+      ],
+      "homepage": "",
+      "repo_created": "2019-02-24",
+      "created_at": "2026-11-15 01:17:02",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "pathwaycom/pathway",
+      "gh_id": 571186647,
+      "crawl_date": "2026-11-15",
+      "title": "pathway",
+      "summary": "Python ETL framework for stream processing, real-time analytics, LLM pipelines,…",
+      "github_url": "https://github.com/pathwaycom/pathway",
+      "star": 61994,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "硬件固件"
+      ],
+      "platform_tags": [
+        "macOS"
+      ],
+      "is_hidden": false,
+      "license": "NOASSERTION",
+      "language": "Python",
+      "open_issues": 37,
+      "forks": 1707,
+      "topics": [
+        "batch-processing",
+        "data-analytics",
+        "data-pipelines",
+        "data-processing",
+        "dataflow",
+        "etl",
+        "etl-framework",
+        "iot-analytics",
+        "kafka",
+        "machine-learning-algorithms",
+        "pathway",
+        "python",
+        "real-time",
+        "rust",
+        "stream-processing",
+        "streaming",
+        "time-series-analysis"
+      ],
+      "homepage": "https://pathway.com",
+      "repo_created": "2022-11-27",
+      "created_at": "2026-11-15 01:17:04",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "k-dense-ai/scientific-agent-skills",
+      "gh_id": 1079456184,
+      "crawl_date": "2026-11-15",
+      "title": "scientific-agent-skills",
+      "summary": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science,…",
+      "github_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "star": 57213,
+      "last_commit": "2026-11-09",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "Linux"
+      ],
+      "is_hidden": false,
+      "license": "MIT",
+      "language": "Python",
+      "open_issues": 86,
+      "forks": 5022,
+      "topics": [
+        "agent-skills",
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills",
+        "claudecode",
+        "clinical-research",
+        "computational-biology",
+        "data-analysis",
+        "drug-discovery",
+        "genomics",
+        "materials-science",
+        "metabolomics",
+        "proteomics",
+        "scientific-computing",
+        "scientific-visualization"
+      ],
+      "homepage": "https://arxiv.org/abs/2609.00065",
+      "repo_created": "2025-10-19",
+      "created_at": "2026-11-15 01:17:04",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "google-gemini/gemini-cli",
+      "gh_id": 968197216,
+      "crawl_date": "2026-11-15",
+      "title": "gemini-cli",
+      "summary": "An open-source AI agent that brings the power of Gemini directly into your termi…",
+      "github_url": "https://github.com/google-gemini/gemini-cli",
+      "star": 108833,
+      "last_commit": "2026-11-15",
+      "category_tags": [
+        "AI&Agent"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "Apache-2.0",
+      "language": "TypeScript",
+      "open_issues": 729,
+      "forks": 14956,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "cli",
+        "gemini",
+        "gemini-api",
+        "mcp-client",
+        "mcp-server"
+      ],
+      "homepage": "https://geminicli.com",
+      "repo_created": "2025-04-17",
+      "created_at": "2026-11-15 01:17:06",
+      "classic": true,
+      "first_seen": "2026-11-15"
+    },
+    {
+      "id": "anduin2017/howtocook",
+      "gh_id": 243950408,
+      "crawl_date": "2026-11-15",
+      "title": "HowToCook",
+      "summary": "Programmer's guide about how to cook at home.",
+      "github_url": "https://github.com/Anduin2017/HowToCook",
+      "star": 103945,
+      "last_commit": "2026-11-14",
+      "category_tags": [
+        "效率工具"
+      ],
+      "platform_tags": [
+        "跨平台"
+      ],
+      "is_hidden": false,
+      "license": "Unlicense",
+      "language": "",
+      "open_issues": 469,
+      "forks": 11224,
+      "topics": [
+        "chinese",
+        "cookbook",
+        "cooking",
+        "dishes",
+        "recipes"
+      ],
+      "homepage": "https://howtocook.aiursoft.com",
+      "repo_created": "2020-02-29",
+      "created_at": "2026-11-15 01:17:06",
+      "classic": true,
+      "first_seen": "2026-11-15"
     }
   ],
   "meta": {
-    "updated_at": "2026-11-14 01:40:13",
-    "total": 176,
+    "updated_at": "2026-11-15 01:17:08",
+    "total": 201,
     "daily_added": 25,
     "queries_ok": 25,
     "window_since": "2026-11-03",
